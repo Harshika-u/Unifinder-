@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NIT Calicut – UniFinder</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- 1) HERO BANNER -->
+  <section
+    class="rounded-lg shadow-lg p-12 mb-8"
+    style="background-image: url('https://nitc.ac.in/xc-assets/images/header/header-institution.webp'); background-size: cover; background-position: center;"
+  >
+    <div
+      class="flex flex-col md:flex-row items-center max-w-4xl mx-auto bg-black bg-opacity-50 p-8 rounded-lg"
+    >
+      <img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAwFBMVEX///8YSH/+/v4AO3gURn4KQnwAP3oAPXkAOXdifaKvvM4AN3YQRH0AQHoANXUAM3T2+PqcrMFXdZw5Xo3Y3+ff5eyotsny9fiNoLnm6/DK097Eztt4j61yiqozWYrs8PS7x9VrhKYAK3CRo7sgToODmLNDZpLR2eNPbpfU3uFceZ68yNZIaZSyv88sVYc2XIxBY4mbrLlMbY8AImwAKXAAHGs8X4drgpqFma63wsqptcFkgZ0jU4EAH2x0jqXA09r7a5QtAAAgAElEQVR4nO09CZujNrICxGEjDJjLGGxMm2t84OxkXjbZ5GX//796Kgkwhz3d0+3uzPu+rv0y68aAVSqp7ioh9Amf8Amf8Amf8Amf8AmfcAU/z+N0NkvTTRzn9vqfHs7jIfhVUQwZwKAg4X96PI+HcCH0Qfmnx/N4WOsDDBfBPz2gt0GZR+NLa22IoTe+Qfz/szdD+yJJtTi6OqKhPkHHf5Iu+/CDxvgWiA6SiikGYyKOaCjtxg+eiIBV9TAh/s8FgZ3pBAMGZDn6ajfEULVH37uMxljWa9/6qOH+MCQrQcUNBlgZbTRfHfLS1ejhXGmf1DL752RD1kru8AMi5cOv7SGG8mb0dHZ9FkuCPd7GPwHslCEKgjIc5H74NamGj58HixhLxu7jhv5CmA/3mSBo58H3IwyxM3y8IqP5mX3g2F8GoTzC8MprwrWfz2o8/Fpervx1t99C8/vz81PAmAqCRnlNsN4vyUKTDHmEIJ0BRdX1LLUZmqvREsfCT8hsRswSmMn5IGjqGPEhJrKqZYd5OaFw+k+jcwM8aTx8WSITyt3EUtLG9+m7fxqdW3D6LrV+EH5Kqb9Xnhk1BnoxeA6/n3KRUr1rcWe8hKGkSQLGW2rlH2apgMlC11Tl3iLWdv80Mrchmw4Y00vE2aSyoB2tuaQ02uhSOYXl0V9t76Ao/YQqDcBqvExlSSkyihvyFoI2R+uFvFknouUFtRKzJza31+vPsUit6TRHA26KF/LB96gQoWZEuBBUH/6Vn1YoIApW9ijZrOan2zScmlZh9eGW41oSytGlf0ndeDG19QwXLoq+quTI0gWKk6UxmyKgq1miFP2fJ7PHfYmhdLIF1/Ph/LlYlcc/985QEoyNgWK1LvoIUgVHs0RRpOuRrTnC/qVrUuUYahGy3LPdLWusFvlqebW9tG3fB7CmLAnLH2obu8AF8aJnxe71Hj0yFy0JWW4p8aiIADOiIOSEEO4wlFwgkqt1U8IQcoXuJWSx7969Y3OHp46Pd0TQ4JO9SJvF5BXdFlSzDJTKo0aFRI0Q5aK4tlCsAIb0G4Yh5SUh2m+/HlqEMFVhy52FQuG6MbUq4S+3GymEJ56RdwMva0emFGwUO6O7YOQW4y1WTS/pCfKpFFQSFC1MH9Yq7MOELrnMQhtFazVZldIrXujbEG7vQBYY0faLq9/gg6iYXNeSINMFiXK9GQMxZ5QYnkIo1fYSM4E8k1tCHlBJZxiGCqbWoWgFXtoIC91FR4qHFKMQkFbldjfa8PIrzlj6EHaTZH39E6vzqp13UpVIRDbdNVQnCSnbAFcFrDtypKs5ObOPv/2brk1cr90w6CimJnQZg8lI9y2dEH/TkA1r6WxgWBNj4mZ9PATOSEpfzSOqsQQiijQ2VjRrdqABc3+pCsx5LWYqHJYkI6PaQEfDnBKPkiyhopJa92ehWcDySJsnl/dXyU+GcAuwpBs4m8s+tzEWdOvR5aWVCV+JZGpHYdxdovvWUyVta8FDckgJHsR3tPP3925sxnZuM7fC2VopWCVZwLzb4A4FNVXSu5FiIiuqREFVFYVi3EMZ06cSG3yIJ0IJKaZzKl/uqKzAsd4T/Nv2A6ZsMGC+JkCNinvsiMlVJcOKJJFtlea27899315tDkVmaJLR3kG2TAGyZiopRLF8MjcTHbe9kyTvi6Fr3Jxaqkj6KrWGYJuJ6Ej5JzlpfAsRRdedfF4mIz3WCkt/Uy8k7sAhUnqerzJFMEEgrB31nq2pvbvAKPVbv6t76KAe/D3llpLNxDwX3UTVitW6YQ7iAPi15JwKOswaNiSN/r+yoZrsGvTY26C/8xoFOE98KnxmA3COUTWM7imP+zOwoRW2N8VthKe1TgWpYZk4S5Brana3RkcMSo3fH0GqRA3nl/J9rnqiYC0C9UjN5AdWtbj8LnY9JHeFyTgSrkN0kHG3RpVD0V+usvPM2B4E+dC7vQ6pgiZnG2fxq89cikxNljLbegF6HZLlTIcdSdS0JyZwgazqyryBwh8Ds968UrOP6qlg3Cg6NRBi9hVWhR/Ar0HSncFaxX05CCS1Di2KWPow40I89VCUd7D9KI+w1wlXKwVDXwU/hh/HsawWIxVGzuhrDo1uJ30Al2nBcvhIsCETDCK4NAi1adGROQz1WfLj+HEcd/XQEWKUsIKbhfFBm5DDWeX7Ip9tifZtD1Y4KTYOaJ5KHb0OP4ajlfcsaawdEZqfEXcFYOUDXTUWDzMw6Zu4u9W/wG9DZGb3p9ar8WNkjIRuC5hUeTubWqpKbEJJ8XEYbvikXiguXJzToTGPN4Fd+QYEGRnTxtwE3QG8zIZ0dhmKUv7MuB4GbdKBcRBROCt+/88xtHbgRTK23hvxY2S0mZ0lp0gMKZcmmC4VX/tIZmpxs4DuF5WiaJ1MSVcEGJRUvWmFXnGMQGcg1B6mtqghMLUoVdjG/xgM+RoVZpRq6kmkssPgSqiWvnWFdsp5mFGxqFRLg85agMQ9JecFf9g65ak/6hytwA5cWpSKjP1JveyK16JneRG1rnallcA7CRG0GHbmlkokts+x5PZGEjwuunHsu/GYLMSQ1bWjnF2dNWE1Iw7Ov88Kp0pXu/DHsaQPuPuTmh3yvb1K61POwjwKNYcDH3kKTrmglLvkgGR+kMZZR6+G4Ek34qgJrNv8p0hNt0dYSIKU7piYyGZZfi69MPxjvsnkTcS0thdiSu/yVkKxLzuieDEzYVQficVThOzW/dZkk3l2AZal+igiAlKKJszOVFexWjcNAac+FdCCrHL9atd7Ipwvs5RaFkEZPI8j0GNZ2APCU4pmTLyWaK1nNhNEbC8Qxyrzi8rNrUcRUdw2TjJJrez4GmrQcySiM5ddstPXROGpYO4UqazLTh5+F0WKX67H3mQiYGlyc2IuqdSeWm4KJieJrCmtjwdPMiBfB8fOIMRE7XvapFPYhADBbThdebHElC3zfB9Fit9G3t+0Q9AZHjdOkC+mgKmCypqxgN4I9PlDMFzezUCQsxLCQgLRdreG2IgVYbG+gyKldH7XzqI8DRaqfDEgYCGK9DZ3PJLHKHLe3Wg7+DzZIKrslqhHu8V1HLdxsKXVfTsSrTZsLwrGBonust5Y0yjzQHq8Fu759TiK8J9zTG9j0Bqv0q11SpXsbPM9OxJFG55YTJU1dyFjbTNOh6cM8BEqwI38gyHopW/fxtBacpei8bSeYILCQ+F+l88ir0Yx88F67P/xlm/N4Qy/HcH1PcdeN40btLq1DRmZdo6pa+YmkvdDZOgCVfxn5AhKMiqcIKrqIhsUqSydpF0Ji7dHozbjOEXHqpu/pQDl91kJCndnEAW50Ccj8pxZ8KycDGqed0rlvsXiQTImY16jvNm/aAmjRUqcgntMMY+yQXAwj74nD7hy427jlh1RY0g4P6/soBD8FhAioIzMcoClSafZKGID370NjqNFCr6Ec01lr1km8KN4Swe8+o7Eu2K6Elx2G92eVfICZQ65S6pSlJS5KEtvhbFhLtet0+YK2ltD3+loznj28u5ipiiAv3WKHPL3LxkwcjHTstbkuR3YPHCOgfpANaKrGuaKTz7aNfpbl+llkjVawaSJfsnUVexQAxFFt6XFZMhWSm1k+6WOAJT7gKEL6cN46wPZw/12SEKipW+NCocbcyTxic5w5O4obQ6DSLYvHDM6Z8VGfKFhhQq2qlnysQS5O1Tim4OxELN6RGA/3EijFGaycCiOwMBBHMEgspfsK7ixFLL9C01HFCh824LJTQ5idBIsSk+5jeJQ1b94lN/Gm6nj3aiddqAJqFzUo83xZct0rpbWIX0ZEdHxwF/ObG45U4nuo0o6eJydYunyyGR398BjQ5BnYKgAC2bKyJx26Lh5UYxpVSSgbhbMmH72/rTh0DxlA5zNBQqoNVOC9CfCo3387oFZSZfZJrdte+8fIc4uNxyG7sk7XrbeG6xks/QouKEvuMEgtfHmk0HW6AQo4UTTTxEzR3yDc7hHQwAM55paZgEJ9VaXQelEb2vRco/+Pk6XJydTnZPDoDgZQlFfiuoQ2+d1eDNETGXFrL3EY8oX9tteLjCKPsj27cOaMZbguKcktJI5lDHhzmhC6xMaISe65/ywJdlpQwlehkG56G2bpIitxHPXOztfZkpdxX4ZjNBETqcKMhc0y6ptSv8EXszxYIDwCEkhj850kP8EYtLIuzGgrBFycKvl+ptMKvL/rK8RzVIqB3OQ9gR1EP5hH7LssI+SDkvk1h2+yNIgQGn79aKLekuPse77cGDhSwglFDniSYX6VR1Fdsxda6JrL4XfVmd3sPZQ1GhsPRRnLUttbrTKc1oXq8Z3hTZ+T1FnP64C+SBxBdztxubeQF8LYs1zPA9UCfYSrljoV/aCEhNQWm8wibm7tI8QOspjdxRV152B1ODPuH6aVeB2C3ovb7ipIFMOfqEL2mIJO4/GsPVlGNQKEnluGxnsvZXtbe7kXqA5nppKdL3fdF/RBb3fZn5uD4wt2BQkpcixO8D7JT86mhh16bzSSuSGv3LVt8GlZF78cIodo0B9U+VBvnNTxsB8zp5OPXuSryDCBhIEImL64qPTaa8loFirQpbRo0XdRgpzxZ7dsRjQXLij06Gzc0fwozxfn2q/mzBmYCzcJLIP1PCC1NVpIfFbgZllkE4PXA0zm6pVaFASG3PQxG9qY9TavRtzQ1Fxm4qhTJejl5J5y1nZBMsLfUEf4FnR5PBgDMFpiuO4umRQUMfiQBeudaN9BlW7Itqvbi3R+e0l2ny7uxlyRDNmN9HFui35jzBvERbIFlzgTXrtgzGE8B0G35+VhJ7LVDamGFO5lXOXILL0qf8e7e4t0XYCbvhSUZm1wrWsY1gZKGTMlFD2En3TFsxbo+TuA6swRaYaZi7TJkFYycxVyQjYuQSRv5zwxvK3MRcd/2mfJpfQttMOKAMQqC6BROYbzkL0x1cqa7kP19AXmGpDkfcGRAOv3PmQDLplugRWMud0ikPuFlKBs8yWPZmInJERRc3BCQXdMT7xYURFZPcsFSjCoG9licfgc+My4tilliuwZarX4lhqmq5JinFNYcYaPtOFWcEUgtldDQLbyDWGgt57mrgZXXmEM9VuhtFxlBgDuqMwi1jWeJNbGpR+PkggxnjxWslxHhegE5CFVszLlfSSKZeD0a5yNBjqxMuIKn3s02E6av/v08hOoVzaZbyc7jx/U+sLaRxJmVaCvRBGJfSCeqJ7Lqqbq1roz8brC2VX/RqJxXyC4NqcRqIQOvWiArd2c5JZLJIuS5JxKxD2ajV8hCFEQcLU1Bcmu65EykQAUt7XXUOzfPw1HasXhhMNjhKp28AoxFPmS3dmUymOFU0fu1TeEAseYagdmZCihh3/uaU/GQpVRtoVh/aHG19H39Rfk+nlRO2Mr+0Nlw/V2nh1AsH7KPKrsYdT2T+PzEswVG2r8T3wTivkhqSjbJ0vQrTrqTjXD6VQO5bV/tW73rgs0P6m6xXZPEnpL85K43ELjnGjlJfCOHJISOZUs9iOmAo3MC2uY3EVkB/IM67iH0XXr+fz4/XWq2sY+RUTtGv5turH51SG4inIpCuGu/HVUcRpbBSzshCdOdaN2/41ZFdUfFnylZ/QbdZuPWT9z9NTpyEcezwFxaBAJPJYXDbfJmD9KjEKCnOhRFD7904YghXaVlwo8c3BUIOc7oplnzsm2pWR+H4nC1Ds9CU7FRKouB1qbTDUdmgF3uEMyqMeskrH0gKquDb7uKm6Ijc4CadTtt5XA6fMdtvSzc3qZbMNkWf29xwKjHC1vGdNJaDE6GvEfJoLyxoN67W81B5jqK0Yp8mZzoRvpiew4SyG1juqtIbeaGWq3xpWFNTagGKolO5kNMD2hWVJtaiziQXFYaV/fQxf6x32R0Fl1hgJ2GnOUP/lhrTgNNOGli0qQK+CD5a92q98xkwpQ1QH5hby1Nk9BFGxbRzQ+wwfwvHIXi3xR++B8t7yJDgRjxwaO+k2EVFsD3g+Cg1miAAJnyRJ+uZztAm+9BgnsvDRuRNLRucZhA2x8oWqpQlitdIDDHevxHA3xFCeUTNNxuQpZE5ofW2PrQI+nB01jQ+rPps0hAXjNZTPLpfL6syu5goLr7Y3icWZLr7bDp1EClg4Bhvc773lbn6ZEFlWFEU1XxtjK01WJ9iWQhox2jH/jM9aj6l7dLoR+0UJFGaLWTd4aDQgn7iRnKwBgoayWL4yK5TuIZh8i3sh669dIwGxslztD1w3xdvZ4TBL49Xe9l/r4rdWcVUUzrbOCCQnUBqWdKNjahIxd16KrIs9oSIICxg/aXVwFDxhiYt/tPlmmua3v/kfkSl3SgPKmXRFp4GyDoOgCDo2d7bBVFODsLHl9Mf2WbIumKXnrUxdoxhsSZPLVcRj82LduG88qVVqqFxtVpH17z8ZNP7ws9pFdrhKQydmcV2n9ApUgHvZnOfsY6EwtK61xMNzvmFdgs3rQnYMUyl4nsem8AZGsOi0OnSZtcHFS/b1Fw5fOTR//ZItG230vG14DrK7dYpE/y9FdSrsQpKnxprYhbu8yiQWBX64r42lJRAe8PE4KwN7gBJCAsW+w/BqA6PdlvFatP/VvAf/y4iIomuUHNUNP0XrrUaXJasLFlkvMNVmeCelD5F99bV6zD2IeMFDHpVRW7jD8/GQtQG3ZjMsr+ccRXNuXqAwDD3Pg/+GEHoMMbRWelq6x/UfdH7iy1Fl2xqcmXoprqH1GdXD1XdoQ8TjFtQAhWJWrDBfFycXXbnL2uemEFr2c4eQzR2+9PG43l6hrmv6H6hy7NvS6KefoBUjWtJmR+g2MBtYNVoQKFq23K8tULbURwcQu86NWJbM7YoJ4DbHBOrqZBtif+5l6LfJuZSgs65xsdMDqclyKJWBPYESxiRbH5EEbiqq0LHaNU+DNGUtw/gB2V4TYJnCWNGFGQRg4CcF87p7UJjjahcUI+OHUpHTaQfKzBB0pryiUh8/48fI29fMrY4XB+YQZjZAZjcdQFnzqdOjEWQ/goW8Kcxm5XlST3hRRKIDMY+jNAuqxUDSFJpuQs9zLaCOOqQgAkWjynJ3SfeD6vBoTyPv+0nmb89JnAA0gSC8ZYNrL9VGjRsOzrErrbLLfpkFWp3on5stT1Gg+gP808CfFEHsoh5yKIjojq1Y7lzpnxtBRI0V+DkiLfSuj9E7FJQGhGVAhOeULNpmH/LQdRstofZ8VaiVH10Vjv1FFGtNVZuOEXyJUgJJi9/QWgiR2KZteOe4Fg6wB7IQtbFvvm5ZpnCx80rbaSw6/REJ3iMA4xMXsiZ3ewFyS/sYFms+MKu0Z06R2pHHKpPmhSUmfQgbEG2HVy8G7n9ypy7iucfiIsge+iFZZpsa86XRFADgd+hxwiYSE1bnQfQaDDbSd7SgxOl4K4VkbW8KWSji388bp0z4gCxqW1SdU8U2/cjPZ8Xlr1k+d6/pJihQ+/4oYKFUR6Ry9V/gvecJBdnju3+6rD8pdlZUGkqHiO1LrHaSDFl7wR7zDLq23cjf5zPTVDWhlklharqupVl2cQRsXqpZbp+7lJTes3H/VUxj1CKqA0imEzRdRLGxemxxfpgyZRDLITopKw+0J/hbbZcTNQAkrEwT2tvHhbkVBG65/uP4xx/HdVmGQbLs8kXGD7Es/Z6rDkSxHjDzQlpxQQW/TeLHCf0kbps4Quc8YAPWnBcdto591rdGrqaDbUaZ1Cyqu/umaTo4VFGwnRpevfu3vfgHK0HQRJZxThzkdt4jRdo8BsckX3RuRVLDL5e5ohGW4i75jc6yEL7jmwJCnMAZFdq+789BFZXL+/gB97w6Y9EF5tIMIX0Wm6trVggsVfPw9hRaa4X7zsnFWgwLiQWCmFHaKNfMN/UdDOlyjWcWSnbn83kH+Sffz4RGYdZlTK0Xrfyza5yLo8xz2XxtzKIFlwwdd9SyL1kqspZ7gCdLgxabwlLnO8OmzBgnzJD6luTFc8UWyOlcBLwDM66hUUMwrXBZvDVPOBn7vYmFQFAoVLpDPIjRrdHLlWk4bTBqt0jpIvVzsnq+6nLVuIC4awimdgtRGWvs4XxAGua4HEE+gAsDKirXTE0E+63BcPHdvQVyrqj/+usv/JLqjKhJgeY13FiWMRHidJmN64KMt5d2jUtKWNsfjOmEznmXcZ1aGGyVGpPg7WTcOXSQ+nY7+jK8M+EJJ7zsWMs2m0zDijztifZqR2IP8OStrGjcK9GJ/SC4BJFvYjV7QSVTeTH2L6qXERnXQiE495gPAe3G9Ul8kb4dwUm7dFBlIhTUJxR9Y9XHoJ2iXIqfHTlCxUI1FtqdaMDwXjA1qVUq019bU9UIKkjVKYoPqXX2Ji+GGoTl0687FIUz1tWLsjmveo570Hsu8X6/t1fZS8q6qGIosnYYlH95wgIyTm5E+4yH5GBO6oC1Ev29ihJm2sMuNSqG4TNDFlfK2o0A1hV0BX7m9pSi5MImXHjiRVGJueN/DuBBLZV3Y14DsVEEPeWifcoSIzQbed+ThTAX6zq3LO2Jwq8zNM++p7NxGpa8lASryH2q/Ew+QRxgNJIHtaUV6zER5dKb51WtaqpexZDDT39J/i5+4TIDDuq54L1IKKvcZNPC2cEjjsfjlFgVA2rCpEqrkfb7LT4qFboXKW1aqekLyYBUU2nGM0+xYI2dUH38kphXVAZbIcsymS4BC5VO5d3HEVlq26ORWvMh9LCdoznLnK2NLqHmYQn7VrP+qWHo2H3WqsNyZTE4UqxuZZcy/IJcyLnCasUb+F/DS315c3c7onXVWkkgjay6posWdCnKPD27ItzTID+srAT0aqwshBycI5eudsxk7mjO4Qi5KQ7BMhHs9pvkzKDJN0HBXovv4Ig2rBafxdHUGK2eIt5YVObRimQH3iLtcY79UFG0LG60h6hhPJjKNeQFoBnzkvRJvJTeXKZ15/IXoUk5gNB9L9rCwUVTJJGrgM9bjU9AKzVTlDJyJGHggCpXywda+ftZdPX8pNxtCU2vygx8cOqSueC1eOBdgePJHHYE1/ViE6/o3WTNt8XcGiFJdTZ4IdU5Le4ZBlciEd7FS3oLEr3d5ZFWoXKxyBteJBXXPE+xXDkXe1iegEoMnEboZ37TG9apnO4GrrOIl4kbMTTUNxXQnJr2Kh90sAdL/SDL5GxSw+L8qw19nRhZiZRV0Gd2n17qmZ+g0fJD63wFkA/1O3rXbqY4+c5NLNEKXL9ou2er0C683KenRjd+eI3FXZjBOiWygqUd+hMitG0DbGJ7R9+25+tEHKPHdpdNv6QzMHYFIF4NdrpsL3VWbLKOWSuXJrOcpZcqD691ugs82wODNzGkgm597UktdRtliAAHm8dKn67K5OgeKwio/tdTMKi2VO4Cut+ZyfaBJySV3BtEDWyIAus9NUPNyglLTcqyZEkY6yPTSyP4q4SLk0R+SOIZNER3xPB/9UxjVWsfev4Dr/tnGI7aQ2MpHy1CtH1aNKBzYJ/NhflUjzEMZ6Pccs2DprT8xz4SQeQ0rQ1LtFqM1GGs1kOVE60gT2gCh8OhikeL2SbjPiPU+GxLD8an8b0rtF1o8TYd5/PDVXM56DxDV3XUg3UL5fAmdKynL6MS8NCqoYu3Og5fDnY3EjzJKmcgS7P+8NFloU3BrAaMJioGXabboHoRd1Yh06I+BMqbneextui1mJe12bUTdGJI6hQkJbniNy/6h5wImqCqN+bw1aUjPwaTljV8JFkUuIfecGTz0gh9FNm3Yd2ER93c0AY2KCQV2zcylIWPOeBidvN0BAmqk8Qh0hJhffrc/f4mgvsVmOihf5JGi4J1MmDnRkzmUfiAAy7s242jMEuL5UXe4MBtxqrLBzuD4LZG5UMP4FAyVc3We0fvGrIrnbbGUmrm065QkOT97j291/qtNUqRShhLAdGsOenseqosjxr/9uffv/+rB7///TWDW68HIEk4D5tTylgu0p02au/elz24d6QhM2zmrPHCDqyi/ZDLYpzV1YydHB/H6eFUj9J8tQscb9Ge2wGnYZW326hJ721AWZNuWy2opz10G2On3UCQiMf9ezgKkNIrG3CGPJ2m3jf0lVlEN3HQ9YDCSlXd8P9+BAmpVX/Dy98MVAEKQHWHL5krptjJF+3Zsw4xqZbQez0Rw17ss6l5HP8WqT9A+16PpeGwlmzhotKE1p8Z96Py2NWt4AdMh8TKshKZOI5z4yg9Y7RiMHmHNJopnAfNmrDZHV7E/lQbFmGwLGJqDrGrdZOxRRotWl0YVKRn+2PGRMMFY2yWTbi3N1txUvTnEz8i0vQS8HvqFYET0/wrigzDZlSGh+wdpFBgqQk6kFlasJJl8G/soYIklSHGCqIPPPSDI2WJBk6szVU4QUTog+AqEonAls267ji7XiJXV1hMykahFoEZAjnZTH5LEatCg9xQER01OYTYC2VNLK1aGVaKqA5fkXv94xGEbCY+2bLQmOtB2i5d8Gi6f/5JBLkS0dJcQ14htLFj8R2NYQghsf12aSvSDvKdVJtXatHL11IRbMat18nnEhibH3o8ILcuDOeqYOyyhr1LObQmlbAWItf8FoE/1Yibwwa0NSSL4AT2MlHZuTkFgRRH1qDQ6eJc1MbsobMm5IMpCAC9GxSnr0EFeaN+qVu//Cqz2GUQeVBnDlRinIYuyJ0GmDRnD2SwPwn9ewaPymlzpDDzE/TAy2RsfDCC0DdqsRzJJrdoKaAROHfcX0E2/8aAuiR+ipLk0q0GzSQbrdr0kPvrU44afbb1aGVjlpkU75Ft+Rwk9iQu0j/zuM59SdUp0XIFSDc3mTPJg4MP6L+RiRVcs9JI123OxLzyzKlHRvxJDiIflOcarOzzCP5wEiKvcqgKQD/sVXago13PQkpIDKSxzuNatA88j/OH4EYqAd6ucqXJ6qHrMwt4URjnwPQjJofNLBsfkvWAJJn3gVsHc7PSDBz7kRvYKuxA6EkSLQUAAAZdSURBVNqL8TyxwjWL0xFZnmp08j+Nyh0YH3LfI4ok8Rz0S8VTfFWSybeON2vgzclq7wOuOSHFQOGGz702KdcvpgbZQ9p0Px6mqUWbQpJuHyd4RdvQlOqXSb/px1fEPAKcES7AMsPzxiGSpI7PEwUsiEqXrrPZUbXhl/HXH3m68YvBG3uo1EbjScr5Ki3GOOC62p/L5pbd2Nn9QcHeH4Nx9f6os+HIrzQqAR3neP6Uy7QaOf9G/eBHu3SU7DPmUor8UQcB/gCEM7NPCDJyGY1oOC5y7XvLBcPcfOAZaz8A5UG/MsVxjeeIhuON5vUOklcfVGTwHuCmpKkug6O5BzBSeCbtSNraQknIf076tRDaAotATdqNjBjRpFlHAIWhhnmZ/yRWxPcgmimSYYwHOopCaJNm3L6pZ/k/YAW+CpL5YZJyNmr+pk9MdnFz/AklxA/AqPGR/qGJFR8C0VDlWfy87PK1ED0ZMiGsVwohsvHtJ5Tob4Rgvzksl8tTndXFMt08ukfuJ3zCJ3zCJ3zCe4IYz14Kh8OLb7311GE5fZ5K0OvFQ/vAEN6qHAWq/ELI4pmkvPTmDsgmx/ATeh3vN5k5/DXtMLeLu+8kDMzdWzG8e0TnCPD2v7vzC+/tPYW/fPEcHkN1XXd+UHu/Rw4ocupn3gAnzL8Nw+87dPuDFdRq0i3zBU9Jl52K9cjFmiTV+bm4OkLkTaA9O8FvxtDqZzV10H7sN3+iSrV6SK8u7lFbqNHl7muC5YutqLlvwh+qYKdK+zUxPEfmbx68CfePQXw7hr3pYn2Ctltn62SsYxD9tN3W/ISjzLlcLnUdO214JiucC9y9dRy4Zdtedpr7C/ayC3zcboot3sUXet9vzl9xwV7HbprlF3j6cmENwmrWqajItvQx/A4YkuUXgP+WomjNA8uygj9EUQyOFhS6WGf4KhItkR9MLkg+vSUIzha9G3pdrrkTQ9l/4eAHiZUEkZck4Y4+5ZYWso7/hW/+E9J3+1ZAHzzSj8kZmvV4X+ivhFFAXxnM4Z1dhOeRNMQZFLNAs9VCVnz0b8H4ihIJC5cgUjPifPlDlXadS43ur514EKQDclXN7/xQrPAJXiMLeL4UiOB5CpQWSVKJUiWD7DBDsYKtIhTorJI6SGpZPlsVHCDt0k1Z7DI4xN2+boY3Vwr1V6lMqq9fv54i5BDJRl8V+Reol5cXYbLAuP5y1rR5054WcNHmYiHLFSp1enPnLSUUtXpZVY6yOIUKVr94CyVHc01fo6WsZhWFrRVkWKnpRZwlCeSvW5msLKEfh/Ftl6vKpj3+/NEYEjikGlJHKYamjf7W1N9QYgrbLAxMRcsohtK8dXtCgs9cnGnSiU695F9JW0HWhZskZWEnoQwY6sqKY3hQ04SubGudBJlc5eCdoxhm2KQ0lLQDxbDeHNFeNTZ91+QjMZTOaPXbb784QEMvscQw/ENMzIpinNj5+TjEEDse3YhhOEeu3sewPusC2eaqWVrHStEUwLCh4WERJTOnKDJKQ3A2QucdSsOtS/fhly9niqGDXFtQnt4NQ2XlfqNKhL5DjmSLaLWc/UlpSEq0Uy62nQKG0J222SGGj8S8Ws6GGArGZqXpf1EiXUq8cHzX9XS1paHu70zodgmrVNqLO05D7RwE6XK5QeVCWe0Xcup+eS8MceYBB6PsxMHqMnIM9RdEd2BWZjJRpKzFsNuHs2MtK6cRhoKyWe/oMsRysfMsy+5huDTqNXAQCTDEUr2lmzugq1RNj1CiAqfKSpt1aHn+YzHsSXx5GWUsN41KI+i7SyrohkcuFBOqtI32IRTOYGhv6OpqH0PByGL7q8zKMbeC6V1X6ZLISzvDAqMhS7rFGcUQqlMwJATCubmyUWf6coDhI3UaQa4LDOl2zSEo+OJZC8jAnFP2oZx3mrwRJ4FQz9PkGeqXh2CjUT5BC9q5GnaSs2Sw4+oIgSk8do02VTvI2heF/PQAUGoS/4EYDjVvpnwZ267Tp8Ey7jApWBsuKsuyy7iSTV4SPjM3AUO3KUKoxmPUdXft1FWRKk77iQinrkweb6+vezCGPTz5p7YYpP3nRj436d13C8fu0RvvHyX73/r45l60gcSKsibdR38KgJF9eyuGKILmVf78ZwQ+sv/fAatPQAiJD+v+8Qmf8Amf8Amf8Amf8An/IPwf6xgCS8AOnGcAAAAASUVORK5CYII="
+        alt="Logo"
+        class="w-24 h-24 rounded-full mb-4 md:mb-0 md:mr-6 shadow-lg"
+      />
+      <div class="text-white">
+        <h1 class="text-4xl font-extrabold mb-2">NIT Calicut</h1>
+        <p class="text-lg">🏆 Ranked #1 in Engineering by NIRF 2024</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-6xl mx-auto p-4">
+    <h1 class="text-4xl font-bold text-center mb-6">
+     NIT Calicut
+    </h1>
+
+    <!-- Tabs Navigation -->
+    <div class="flex space-x-4 border-b mb-6" id="tabs">
+      <button class="tab-button active-tab" data-tab="Collegeinfo">🎓College Info</button>
+      <button class="tab-button " data-tab="courses">🎓 Courses</button>
+      <button class="tab-button" data-tab="admissions">📝 Admissions</button>
+      <button class="tab-button" data-tab="fees">💰 Fees</button>
+      <button class="tab-button" data-tab="campus">🏕️ Campus Life</button>
+      <button class="tab-button" data-tab="placements">💼 Placements</button>
+      <button class="tab-button" data-tab="Gallery">🌐 Gallery</button>
+      <button class="tab-button" data-tab="alumni">🌐 Alumni</button>
+      <button class="tab-button" data-tab="Student Talks">🎓 Student Talks</button>
+    </div>
+
+    <!-- Tab Content -->
+    <div id="tab-content">
+      <!-- Collage info Pane -->
+       <div id="Collegeinfo" class="tab-pane block">
+        <h2 class="text-2xl font-semibold mb-2">🎓  Information – NIT Calicut</h2>
+        <!--  collage info content -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Full Name: </h3><p class="text-rose-700 text-xl font-semibold">National Institute of Technology Calicut</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Established: </h3><p class="text-rose-700 text-xl font-semibold">1961</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+     <h3 class="font-bold text-xl">Type:</h3><p class="text-rose-700 text-xl font-semibold">Public, Technical, Institute of National Importance
+</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+     <h3 class="font-bold text-xl">Location:</h3><p class="text-rose-700 text-xl font-semibold">NIT Campus P.O., Kozhikode, Kerala, India – 673601</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Motto: </h3><p class="text-rose-700 text-xl font-semibold">“From darkness, lead me to light”</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Status: </h3><p class="text-rose-700 text-xl font-semibold">Institute of National Importance (autonomous, government-funded)
+</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Accreditation:  </h3><p class="text-rose-700 text-xl font-semibold">Approved by AICTE; many programs are NBA-accredited
+</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Campus Size: </h3><p class="text-rose-700 text-xl font-semibold">: 285 acres (approx. 120 hectares)
+</p>
+    </div>
+  </div>
+  <!--  Content Card 1 -->
+<div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+ <!-- Enhanced Content Card added to College Info -->
+        <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+
+          <div class="relative">
+<h3 class="text-2xl font-bold mb-4">Basic Information </h3>
+             
+
+           
+            <p class="mb-4 leading-relaxed">
+The National Institute of Technology Calicut (NIT-Calicut or NIT-C) is a public technical university and an institute of national importance governed by the NIT Act passed by the Parliament of India. The campus is situated 22 kilometres (14 mi) northeast of Kozhikode, on the Kozhikode–Mukkam Road. It was established in 1961 and was known as Calicut Regional Engineering College (CREC) until 2002. It is one of the National Institutes of Technology campuses established by the Government of India to impart high standard technical education to students from all over the country. NIT Calicut hosts a supercomputer on its campus, and has a dedicated nanotechnology department. NIT Calicut is ranked as one of the prestigious engineering institutions in India.      </p>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrkhyWwJydWUKHo-B56tyo6A5bUC_oqOVk6g&s" alt="Campus Lake" class="w-full rounded-lg mb-4 shadow-lg">
+                     <!-- Diagonal Overlays -->
+
+          </div></div>
+        </div>
+                <!-- Enhanced Content Card-2 added to College Info -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">History</h3>
+             
+             
+<div>
+<p>NIT Calicut was established in 1961 as the Calicut Regional Engineering College (CREC)—the ninth such institution for technical education set up in India. It was initially affiliated with Kerala University until Calicut University was established. The campus shifted from Government Polytechnic, West Hill, to its current sprawling location in 1963. In 2002, it became the National Institute of Technology Calicut, attaining the status of an Institute of National Importance and gaining autonomy under the Ministry of Education, Government of India. NITC has since grown in stature, offering a wide array of technical and research-focused programs and is regularly ranked among the top Indian engineering institutions.</p> </div>
+          
+             
+              
+              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Correct_Logo_of_NIT_Calicut.svg/250px-Correct_Logo_of_NIT_Calicut.svg.png">
+
+              
+                
+          </div>
+        </div></div>
+      
+      <!-- Enhanced Content Card-3 added to College Info -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+
+          
+ <!-- NIT Calicut Highlights -->
+<div class="max-w-4xl mx-auto my-4 p-5 bg-indigo-50 border-l-4 border-indigo-400 text-indigo-800 rounded-lg shadow-md transition duration-300 ease-in-out hover:scale-[1.02]">
+  <strong>🏫 Why Choose NIT Calicut?</strong><br><br>
+
+  <ul class="list-disc ml-6 space-y-2">
+    <li><strong>Top-tier Academics:</strong> NIT Calicut is among the top 25 engineering colleges in India (NIRF Ranked).</li>
+    <li><strong>Excellent Placement:</strong> Consistent 80–90% placements in CSE, ECE, and EEE; top recruiters include Google, Amazon, Microsoft, and Qualcomm.</li>
+    <li><strong>Scenic Campus:</strong> Nestled in the lush greenery of Kerala’s Western Ghats, the 300-acre campus is breathtaking.</li>
+    <li><strong>Research & Innovation:</strong> Strong focus on R&D with centers like CERD, CEQIP; excellent opportunities for funded projects and internships.</li>
+    <li><strong>Cultural Exposure:</strong> Home to fests like Ragam (Cultural) and Tathva (Tech) – known across India for quality and scale.</li>
+    <li><strong>Campus Life:</strong> Vibrant clubs, active sports culture, and a healthy mix of academics and extra-curriculars.</li>
+    <li><strong>Affordable & Diverse:</strong> Government-funded fees and students from all over India make it highly inclusive and value-for-money.</li>
+    <li><strong>Global Alumni:</strong> Graduates from NIT Calicut work in top roles across Google, ISRO, NASA, and top universities like MIT and Stanford.</li>
+  </ul>
+</div>
+
+
+ </div> </div>
+</div>
+      <div id="courses" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-2">🎓 Courses Offered </h2>
+        <!-- your courses content -->
+         
+     
+        <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+
+          <div class="relative">
+<!-- Courses Section -->
+  <section class="max-w-6xl mx-auto p-6 mt-10">
+    <h2 class="text-3xl font-bold mb-6 text-center text-indigo-700">📘 Programs Offered</h2>
+    <div class="bg-white rounded-2xl p-6 shadow-md">
+      <h3 class="text-xl font-semibold text-gray-800 mb-4">Bachelor of Architecture (B.Arch.)</h3>
+      <ul class="list-disc list-inside text-gray-700">
+        <li>Bachelor of Architecture (B.Arch.)</li></ul>
+      <h3 class="text-xl font-semibold text-gray-800 mb-2">Bachelor of Technology (B.Tech.)</h3>
+      <ul class="list-disc list-inside text-gray-700">
+        <li>B.Tech in Computer Science and Engineering</li>
+        <li>Biotechnology</li>
+        <li>Chemical Engineering</li>
+        <li>Civil Engineering</li>
+        <li>Electrical and Electronics Engineering</li>
+        <li>Electronics and Communication Engineering</li>
+        <li>Energy Engineering</li>
+        <li>Engineering Physics</li>
+        <li>Materials Science and Engineering</li>
+        <li>Mechanical Engineering</li>
+        <li>Production Engineering</li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+</div></div></div>
+
+
+<!-- Admissions Pane -->
+<div id="admissions" class="tab-pane hidden px-4 py-6">
+  <h2 class="text-3xl font-bold text-indigo-700 mb-6">📝 Admissions – NIT Calicut </h2>
+
+  <!-- Timeline CSS -->
+  <style>
+    .timeline-container {
+      position: relative;
+      margin: 2rem auto;
+      padding: 2rem 0;
+      max-width: 1100px;
+    }
+    .timeline-line {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(to bottom, #6366f1, #9333ea);
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+    .timeline-item {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+    .timeline-item-left,
+    .timeline-item-right {
+      width: 47%;
+      background-color: #f9fafb;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      z-index: 1;
+      transition: transform 0.3s ease;
+    }
+    .timeline-item-left:hover,
+    .timeline-item-right:hover {
+      transform: scale(1.03);
+    }
+    .timeline-circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: linear-gradient(to bottom right, #4f46e5, #7c3aed);
+      border-radius: 9999px;
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: white;
+      z-index: 2;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    @media (max-width: 768px) {
+      .timeline-item-left,
+      .timeline-item-right {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+      .timeline-circle {
+        top: -1.5rem;
+        left: 5%;
+        transform: none;
+      }
+    }
+  </style>
+
+  <!-- Timeline Content -->
+  <section class="timeline-container">
+    <div class="timeline-line"></div>
+
+    <div class="timeline-item">
+      <div class="timeline-item-left">
+        <h3 class="text-xl font-bold text-blue-700 mb-2">1. Appear for JEE Main 2025 (Eligibility Test)</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Conducted by NTA (National Testing Agency)</li>
+          <li>You must first qualify JEE Main to become eligible for JEE Advanced
+
+</li>
+          <li>Top 2.5 lakh candidates from JEE Main are shortlisted</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">1</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-item-right ml-auto">
+        <h3 class="text-xl font-bold text-purple-700 mb-2">2. Register for JEE Advanced 2025</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Visit the official JEE Advanced website: https://jeeadv.ac.in" target="_blank" class="text-blue-600 underline">jeeadv.ac.in</a></li>
+          <li>Fill in details and pay registration fee</li>
+          <li>Choose exam cities</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">2</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-item-left">
+        <h3 class="text-xl font-bold text-green-700 mb-2">3. Appear for JEE Advanced 2025</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>This is the only entrance exam accepted for IIT B.Tech admissions</li>
+          <li>Highly competitive with negative marking</li>
+          <li>Subjects: Physics, Chemistry, Mathematics</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">3</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-item-right ml-auto">
+        <h3 class="text-xl font-bold text-pink-700 mb-2">4. Secure a High Rank</h3>
+       <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Your All India Rank (AIR) in JEE Advanced determines:
+            <ul class="list-disc ml-6">
+              <li>Your eligibility for NITs</li>
+              <li>Branches/courses you can get (e.g., CSE, Mechanical)</li>
+            </ul>
+          </li>
+          <li>A higher rank gives access to more popular streams like Computer Science</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">4</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-item-left">
+        <h3 class="text-xl font-bold text-red-600 mb-2">5. Participate in JoSAA Counselling</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Conducted by Joint Seat Allocation Authority (JoSAA)</li>
+          <li>Choose NITs and desired branch during counselling rounds</li>
+          <li>Seats are allotted based on:
+            <ul class="list-disc ml-6">
+              <li>Your JEE Advanced rank</li>
+              <li>Category (General, OBC, SC/ST, EWS)</li>
+              <li>Availability of seats in chosen branch</li>
+            </ul>
+          </li>
+        </ul>
+        
+      </div>
+      <div class="timeline-circle">5</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-item-right ml-auto">
+        <h3 class="text-xl font-bold text-yellow-700 mb-2">6. Final Admission & Document Verification</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>If allotted NITs:
+            <ul class="list-disc ml-6">
+              <li>Accept the seat</li>
+              <li>Pay the seat confirmation fee</li>
+              <li>Report online or offline for document verification</li>
+            </ul>
+          </li>
+      
+          <li>Submit original documents:
+            <ul class="list-disc ml-6">
+              <li>JEE Advanced Rank Card</li>
+              <li>JEE Main Admit Card</li>
+              <li>Class 10 & 12 Mark Sheets</li>
+              <li>Category Certificate (if applicable)</li>
+              <li>Passport-sized photographs</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="timeline-circle">6</div>
+    </div>
+  </section>
+</div>
+
+      <!-- Fees Pane -->
+      <div id="fees" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-2">💵 Academic Fees</h2>
+        <div class="space-y-4 text-base leading-relaxed text-gray-700">
+          
+  <ul class="list-disc pl-6 space-y-2">
+    <li>
+      <a href="https://nitc.ac.in/imgserver/uploads/attachments/btech--b-arch-fee-structure-for-2024---25-admissions_9cf1e0f9-905f-4a74-9106-45f58293ae43_0.pdf" target="_blank" class="text-blue-700 font-medium hover:underline">
+      Click here for B.Tech/B.Arch Fee Structure (2024-25)
+      </a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+      </div>
+
+     <!-- Campus Life Pane -->
+      <div id="campus" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-4">🏕️ Campus Life</h2>
+
+        <!-- Enhanced Content Card added to Campus Life -->
+        <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+
+          <div class="relative">
+            <h3>My College Life in NIT Calicut: Academics, Activities, & Placements by Rahul N</h3>
+           
+            <p class="mb-4 leading-relaxed">
+I chose this institute because it is the best one I could get with my rank in JEE. I completed my first year here just a few days ago. It was a wonderful year for me personally. The one thing that sets apart NIT Calicut is its campus life and its surroundings. This year was very good. I got many good new friends. Enjoyed my time with them. The NIRF ranking of this institute is 5 among all NITs. I also considered this while looking for colleges.
+            </p>
+            
+
+          </div>
+        </div>
+                 <!-- Enhanced Content Card-2 added to Campus life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4"> Academics
+</h3>
+             
+             
+<div>
+<p> I chose Electronics and Communication Engineering in NIT Calicut. In my first year’s experience, I think it is not that tough to study as everyone say. If you understand the concept, you can easily solve all the problems and attain good marks. In addition, we have fewer subjects compared to other branches. You can secure admission here after scoring good marks in JEE and complete your admission process in JOSAA allotment process. Exams are so frequent in this course. We have to write internal exams, mid sems, quizzes, and end sems.I paid around 2 Lakh initially during the admission process and every sem tuition fees of Rs. 75,000. There are special discounts for students having category like SC/ST and other.</p> </div>
+</div>  
+        </div>    </div>
+<!-- Enhanced Content Card-3 added to Campus life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Faculty
+
+</h3>
+             
+             
+<div>
+<p> Faculty members in the institute are very experienced and well educated. Teachers use black boards for teaching. They also use PPTs and written material for teaching. Since the faculties are well educated, they can solve any problem we ask them. And they can easily clear all doubts we have. Most of the faculties do not have good relationship with their students they just come and take class and they will go. Some faculties are so strict that they don't give attendance even if are late by one minute. But mostly they are good.</p> </div>
+          </div></div></div>
+
+<!-- Enhanced Content Card-4 added to Campus life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4"> 
+Infrastructure
+</h3>
+             
+             
+<div>
+<p>  NIT Calicut provides a well-structured infrastructure. Campus size is about 300 acre. The campus includes a vast library, seminar halls, auditorium, and computer facilities. There is a canteen named ‘Swadishtam’ inside the campus where there is a vast variety of food. Sports faculties in the campus are also good. There is floodlight in most of the grounds, where we can play at night also. West campus of our institute is filled with so many trees and that is my favorite place in the campus.</p> </div>
+
+          </div></div></div>
+
+<!-- Enhanced Content Card- 5 added to Campus life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4"> 
+Campus
+</h3>
+             
+             
+<div>
+<p>The one thing that makes NIT Calicut better than most colleges is its campus life. There are many activities in the institute for students to participate in. South India’s largest cultural fest happens here every year, named ‘Ragam’. For Ragam, people from various colleges come and participate. There is lot of clubs too that we can join from 2nd year onwards. Lot of Football and other Sports Tournaments happen every year. Overall campus life is very good.</p> </div>
+          </div></div></div>
+</div>
+
+     
+
+      <!-- Placements Pane -->
+      <div id="placements" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-2">💼 Placements</h2>
+        <div class="p-4">
+  <h3 class="text-xl font-semibold mb-4 text-gray-800">Placement Highlights (2024-2025)</h3>
+  <p>NIT Calicut is highly regarded for its placement outcomes. The institute’s dedicated Career Development Centre coordinates with over 200 recruiting companies each year, including top multinational corporations and Indian giants. In 2025, the highest salary package offered was ₹50.64 lakh per annum, with an average package of ₹12-13 lakh per annum. Approximately 930 students from the eligible pool were placed, with almost 77.97% of registered students receiving offers. The median salary for B.Tech and M.Tech graduates hovers around ₹9 lakh per annum, and more than 103 students secured packages over ₹25 lakh.
+Leading recruiters include Accenture, Amazon, Cisco, Axis Bank, CDAC, American Express, Microsoft, Oracle, Philips India, Bajaj Auto, and core engineering firms like L&T and Shobha Group. Opportunities span IT, finance, consulting, core engineering, analytics, and research domains.
+Internship opportunities are also abundant, with leading companies like Goldman Sachs, Oracle, Visa, and Qualcomm providing stipends between ₹40,000-1,00,000 per month. The robust internship ecosystem enhances employability and readiness for professional challenges, often pre-empting final placements.
+The placement cell ensures comprehensive prep—resume-building workshops, mock interviews, group discussions, and technical training. There are frequent interactions with alumni and industry experts to keep students abreast of market trends, technologies, and workplace expectations.
+The placement season typically begins in the seventh semester (for B.Tech) and runs through the academic year. Many students receive pre-placement offers from summer internships, and those aiming for higher studies are equally well supported. Placements in the core technical sector, software, finance, and analytics are consistently strong thanks to NIT Calicut’s nationwide reputation and active industry engagement.
+Feedback from students notes that although securing a placement is competitive and GPA-sensitive (firms often set a GPA cut-off), the overall support system is effective and encouraging. Coding skills and soft skills (especially communication) are deemed crucial, reflecting evolving employer expectations. There’s also institutional support for students aspiring to non-conventional roles, including entrepreneurship and research, ensuring a holistic placement experience.
+
+</p>
+ 
+        <h2 class="text-2xl font-semibold mb-2">Placements Pdf (2024)</h2>
+        <div class="space-y-4 text-base leading-relaxed text-gray-700">
+          
+  <ul class="list-disc pl-6 space-y-2">
+    <li>
+      
+      <a href="file:///C:/Users/hp/Downloads/Annual%20Report%20CCD%202023-2024.pdf" target="_blank" class="text-blue-700 font-medium hover:underline">
+     click here for pdf </a>
+    </li>
+ </ul>
+
+      </div> </div></div>
+
+      <!-- Gallery Pane -->
+      <div id="Gallery" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-2">Campus Gallery</h2>
+       <div class="p-6 bg-gray-100 rounded-xl">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+    
+    <!-- Image 1 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.collegebatch.com/static/clg-gallery/national-institute-of-technology-calicut-242036.jpg" 
+        
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+
+    <!-- Image 2 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.collegebatch.com/static/clg-gallery/national-institute-of-technology-calicut-309714.jpg" 
+          
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+
+    <!-- Image 3 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.collegebatch.com/static/clg-gallery/national-institute-of-technology-calicut-309716.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+
+    <!-- Image 4 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.collegebatch.com/static/clg-gallery/national-institute-of-technology-calicut-309719.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+<!-- Image 5 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.collegebatch.com/static/clg-gallery/national-institute-of-technology-calicut-309720.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+<!-- Image 6 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.collegebatch.com/static/clg-gallery/national-institute-of-technology-calicut-309721.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+<!-- Image 7 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.collegebatch.com/static/clg-gallery/national-institute-of-technology-calicut-309718.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+<!-- Image 8 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.collegebatch.com/static/clg-gallery/national-institute-of-technology-calicut-309715.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+ <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.collegebatch.com/static/clg-gallery/national-institute-of-technology-calicut-242037.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+ <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://nitc.ac.in/imgserver/uploads/compressed/pcm__86ce4315-d761-4044-afe2-4441687294f3_0.png" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+ <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://nitc.ac.in/imgserver/uploads/compressed/pcm__2a9f775c-a3b5-4c83-85f9-d2ab7be65965_0.png" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+ <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://nitc.ac.in/imgserver/uploads/attachments/pcm__781298a4-3593-4b0c-8aa2-3223e249a5be_0.png" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+ <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://nitc.ac.in/imgserver/uploads/compressed/pcm__76fb69f8-fac9-4bbc-9bee-822e51e38ec9_0.png" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+<div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="
+    https://nitc.ac.in/imgserver/uploads/compressed/pcm__7c7d0f36-a462-4124-9b92-46d13160ec85_0.png" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+
+
+  </div>
+</div></div>
+
+     
+
+      <!-- alumni Pane -->
+      <div id="alumni" class="tab-pane hidden">
+       <!-- Alumni Table -->
+<div class="max-w-6xl mx-auto p-4">
+
+ <section class="max-w-6xl mx-auto p-6">
+  <h2 class="text-3xl font-bold mb-6 text-center text-indigo-700">🎓 Notable Alumni – MIT-World Peace University</h2>
+ <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-white">
+  
+  <!-- Alumni Card -->
+  <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+    <h3 class="text-lg font-semibold text-gray-800">Vinay V Panicker<span class="text-sm font-normal text-gray-500"></span></h3>
+    <p class="text-gray-600 mt-1">Researcher
+</p>
+  </div>
+
+  <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+    <h3 class="text-lg font-semibold text-gray-800">Dr. Jayaraj PB<span class="text-sm font-normal text-gray-500"></span></h3>
+    <p class="text-gray-600 mt-1">Associate Professor, Department of Computer Science and Engineering</p>
+  </div>
+
+  <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+    <h3 class="text-lg font-semibold text-gray-800">Kartik Singhal <span class="text-sm font-normal text-gray-500"></span></h3>
+    <p class="text-gray-600 mt-1">Researcher
+</p>
+  </div>
+
+  <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+    <h3 class="text-lg font-semibold text-gray-800">Sadasivan Puthusserypady <span class="text-sm font-normal text-gray-500"></span></h3>
+    <p class="text-gray-600 mt-1">Associate Professor at the Department of Electrical Engineering, Technical University of Denmark, Denmark</p>
+  </div>
+
+  <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+    <h3 class="text-lg font-semibold text-gray-800">Appu Prabhakar <span class="text-sm font-normal text-gray-500"></span></h3>
+    <p class="text-gray-600 mt-1">Indian cinematographer
+</p>
+  </div>
+
+  <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+    <h3 class="text-lg font-semibold text-gray-800">Joshy George <span class="text-sm font-normal text-gray-500"></span></h3>
+    <p class="text-gray-600 mt-1">Researcher
+</p>
+  </div>
+
+  <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+    <h3 class="text-lg font-semibold text-gray-800">Malindu Sandanayake <span class="text-sm font-normal text-gray-500"></span></h3>
+    <p class="text-gray-600 mt-1">Researcher
+</p>
+  </div>
+
+
+
+</div>
+
+
+</div>
+      </div>
+
+      <!-- Student Talks Pane -->
+      <div id="Student Talks" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-2">🎓 Scholarships</h2>
+       <section class="px-6 py-12 bg-white">
+  
+  <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+    <strong>Rewiew 1:KOTHA ASWIN
+Bachelor of Technology [B.Tech], 2028
+Posted on: Jun 7th, 2025</strong>NIT Calicut has a quiet large campus with all the facilities like playgrounds, swimming pool, indoor courts etc. Campus area is around 300 acres with 12 gates. It has a very large library with a great collection of books and good accommodation for students to study. My favorite thing about the institute is the seminar hall, which are large and ambient. The institute has primary health centre within the campus and there are buses inside the institute to travel. Special mention is the amphitheatre in the institute, which is a garden and very pleasant.Campus Life at NIT Calicut is awesome with all the sports facilities, hostels, freedom etc. You can expect around 5000 students in the campus and the campus is not very much crowded. There are many clubs to encourage the extracurricular activities of students. The clubs are very diverse, they provide the students with many opportunities. There are many events and festivals celebrated in the institute. You can expect an event almost every month. It is worth to get into this institute if are looking for a good campus and institute life
+  </div>
+<div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+   <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+    <strong>Rewiew 2:JINU HAMDAN
+Bachelor of Technology [B.Tech], 2028
+Posted on: May 8th, 2025</strong>NIT Calicut is almost 300 acre. It is filled with lush green trees. It is one of the most beautiful NIT institutes in India. The buildings here are old, but they are well maintained. The campus is more than 50 years old. Academic facilities like library, seminar halls, auditorium, conference hall, etc. are well maintained. Library here is easily accessible by students. Sports facilities are not that good compared to other NITs. For transportation college bus runs through the campus frequently. It is free for everyone.The one thing that sets apart NIT Calicut from other colleges in Kerala is the best college life it offers. There are not many restrictions for students in the institute. The campus is open for 24 hours. There are lot of clubs and home teams here. In home team, only first years can participate and in clubs, first years cannot participate. There is also NSS present. As part of NSS, we attend camps in other schools or colleges. Many fests also happen here frequently.
+
+  </div></div>
+  <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+   <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+    <strong>Rewiew 3:AMEN SIRAJ
+Bachelor of Technology [B.Tech], 2028
+Posted on: May 7th, 2025</strong>
+Campus is almost 300 acre. Academic facilities like library, labs, and seminar halls are also present in the campus. The library in the campus is top notch; students can easily make use of the Library until 12 AM. In campus, total there are 3 canteens present, where you can get good snacks and food. However, the labs in the campus are very old and equipment in the labs are little outdated. Campus is nature friendly and so beautiful. Sports facilities in the campus are decent.Campus life in NIT Calicut is top notch. In Kerala, most of the institutes close after 6 PM but here, the campus is open for 24 hours. We have so many events in the campus every year. Some of them are ‘Ragam’ and ‘Tathva’. For this event, lots of people come to campus to watch the event. All the programs in the campus are conducted by the students. This is the best opportunity for students to learn how to manage events.
+  </div></div>
+  <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+   <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+    <strong>Rewiew 4:NAJIM HUSNI
+Bachelor of Technology [B.Tech], 2028
+Posted on: May 7th, 2025</strong>
+NAJIM HUSNI
+Bachelor of Technology [B.Tech], 2028
+Posted on: May 7th, 2025
+  </div>
+  
+</div>
+     </div>
+  <script>
+    const buttons = document.querySelectorAll('.tab-button');
+    const panes = document.querySelectorAll('.tab-pane');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active-tab'));
+        btn.classList.add('active-tab');
+        panes.forEach(p => p.classList.add('hidden'));
+        document.getElementById(btn.dataset.tab).classList.remove('hidden');
+      });
+    });
+  </script>
+
+  <style>
+    .tab-button { padding: .5rem 1rem; font-size: .875rem; font-weight: 500; color: #374151; border-bottom:2px solid transparent; transition: .2s; cursor: pointer; }
+    .tab-button:hover { color: #3b82f6; border-color: #3b82f6; }
+    .active-tab { border-color: #2563eb; color: #2563eb; }
+    .tab-pane { background: #fff; padding:1rem; border-radius:.5rem; box-shadow:0 1px 2px rgb(0 0 0 / .05); }
+  </style>
+</body>
+</html>
+
+

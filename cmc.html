@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Christian Medical College, Vellore – UniFinder</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- 1) HERO BANNER -->
+  <section
+    class="rounded-lg shadow-lg p-12 mb-8"
+    style="background-image: url('data:image/jpeg;base64,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'); background-size: cover; background-position: center;"
+  >
+    <div
+      class="flex flex-col md:flex-row items-center max-w-4xl mx-auto bg-black bg-opacity-50 p-8 rounded-lg"
+    >
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnky71rkeaQTj0ZE6igdMduHGOBwPieTXxYQ&s"
+        alt="Logo"
+        class="w-24 h-24 rounded-full mb-4 md:mb-0 md:mr-6 shadow-lg bg-white p-2"
+      />
+      <div class="text-white">
+        <h1 class="text-4xl font-extrabold mb-2">Christian Medical College, Vellore</h1>
+        <p class="text-lg">🏆 Ranked #2 Medical College in India by NIRF 2023</p>
+      </div>
+    </div>
+  </section>
+  <div class="max-w-6xl mx-auto p-4">
+    <h1 class="text-4xl font-bold text-center mb-6">
+      Christian Medical College, Vellore
+    </h1>
+    <!-- Tabs Navigation -->
+    <div class="flex space-x-4 border-b mb-6" id="tabs">
+      <button class="tab-button active-tab" data-tab="Collegeinfo">🎓College Info</button>
+      <button class="tab-button " data-tab="courses">🎓 Courses</button>
+      <button class="tab-button" data-tab="admissions">📝 Admissions</button>
+      <button class="tab-button" data-tab="fees">💰 Fees</button>
+      <button class="tab-button" data-tab="campus">🏕️ Campus Life</button>
+      <button class="tab-button" data-tab="placements">💼 Placements</button>
+      <button class="tab-button" data-tab="Gallery">🌐 Gallery</button>
+      <button class="tab-button" data-tab="alumni">🌐 Alumni</button>
+      <button class="tab-button" data-tab="Student Talks">🎓 Student Talks</button>
+    </div>
+    <!-- Tab Content -->
+    <div id="tab-content">
+      <!-- Collage info Pane -->
+       <div id="Collegeinfo" class="tab-pane block">
+        <h2 class="text-2xl font-semibold mb-2">🎓 Information – Christian Medical College, Vellore</h2>
+        <!--  collage info content -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Full Name: </h3><p class="text-rose-700 text-xl font-semibold">Christian Medical College, Vellore</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Established: </h3><p class="text-rose-700 text-xl font-semibold">1900</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+     <h3 class="font-bold text-xl">Type:</h3><p class="text-rose-700 text-xl font-semibold">Private Medical College and Hospital</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+     <h3 class="font-bold text-xl">Location:</h3><p class="text-rose-700 text-xl font-semibold">Vellore, Tamil Nadu, India</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Motto: </h3><p class="text-rose-700 text-xl font-semibold">Not to be ministered unto, but to minister</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Status: </h3><p class="text-rose-700 text-xl font-semibold">Autonomous Institution under University Grants Commission (UGC)
+</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Accreditation:  </h3><p class="text-rose-700 text-xl font-semibold">National Medical Commission (NMC), NAAC A+ Grade
+</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Campus Size: </h3><p class="text-rose-700 text-xl font-semibold">Main Campus: 200 acres, Bagayam Campus: 100 acres</p>
+    </div>
+  </div>
+  <!--  Content Card 1 -->
+<div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+ <!-- Enhanced Content Card added to College Info -->
+        <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+<h3 class="text-2xl font-bold mb-4">Basic Information </h3>
+             
+           
+            <p class="mb-4 leading-relaxed">
+Christian Medical College, Vellore (CMC Vellore) is a private, minority-run medical college and hospital in Vellore, Tamil Nadu, India. Founded in 1900 by American missionary Ida S. Scudder, CMC Vellore has grown from a single-bed clinic to one of India's most prestigious medical institutions. The college is managed by the Christian Medical College Vellore Association, a Christian organization. It is affiliated with The Tamil Nadu Dr. M.G.R. Medical University for its medical courses and with Vellore Institute of Technology for other academic programs.</p>
+<p class="mb-4 leading-relaxed">
+CMC Vellore operates two campuses - the main campus at Vellore town and a secondary campus at Bagayam. The institution includes a network of primary, secondary and tertiary care hospitals with around 2,800 beds. It has been consistently ranked among the top medical colleges in India by various ranking agencies, including NIRF, which ranked it second in the medical category in 2023.</p>
+                     <!-- Diagonal Overlays -->
+          </div></div>
+        </div>
+                <!-- Enhanced Content Card-2 added to College Info -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">History</h3>
+             
+             
+<div>
+<p>
+The story of Christian Medical College, Vellore begins with Ida S. Scudder, an American missionary who witnessed the death of three women in one night due to lack of proper medical care during childbirth. This incident inspired her to become a doctor and return to India to serve women's healthcare needs. In 1900, she started a small clinic with just one bed in Vellore.</p>
+<p>
+The institution grew steadily, and in 1902, a 40-bed hospital was built. In 1918, a medical school for women was established, which was later upgraded to a co-educational college in 1947. The college became affiliated with the Madras University and began offering the MBBS degree.</p>
+<p>
+Over the years, CMC Vellore has pioneered several medical firsts in India, including the first open-heart surgery in 1961, the first kidney transplant in 1971, and the first bone marrow transplant in 1986. Today, it stands as one of India's most respected medical institutions, known for its commitment to medical education, research, and healthcare services, especially for the underprivileged.</p> </div>
+          
+             
+              
+           
+             
+          </div>
+        </div></div>
+      
+      <!-- Enhanced Content Card-3 added to College Info -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Vision and Mission</h3>
+<ul class="list-disc ml-6 mb-4">
+  <li>To be a witness to the healing ministry of Christ, through excellence in education, research and healthcare.</li>
+  <li>To develop compassionate, professionally competent, morally upright health professionals.</li>
+  <li>To provide healthcare of the highest quality, with special concern for the underprivileged.</li>
+</ul>
+ <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Values</h3>	
+</ul>    <ul class="list-disc ml-6 mb-4">
+  <li>Compassion and Care</li>
+  <li>Excellence in Education and Healthcare</li>
+  <li>Integrity and Ethical Practice</li>
+  <li>Justice and Inclusiveness</li>
+  <li>Teamwork and Collaboration</li>
+  <li>Wholeness and Healing</li>
+</ul>        
+             
+             
+          
+</div>
+      </div>
+ </div> </div></div>
+      <div id="courses" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-2">🎓 Courses Offered </h2>
+        <!-- your courses content -->
+         
+     
+        <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            
+            <p class="mb-4 leading-relaxed">
+Christian Medical College, Vellore offers a wide range of undergraduate, postgraduate, and doctoral programs in medical and allied health sciences. The institution is known for its rigorous academic programs, hands-on clinical training, and research opportunities. The courses are designed to produce competent healthcare professionals with a strong foundation in medical sciences and a commitment to serving the community.</p>
+<h3 class="text-2xl font-bold mb-4">UNDERGRADUATE PROGRAMS</h3>
+           
+            <p class="mb-4 leading-relaxed">
+CMC Vellore offers several undergraduate programs in medicine, nursing, and allied health sciences. The most sought-after program is the MBBS (Bachelor of Medicine and Bachelor of Surgery), which has an annual intake of 100 students. The college also offers BSc programs in Nursing, Medical Laboratory Technology, Radiography, Operation Theatre Technology, and several other allied health disciplines.</p>
+<h4 class="text-2xl font-bold mb-4">Bachelor of Medicine and Bachelor of Surgery (MBBS) :</h4>
+<p>The MBBS program at CMC Vellore is a 5.5-year course including a one-year compulsory rotating internship. The curriculum is designed to provide a strong foundation in medical sciences and extensive clinical exposure. The selection process includes a NEET UG score, followed by special tests and interviews conducted by the college.
+</p>
+<!-- Table for MBBS Phases at CMC -->
+<table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Phase</th>
+      <th class="py-3 px-4">Duration (years)</th>
+      <th class="py-3 px-4">Training</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">First</td>
+      <td class="py-3 px-4">One</td>
+      <td class="py-3 px-4">Pre-Clinical (Anatomy, Physiology, Biochemistry)</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Second</td>
+      <td class="py-3 px-4">One-and-a-half</td>
+      <td class="py-3 px-4">Para-clinical (Pathology, Microbiology, Pharmacology, etc.)</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Third</td>
+      <td class="py-3 px-4">Two</td>
+      <td class="py-3 px-4">Clinical (Medicine, Surgery, Obstetrics & Gynecology, etc.)</td>
+    </tr>
+    <tr>
+      <td class="py-3 px-4 font-semibold">Internship</td>
+      <td class="py-3 px-4">One</td>
+      <td class="py-3 px-4">Compulsory rotation in various departments</td>
+    </tr>
+  </tbody>
+</table>
+            <p>Admission to the MBBS program is highly competitive, with only 100 seats available annually. The selection process includes the NEET UG score, followed by special tests and interviews conducted by the college. The college follows a reservation policy with seats allocated for various categories including SC, ST, OBC, and economically weaker sections.</p>
+          </div>
+        </div>
+    <!-- Enhanced Content Card-2 added to  -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Undergraduate Allied Health Science Programs:
+</h3>
+      <p>CMC Vellore offers several BSc programs in allied health sciences. These programs are designed to train healthcare professionals who support the medical team in diagnosis, treatment, and rehabilitation. The programs include practical training in the college's state-of-the-art laboratories and hospitals.</p>
+<h4 class="text-2xl font-bold mb-4">BSc Programs and Intake Capacity:</h4>
+<table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Course</th>
+      <th class="py-3 px-4">Duration</th>
+      <th class="py-3 px-4">Intake Capacity</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">BSc Nursing</td>
+      <td class="py-3 px-4">4 years</td>
+      <td class="py-3 px-4">150</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">BSc Medical Laboratory Technology</td>
+      <td class="py-3 px-4">3 years</td>
+      <td class="py-3 px-4">40</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">BSc Radiography</td>
+      <td class="py-3 px-4">3 years</td>
+      <td class="py-3 px-4">25</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">BSc Operation Theatre Technology</td>
+      <td class="py-3 px-4">3 years</td>
+      <td class="py-3 px-4">20</td>
+    </tr>
+    <tr>
+      <td class="py-3 px-4 font-semibold">BSc Optometry</td>
+      <td class="py-3 px-4">4 years</td>
+      <td class="py-3 px-4">20</td>
+    </tr>
+  </tbody>
+</table>
+   <h4 class="text-2xl font-bold mb-4">Other Allied Health Science Programs:
+</h4> <table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Course</th>
+      <th class="py-3 px-4">Duration</th>
+      <th class="py-3 px-4">Intake Capacity</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">BSc Prosthetics and Orthotics</td>
+      <td class="py-3 px-4">4 years</td>
+      <td class="py-3 px-4">15</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">BSc Audiology and Speech-Language Pathology</td>
+      <td class="py-3 px-4">4 years</td>
+      <td class="py-3 px-4">20</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">BSc Respiratory Therapy</td>
+      <td class="py-3 px-4">4 years</td>
+      <td class="py-3 px-4">15</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">BSc Medical Imaging Technology</td>
+      <td class="py-3 px-4">4 years</td>
+      <td class="py-3 px-4">20</td>
+    </tr>
+    <tr>
+      <td class="py-3 px-4 font-semibold">BSc Renal Dialysis Technology</td>
+      <td class="py-3 px-4">3 years</td>
+      <td class="py-3 px-4">10</td>
+    </tr>
+  </tbody>
+</table>
+   </div>   </div></div>
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y/1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">POSTGRADUATE PROGRAMS
+</h3>  <p>CMC Vellore offers a wide range of postgraduate programs including MD, MS, DM, MCh, and diploma courses. The postgraduate programs are highly competitive and are known for their rigorous training and research opportunities. The selection process includes NEET PG/SS scores followed by interviews and practical assessments.</p></div>
+         <h4 class="text-2xl font-bold mb-4">Postgraduate Medical Programs (MD/MS/Diploma):
+</h4><table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Program</th>
+      <th class="py-3 px-4">Duration</th>
+      <th class="py-3 px-4">Specializations</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Doctor of Medicine (MD)</td>
+      <td class="py-3 px-4">3 years</td>
+      <td class="py-3 px-4">Anatomy, Physiology, Biochemistry, Pharmacology, Pathology, Microbiology, Community Medicine, General Medicine, Pediatrics, Dermatology, Psychiatry, Radio-diagnosis, Anesthesiology</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Master of Surgery (MS)</td>
+      <td class="py-3 px-4">3 years</td>
+      <td class="py-3 px-4">General Surgery, Orthopedics, Ophthalmology, Otorhinolaryngology, Obstetrics & Gynecology</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Diploma Programs</td>
+      <td class="py-3 px-4">2 years</td>
+      <td class="py-3 px-4">Various clinical and non-clinical specializations</td>
+    </tr>
+  </tbody>
+</table>
+          <h4 class="text-2xl font-bold mb-4">Super Specialty Programs (DM/MCh):
+</h4>
+           <table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Program</th>
+      <th class="py-3 px-4">Duration</th>
+      <th class="py-3 px-4">Specializations</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Doctorate of Medicine (DM)</td>
+      <td class="py-3 px-4">3 years</td>
+      <td class="py-3 px-4">Cardiology, Neurology, Nephrology, Gastroenterology, Endocrinology, Hematology, Immunology, Neonatology, Clinical Pharmacology, Medical Oncology</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Master of Chirurgiae (MCh)</td>
+      <td class="py-3 px-4">3 years</td>
+      <td class="py-3 px-4">Cardiothoracic Surgery, Neurosurgery, Urology, Plastic Surgery, Pediatric Surgery, Surgical Oncology</td>
+    </tr>
+  </tbody>
+</table>
+<h4 class="text-2xl font-bold mb-4">Postgraduate Allied Health Science Programs:
+</h4>
+           <table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Program</th>
+      <th class="py-3 px-4">Duration</th>
+      <th class="py-3 px-4">Specializations</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">MSc Programs</td>
+      <td class="py-3 px-4">2 years</td>
+      <td class="py-3 px-4">Nursing, Medical Laboratory Technology, Radiology, Physiotherapy, Psychology</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">MPhil Programs</td>
+      <td class="py-3 px-4">2 years</td>
+      <td class="py-3 px-4">Psychiatric Social Work, Clinical Psychology</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Postgraduate Diploma</td>
+      <td class="py-3 px-4">1-2 years</td>
+      <td class="py-3 px-4">Various allied health specializations</td>
+    </tr>
+  </tbody>
+</table>
+<h4 class="text-2xl font-bold mb-4">Doctoral Programs:
+</h4>
+           <table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Program</th>
+      <th class="py-3 px-4">Duration</th>
+      <th class="py-3 px-4">Specializations</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">PhD</td>
+      <td class="py-3 px-4">3-5 years</td>
+      <td class="py-3 px-4">Various medical and allied health disciplines</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">DM/MCh (Research Track)</td>
+      <td class="py-3 px-4">5 years</td>
+      <td class="py-3 px-4">Various super-specialty disciplines</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+
+      </div>
+<!-- Admissions Pane -->
+<div id="admissions" class="tab-pane hidden px-4 py-6">
+  <h2 class="text-3xl font-bold text-indigo-700 mb-6">📝 Admissions – CMC Vellore 2025</h2>
+  <!-- Timeline CSS -->
+  <style>
+    .timeline-container {
+      position: relative;
+      margin: 2rem auto;
+      padding: 2rem 0;
+      max-width: 1100px;
+    }
+    .timeline-line {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(to bottom, #6366f1, #9333ea);
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+    .timeline-item {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+    .timeline-item-left,
+    .timeline-item-right {
+      width: 47%;
+      background-color: #f9fafb;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      z-index: 1;
+      transition: transform 0.3s ease;
+    }
+    .timeline-item-left:hover,
+    .timeline-item-right:hover {
+      transform: scale(1.03);
+    }
+    .timeline-circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: linear-gradient(to bottom right, #4f46e5, #7c3aed);
+      border-radius: 9999px;
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: white;
+      z-index: 2;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    @media (max-width: 768px) {
+      .timeline-item-left,
+      .timeline-item-right {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+      .timeline-circle {
+        top: -1.5rem;
+        left: 5%;
+        transform: none;
+      }
+    }
+  </style>
+  <!-- Timeline Content -->
+  <section class="timeline-container">
+    <div class="timeline-line"></div>
+    <div class="timeline-item">
+      <div class="timeline-item-left">
+        <h3 class="text-xl font-bold text-blue-700 mb-2">1. Appear for NEET UG 2025 (Eligibility Test)</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Conducted by NTA (National Testing Agency)</li>
+          <li>Mandatory for admission to MBBS program at CMC Vellore</li>
+          <li>Subjects: Physics, Chemistry, Biology (Botany & Zoology)</li>
+          <li>Minimum qualifying percentile required: 50th percentile for General, 40th for SC/ST/OBC</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">1</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-right ml-auto">
+        <h3 class="text-xl font-bold text-purple-700 mb-2">2. Apply for CMC Vellore Admission</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Register on the official CMC Vellore website (www.cmch-vellore.edu)</li>
+          <li>Fill the application form with NEET UG details</li>
+          <li>Pay the application fee (approximately INR 2,500 for General category)</li>
+          <li>Submit required documents and photographs</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">2</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-left">
+        <h3 class="text-xl font-bold text-green-700 mb-2">3. Appear for CMC Vellore Special Tests</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Shortlisted candidates based on NEET UG scores are called for special tests</li>
+          <li>Tests include:
+            <ul class="list-disc ml-6">
+              <li>General Paper (Aptitude, General Knowledge, Current Affairs)</li>
+              <li>Specific Paper (Biology, Physics, Chemistry)</li>
+            </ul>
+          </li>
+          <li>Tests are conducted at various centers across India</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">3</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-right ml-auto">
+        <h3 class="text-xl font-bold text-pink-700 mb-2">4. Attend Interview Process</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Candidates who qualify in the special tests are called for interviews</li>
+          <li>Interview panel assesses:
+            <ul class="list-disc ml-6">
+              <li>Motivation for joining CMC Vellore</li>
+              <li>Understanding of the institution's mission and values</li>
+              <li>Communication skills and personality</li>
+            </ul>
+          </li>
+          <li>Interviews are conducted at CMC Vellore campus</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">4</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-left">
+        <h3 class="text-xl font-bold text-red-600 mb-2">5. Merit List & Seat Allotment</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Final merit list is prepared based on:
+            <ul class="list-disc ml-6">
+              <li>NEET UG score (50% weightage)</li>
+              <li>Special test scores (35% weightage)</li>
+              <li>Interview performance (15% weightage)</li>
+            </ul>
+          </li>
+          <li>Seat allotment based on merit and category</li>
+          <li>Allotment letter sent to selected candidates</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">5</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-right ml-auto">
+        <h3 class="text-xl font-bold text-yellow-700 mb-2">6. Complete Admission Formalities</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Submit original documents:
+            <ul class="list-disc ml-6">
+              <li>NEET UG Admit Card & Scorecard</li>
+              <li>Class 10 & 12 Mark Sheets</li>
+              <li>Transfer Certificate & Conduct Certificate</li>
+              <li>Community Certificate (if applicable)</li>
+              <li>Passport-sized photographs</li>
+            </ul>
+          </li>
+          <li>Pay the tuition and other fees</li>
+          <li>Complete medical examination</li>
+          <li>Attend orientation program</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">6</div>
+    </div>
+  </section>
+</div>
+
+      <!-- Fees Pane -->
+      <div id="fees" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-2">💵 Academic Fees (2025-26)</h2>
+       <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+  <!-- Diagonal Overlays -->
+  <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+  <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+  
+  <!-- Accent Bar -->
+  <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+  <div class="relative">
+    <h2 class="text-2xl font-bold text-indigo-700 mb-4">💰 CMC Vellore Fees Structure</h2>
+    <p class="mb-4 leading-relaxed text-gray-700">
+      Christian Medical College, Vellore follows a transparent fee structure for all its programs. The fees vary depending on the course and category of the student. The institution also offers scholarships and financial assistance to deserving students from economically weaker sections.
+    </p>
+    <!-- Fees Table -->
+    <div class="overflow-x-auto mt-6">
+      <table class="min-w-full text-sm border border-gray-300">
+        <thead class="bg-indigo-100 text-indigo-800">
+          <tr>
+            <th class="text-left px-4 py-2 border border-gray-300">Particulars</th>
+            <th class="text-left px-4 py-2 border border-gray-300">MBBS (Annual)</th>
+            <th class="text-left px-4 py-2 border border-gray-300">BSc Nursing (Annual)</th>
+            <th class="text-left px-4 py-2 border border-gray-300">BSc Allied Health (Annual)</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-800">
+          <tr class="bg-white">
+            <td class="px-4 py-2 border border-gray-300">Tuition Fee</td>
+            <td class="px-4 py-2 border border-gray-300">INR 24,090</td>
+            <td class="px-4 py-2 border border-gray-300">INR 12,045</td>
+            <td class="px-4 py-2 border border-gray-300">INR 12,045</td>
+          </tr>
+          <tr class="bg-gray-50">
+            <td class="px-4 py-2 border border-gray-300">Library Fee</td>
+            <td class="px-4 py-2 border border-gray-300">INR 2,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 1,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 1,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-2 border border-gray-300">Laboratory Fee</td>
+            <td class="px-4 py-2 border border-gray-300">INR 5,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 2,500</td>
+            <td class="px-4 py-2 border border-gray-300">INR 2,500</td>
+          </tr>
+          <tr class="bg-gray-50">
+            <td class="px-4 py-2 border border-gray-300">Hostel Fee</td>
+            <td class="px-4 py-2 border border-gray-300">INR 15,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 15,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 15,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-2 border border-gray-300">Mess Fee</td>
+            <td class="px-4 py-2 border border-gray-300">INR 36,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 36,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 36,000</td>
+          </tr>
+          <tr class="bg-gray-50">
+            <td class="px-4 py-2 border border-gray-300">Caution Deposit (Refundable)</td>
+            <td class="px-4 py-2 border border-gray-300">INR 5,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 2,500</td>
+            <td class="px-4 py-2 border border-gray-300">INR 2,500</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-2 border border-gray-300">Total Annual Fee (Approx)</td>
+            <td class="px-4 py-2 border border-gray-300">INR 87,090</td>
+            <td class="px-4 py-2 border border-gray-300">INR 69,045</td>
+            <td class="px-4 py-2 border border-gray-300">INR 69,045</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="mt-6 p-4 bg-yellow-50 rounded-lg">
+      <h3 class="font-bold text-lg text-yellow-800 mb-2">Note:</h3>
+      <ul class="list-disc ml-6 text-yellow-700">
+        <li>Fees are subject to revision by the college authorities</li>
+        <li>Additional fees may apply for examination, registration, and other services</li>
+        <li>International students have a different fee structure</li>
+        <li>Merit-cum-means scholarships are available for deserving students</li>
+      </ul>
+    </div>
+  </div>
+</div>
+      </div>
+     <!-- Campus Life Pane -->
+      <div id="campus" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-4">🏕️ Campus Life</h2>
+        <!-- Enhanced Content Card added to Campus Life -->
+        <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+           
+            <p class="mb-4 leading-relaxed">
+Life at Christian Medical College, Vellore is a unique blend of rigorous academics, clinical training, and extracurricular activities. The institution provides a nurturing environment that encourages holistic development of students. With students from diverse backgrounds and cultures, CMC Vellore offers a vibrant campus life that fosters learning, growth, and camaraderie.</p>
+          
+          </div>
+        </div>
+                <!-- Enhanced Content Card-2 added to Campus Life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Hostel Life</h3>
+             
+             
+<div>
+<p>CMC Vellore provides separate hostel facilities for male and female students. The hostels are well-equipped with modern amenities and create a home away from home for students. Each hostel has wardens who ensure the well-being of the residents. The hostel life at CMC Vellore is known for its community spirit and cultural exchange.</p>
+<p>Hostel facilities include:
+<ul class="list-disc ml-6 mb-4">
+  <li>Spacious and well-ventilated rooms</li>
+  <li>Wi-Fi connectivity</li>
+  <li>Common rooms with TV and recreational facilities</li>
+  <li>Study rooms and libraries</li>
+  <li>Prayer and meditation rooms</li>
+  <li>24/7 security</li>
+  <li>Mess facilities with nutritious and hygienic food</li>
+</ul></p> </div>
+          
+              
+              
+             
+         
+        </div>   </div>
+      </div>
+            <!-- Enhanced Content Card-3 added to Campus Life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Extracurricular Activities</h3>
+             
+             
+<div>
+<p>CMC Vellore encourages students to participate in various extracurricular activities to ensure their holistic development. The institution has numerous student clubs and organizations that cater to diverse interests. These activities provide students with opportunities to explore their talents, develop leadership skills, and create lasting friendships.</p>
+<p>Popular extracurricular activities include:
+<ul class="list-disc ml-6 mb-4">
+  <li>Sports and athletics (cricket, football, basketball, volleyball, badminton, table tennis)</li>
+  <li>Cultural events (music, dance, drama)</li>
+  <li>Literary activities (debates, quizzes, creative writing)</li>
+  <li>Community service and outreach programs</li>
+  <li>Spiritual development activities</li>
+  <li>Student-run publications</li>
+</ul></p> </div>
+          
+              
+              
+             
+         
+        </div>   </div>
+      </div>
+                  <!-- Enhanced Content Card-2 added to Campus Life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Annual Events and Festivals</h3>
+             
+             
+<div>
+<p>CMC Vellore organizes several annual events and festivals that are eagerly awaited by students. These events provide a platform for students to showcase their talents, celebrate diversity, and create memorable experiences. The most prominent events include:</p>
+<p><strong>Zephyrus:</strong> The annual cultural festival of CMC Vellore, featuring music, dance, drama, and various competitions. Students from various departments participate enthusiastically in this multi-day event.</p>
+<p><strong>Spectrum:</strong> An inter-collegiate festival that invites students from other institutions to participate in academic, cultural, and sports competitions.</p>
+<p><strong>Sports Meet:</strong> Annual sports competition where students showcase their athletic abilities and compete in various sports events.</p>
+<p><strong>College Day:</strong> A celebration of the institution's founding, featuring special programs, awards, and cultural performances.</p> </div>
+          
+              
+              
+             
+         
+        </div>   </div>
+      </div>
+       <!-- Enhanced Content Card-2 added to Campus Life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Community Outreach</h3>
+             
+             
+<div>
+<p>Community service is an integral part of life at CMC Vellore. The institution encourages students to participate in various outreach programs that serve the underprivileged communities in and around Vellore. These programs not only benefit the community but also help students develop empathy, compassion, and a sense of social responsibility.</p>
+<p>Notable community outreach initiatives include:
+<ul class="list-disc ml-6 mb-4">
+  <li>Rural health camps</li>
+  <li>Health education programs in schools and villages</li>
+  <li>Mobile medical units for remote areas</li>
+  <li>Community development projects</li>
+  <li>Support groups for patients with chronic illnesses</li>
+  <li>Environmental conservation initiatives</li>
+</ul></p> </div>
+          
+              
+              
+             
+         
+        </div>   </div>
+      </div>
+</div>
+     
+      <!-- Placements Pane -->
+      <div id="placements" class="tab-pane hidden">
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+           
+             
+  <h3 class="text-xl font-semibold mb-4 text-gray-800">CMC Vellore Career Opportunities</h3>
+  <p>Christian Medical College, Vellore has an excellent track record when it comes to the career progression of its graduates. The institution's reputation for producing highly skilled and compassionate healthcare professionals makes its graduates highly sought after in the job market. While CMC Vellore does not have a traditional placement cell like engineering colleges, it provides career guidance and support to its students.</p>
+  <p>The career opportunities for CMC Vellore graduates include:</p>
+  <ul class="list-disc ml-6 mb-4">
+    <li>Employment in prestigious hospitals and healthcare institutions in India and abroad</li>
+    <li>Opportunities for higher studies in reputed institutions in India and foreign countries</li>
+    <li>Research positions in leading research organizations</li>
+    <li>Teaching positions in medical and allied health science colleges</li>
+    <li>Opportunities to join government health services</li>
+    <li>Entrepreneurship in healthcare sector</li>
+    <li>Positions in international health organizations like WHO, UNICEF, etc.</li>
+  </ul>
+</div></div>
+   <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+              <h3 class="text-xl font-semibold mb-4 text-gray-800">Career Support Services</h3>
+<p>CMC Vellore provides various career support services to its students to help them make informed career choices and prepare for their professional journey. These services include:</p>
+<table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Service</th>
+      <th class="py-3 px-4">Description</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Career Guidance</td>
+      <td class="py-3 px-4">Individual and group counseling sessions to help students explore career options based on their interests and skills</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Higher Studies Support</td>
+      <td class="py-3 px-4">Guidance and support for students aspiring to pursue higher studies in India or abroad</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Workshops and Seminars</td>
+      <td class="py-3 px-4">Regular workshops on resume writing, interview skills, and professional development</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Alumni Network</td>
+      <td class="py-3 px-4">Access to a strong alumni network for mentorship and career opportunities</td>
+    </tr>
+    <tr>
+      <td class="py-3 px-4 font-semibold">Job Portal</td>
+      <td class="py-3 px-4">Online platform with job listings and career resources</td>
+    </tr>
+  </tbody>
+</table>
+              </div>
+      </div>
+    </div></div>
+              </div>
+      <!-- Gallery Pane -->
+      <div id="Gallery" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-2">Campus Gallery</h2>
+       <div class="p-6 bg-gray-100 rounded-xl">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+    
+    <!-- Image 1 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.cmch-vellore.edu/images/main-building.jpg" 
+        
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+    <!-- Image 2 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.cmch-vellore.edu/images/chapel.jpg" 
+          
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+    <!-- Image 3 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.cmch-vellore.edu/images/library.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+    <!-- Image 4 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.cmch-vellore.edu/images/hostel.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+<!-- Image 5 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.cmch-vellore.edu/images/lecture-hall.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+<!-- Image 6 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.cmch-vellore.edu/images/hospital-building.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+<!-- Image 7 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.cmch-vellore.edu/images/college-campus.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+<!-- Image 8 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.cmch-vellore.edu/images/labs.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+<!-- Image 9 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.cmch-vellore.edu/images/sports-complex.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+  </div>
+</div>
+      </div>
+    <!-- alumni Pane -->
+<div id="alumni" class="tab-pane hidden">
+  <!-- Alumni Table -->
+  <div class="max-w-6xl mx-auto p-4">
+    <section class="max-w-6xl mx-auto p-6">
+      <h2 class="text-3xl font-bold mb-6 text-center text-indigo-700">🎓 Notable Alumni – CMC Vellore</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-white">
+        <!-- Alumni Cards -->
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Jacob John</h3>
+          <p class="text-gray-600 mt-1">Virologist, Polio Eradication Expert</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. George M. Chandy</h3>
+          <p class="text-gray-600 mt-1">Immunologist, Developed First AIDS Vaccine in India</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. M.C. Mathew</h3>
+          <p class="text-gray-600 mt-1">Cardiologist, Pioneer of Cardiac Care in India</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Sunil Chandy</h3>
+          <p class="text-gray-600 mt-1">Cardiologist, Former Director of CMC Vellore</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Anil Cherian</h3>
+          <p class="text-gray-600 mt-1">Neurosurgeon, Epilepsy Surgery Specialist</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Suranjan Bhattacharji</h3>
+          <p class="text-gray-600 mt-1">Pediatrician, Former Director of ICMR</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. K.M. Cherian</h3>
+          <p class="text-gray-600 mt-1">Cardiothoracic Surgeon, Founder of Frontier Lifeline Hospital</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Joy John Mammen</h3>
+          <p class="text-gray-600 mt-1">Hematologist, Transfusion Medicine Expert</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Lalitha Abraham</h3>
+          <p class="text-gray-600 mt-1">Microbiologist, Infection Control Specialist</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. V.I. Mathan</h3>
+          <p class="text-gray-600 mt-1">Gastroenterologist, Shanti Swarup Bhatnagar Awardee</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Gita Mathai</h3>
+          <p class="text-gray-600 mt-1">Pediatrician, Public Health Expert</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. E. Moses</h3>
+          <p class="text-gray-600 mt-1">Orthopedic Surgeon, Limb Reconstruction Specialist</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+      </div>
+    <div id="Student Talks" class="tab-pane hidden">
+  <h2 class="text-2xl font-semibold mb-2">🎓 Student Reviews</h2>
+  <section class="px-6 py-12 bg-white space-y-6">
+    <!-- Review 1 -->
+    <div style="background: white; padding: 20px; border-radius: 12px;">
+      <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+        <strong>Review 1: Life-changing experience at CMC Vellore.</strong>
+        <p>
+          <b>Academics:</b> The academic curriculum at CMC Vellore is rigorous and comprehensive. The faculty members are highly knowledgeable and supportive. The emphasis on practical training and clinical exposure from the early years of the course is exceptional.
+          <br><b>Infrastructure:</b> The campus infrastructure is excellent with state-of-the-art laboratories, well-equipped lecture halls, and an extensive library. The hospital facilities provide unparalleled clinical exposure.
+          <br><b>Hostel Life:</b> The hostels are comfortable and provide a conducive environment for studying. The mess food is nutritious and hygienic. The hostel community is diverse and welcoming.
+          <br><b>Overall:</b> Studying at CMC Vellore has been a transformative experience that has not only equipped me with medical knowledge but also instilled in me values of compassion and service.
+        </p>
+      </div>
+    </div>
+    <!-- Review 2 -->
+    <div style="background: white; padding: 20px; border-radius: 12px;">
+      <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+        <strong>Review 2: Best decision I ever made.</strong>
+        <p>
+          <b>Faculty:</b> The professors at CMC Vellore are not just teachers but mentors who guide you throughout your journey. They are experts in their fields and are always approachable.
+          <br><b>Clinical Exposure:</b> The clinical exposure you get here is unmatched. From the first year itself, you get to interact with patients and learn from real cases. The hospital sees a diverse range of cases, which enhances your learning experience.
+          <br><b>Research Opportunities:</b> CMC Vellore encourages research and provides ample opportunities for students to engage in research projects under the guidance of experienced faculty.
+          <br><b>Community Service:</b> The emphasis on community service and outreach programs helps you understand the healthcare needs of the underprivileged and develops a sense of social responsibility.
+        </p>
+      </div>
+    </div>
+    <!-- Review 3 -->
+    <div style="background: white; padding: 20px; border-radius: 12px;">
+      <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+        <strong>Review 3: A holistic medical education experience.</strong>
+        <p>
+          <b>Curriculum:</b> The curriculum is well-structured and updated regularly to keep pace with the latest developments in medical science. The integration of basic sciences with clinical subjects is done effectively.
+          <br><b>Extracurricular Activities:</b> Despite the rigorous academic schedule, there are plenty of extracurricular activities to participate in. The annual cultural festival Zephyrus is a highlight of the year.
+          <br><b>Student Community:</b> The student community is diverse and inclusive. You get to interact with people from different backgrounds and cultures, which broadens your perspective.
+          <br><b>Career Prospects:</b> The reputation of CMC Vellore opens up numerous career opportunities. The alumni network is strong and supportive, providing guidance and mentorship.
+        </p>
+      </div>
+    </div>
+    <!-- Review 4 -->
+    <div style="background: white; padding: 20px; border-radius: 12px;">
+      <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+        <strong>Review 4: Challenging but rewarding journey.</strong>
+        <p>
+          <b>Academic Rigor:</b> The academic program at CMC Vellore is challenging and demands dedication and hard work. The evaluation system is comprehensive and ensures that you have a thorough understanding of the subjects.
+          <br><b>Facilities:</b> The college provides excellent facilities for learning, including well-equipped laboratories, a vast library with digital resources, and modern teaching aids.
+          <br><b>Values-based Education:</b> What sets CMC Vellore apart is its emphasis on values-based education. The institution not only focuses on developing medical skills but also on nurturing compassionate healthcare professionals.
+          <br><b>Personal Growth:</b> The journey at CMC Vellore is not just about acquiring medical knowledge but also about personal growth. It challenges you, shapes you, and prepares you for a career dedicated to service.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+  <script>
+    const buttons = document.querySelectorAll('.tab-button');
+    const panes = document.querySelectorAll('.tab-pane');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active-tab'));
+        btn.classList.add('active-tab');
+        panes.forEach(p => p.classList.add('hidden'));
+        document.getElementById(btn.dataset.tab).classList.remove('hidden');
+      });
+    });
+  </script>
+  <style>
+    .tab-button { padding: .5rem 1rem; font-size: .875rem; font-weight: 500; color: #374151; border-bottom:2px solid transparent; transition: .2s; cursor: pointer; }
+    .tab-button:hover { color: #3b82f6; border-color: #3b82f6; }
+    .active-tab { border-color: #2563eb; color: #2563eb; }
+    .tab-pane { background: #fff; padding:1rem; border-radius:.5rem; box-shadow:0 1px 2px rgb(0 0 0 / .05); }
+  </style>
+</body>
+</html>

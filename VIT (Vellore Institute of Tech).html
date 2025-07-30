@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VIT (Vellore Institute of Tech)- Reviews & Info</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      background: #f8f8f8;
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .tab-button {
+      padding: 8px 12px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-weight: 500;
+      color: #333;
+    }
+    .tab-button.active {
+      border-bottom: 2px solid #007bff;
+      color: #007bff;
+    }
+    .tab-content {
+      display: none;
+      padding: 20px;
+    }
+    .tab-content.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <header style="background-image: url('data/background.jpg'); background-size: cover; height: 200px; display: flex; align-items: center; justify-content: center; color: white;">
+    <h1>VIT (Vellore Institute of Tech) Reviews on Placements, Faculty & Facilities</h1>
+  </header>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab-button active" onclick="showTab('college')">College Info</button>
+    <button class="tab-button" onclick="showTab('courses')">Courses</button>
+        <button class="tab-button" onclick="showTab('fees')">Fees</button>
+      <button class="tab-button" onclick="showTab('admissions')">Admissions</button>
+          <button class="tab-button" onclick="showTab('placements')">Placements</button>
+    <button class="tab-button" onclick="showTab('Cut-offs')">Cut-offs</button>
+    <button class="tab-button" onclick="showTab('Ranking')">Ranking</button>
+    <button class="tab-button" onclick="showTab('Galllery')">Galllery</button>
+    <button class="tab-button" onclick="showTab('campus')">Hostel & Campus</button>
+    <button class="tab-button" onclick="showTab('faculty')">Faculty</button>
+    <button class="tab-button" onclick="showTab('scholorships')">Scholorships</button>
+    <button class="tab-button" onclick="showTab('reviews')">Reviews</button>
+  </div>
+
+  <!-- Tab Content -->
+  <div id="college " class="tab-content active">
+    <h2>College Info</h2>
+    <p>IIT Madras, located in Chennai, is one of India's premier institutes...</p>
+  </div>
+
+  <div id="courses" class="tab-content">
+    <h2>Courses</h2>
+    <p>Courses offered include B.Tech, M.Tech, PhD in various disciplines...</p>
+  </div>
+<div id="admissions" class="tab-content">
+    <h2>Admissions</h2>
+    <p>Beautiful green campus with hostels like Sharavati, Godavari, Jamuna...</p>
+  </div>
+  <div id="fees" class="tab-content">
+    <h2>Fees</h2>
+    <p>The tuition fee for B.Tech is approx ₹2,00,000 per year (subject to change)...</p>
+  </div>
+
+  <div id="placements" class="tab-content">
+    <h2>Placements</h2>
+    <p>Top companies like Google, Microsoft, Goldman Sachs recruit from here...</p>
+  </div>
+
+  <div id="Cut-offs" class="tab-content">
+    <h2>Cut-offs</h2>
+    <p>Beautiful green campus with hostels like Sharavati, Godavari, Jamuna...</p>
+  </div>
+  <div id="Ranking" class="tab-content">
+    <h2>Ranking</h2>
+    <p>Beautiful green campus with hostels like Sharavati, Godavari, Jamuna...</p>
+  </div>
+ 
+  
+<div id="Galllery" class="tab-content">
+    <h2>Galllery</h2>
+    <p>Beautiful green campus with hostels like Sharavati, Godavari, Jamuna...</p>
+  </div>
+  <div id="campus" class="tab-content">
+    <h2>Hostel & Campus</h2>
+    <p>Beautiful green campus with hostels like Sharavati, Godavari, Jamuna...</p>
+  </div>
+   <div id="faculty" class="tab-content">
+    <h2>Faculty</h2>
+    <p>Highly qualified professors, many with PhDs from top global universities...</p>
+  </div>
+
+  <div id="scholorships" class="tab-content">
+    <h2>Scholorships</h2>
+    <p>Beautiful green campus with hostels like Sharavati, Godavari, Jamuna...</p>
+  </div>
+  
+  <div id="reviews " class="tab-content">
+    <h2>Reviews</h2>
+    <p>Beautiful green campus with hostels like Sharavati, Godavari, Jamuna...</p>
+  </div>
+  <script>
+    function showTab(id) {
+      const buttons = document.querySelectorAll(".tab-button");
+      const contents = document.querySelectorAll(".tab-content");
+
+      buttons.forEach(btn => btn.classList.remove("active"));
+      contents.forEach(tab => tab.classList.remove("active"));
+
+      document.querySelector(`#${id}`).classList.add("active");
+      event.target.classList.add("active");
+    }
+  </script>
+
+</body>
+</html>

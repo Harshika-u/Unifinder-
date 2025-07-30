@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GITAM School of Medical Sciences – UniFinder</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- 1) HERO BANNER -->
+  <section
+    class="rounded-lg shadow-lg p-12 mb-8"
+    style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy9WehVoPj8-ew7qlaUOu4rwPKMRQfsXAk3A&s'); background-size: cover; background-position: center;"
+  >
+    <div
+      class="flex flex-col md:flex-row items-center max-w-4xl mx-auto bg-black bg-opacity-50 p-8 rounded-lg"
+    >
+      <img
+        src="data:image/jpeg;base64,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"
+        alt="Logo"
+        class="w-24 h-24 rounded-full mb-4 md:mb-0 md:mr-6 shadow-lg bg-white p-2"
+      />
+      <div class="text-white">
+        <h1 class="text-4xl font-extrabold mb-2">GITAM School of Medical Sciences</h1>
+        <p class="text-lg">🏆 Premier Medical Education Institution in Andhra Pradesh</p>
+      </div>
+    </div>
+  </section>
+  <div class="max-w-6xl mx-auto p-4">
+    <h1 class="text-4xl font-bold text-center mb-6">
+      GITAM School of Medical Sciences
+    </h1>
+    <!-- Tabs Navigation -->
+    <div class="flex space-x-4 border-b mb-6" id="tabs">
+      <button class="tab-button active-tab" data-tab="Collegeinfo">🎓College Info</button>
+      <button class="tab-button " data-tab="courses">🎓 Courses</button>
+      <button class="tab-button" data-tab="admissions">📝 Admissions</button>
+      <button class="tab-button" data-tab="fees">💰 Fees</button>
+      <button class="tab-button" data-tab="campus">🏕️ Campus Life</button>
+      <button class="tab-button" data-tab="placements">💼 Placements</button>
+      <button class="tab-button" data-tab="Gallery">🌐 Gallery</button>
+      <button class="tab-button" data-tab="alumni">🌐 Alumni</button>
+      <button class="tab-button" data-tab="Student Talks">🎓 Student Talks</button>
+    </div>
+    <!-- Tab Content -->
+    <div id="tab-content">
+      <!-- Collage info Pane -->
+       <div id="Collegeinfo" class="tab-pane block">
+        <h2 class="text-2xl font-semibold mb-2">🎓  Information – GITAM School of Medical Sciences</h2>
+        <!--  collage info content -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Full Name: </h3><p class="text-rose-700 text-xl font-semibold">GITAM School of Medical Sciences</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Established: </h3><p class="text-rose-700 text-xl font-semibold">2015</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+     <h3 class="font-bold text-xl">Type:</h3><p class="text-rose-700 text-xl font-semibold">Private Medical College</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+     <h3 class="font-bold text-xl">Location:</h3><p class="text-rose-700 text-xl font-semibold">Visakhapatnam, Andhra Pradesh, India</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Affiliation: </h3><p class="text-rose-700 text-xl font-semibold">GITAM (Deemed to be University)</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Approval: </h3><p class="text-rose-700 text-xl font-semibold">Medical Council of India (MCI)</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Accreditation:  </h3><p class="text-rose-700 text-xl font-semibold">National Medical Commission (NMC)</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Campus Size: </h3><p class="text-rose-700 text-xl font-semibold">100 acres</p>
+    </div>
+  </div>
+  <!--  Content Card 1 -->
+<div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+ <!-- Enhanced Content Card added to College Info -->
+        <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+<h3 class="text-2xl font-bold mb-4">About GITAM School of Medical Sciences </h3>
+             
+           
+            <p class="mb-4 leading-relaxed">
+GITAM School of Medical Sciences is a constituent college of GITAM (Deemed to be University), established in 2015. Located in the beautiful city of Visakhapatnam, Andhra Pradesh, the institution is dedicated to providing quality medical education and healthcare services to the nation. The medical college is attached to a 750-bed teaching hospital that provides comprehensive healthcare services to the community and serves as a training ground for medical students.</p>
+                     <!-- Diagonal Overlays -->
+          </div></div>
+        </div>
+                <!-- Enhanced Content Card-2 added to College Info -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Vision and Mission</h3>
+             
+             
+<div>
+<p><strong>Vision:</strong> To be a globally recognized institution of excellence in medical education, research, and healthcare services.</p>
+<p><strong>Mission:</strong> To produce competent, compassionate, and ethical healthcare professionals who will serve the community with dedication and contribute to the advancement of medical science through research and innovation.</p> </div>
+          
+             
+              
+           
+             
+          </div>
+        </div></div>
+      
+      <!-- Enhanced Content Card-3 added to College Info -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Key Features</h3>
+<ul class="list-disc ml-6 mb-4">
+  <li>State-of-the-art infrastructure with modern laboratories and classrooms
+</li>
+  <li>750-bed multi-specialty teaching hospital with advanced medical facilities
+</li>
+ <li>Highly qualified and experienced faculty members
+</li>
+ <li>Emphasis on research and innovation in medical sciences
+</li>
+ <li>Comprehensive curriculum with integrated teaching methodology
+</li>
+ <li>Focus on community healthcare and outreach programs
+</li>
+ <li>Modern hostel facilities with all amenities
+</li>
+ <li>Sports and extracurricular activities for overall development
+</li>
+</ul>        
+             
+             
+          
+</div>  </div>
+      </div>
+ </div> </div>
+      <div id="courses" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-2">🎓 Courses Offered </h2>
+        <!-- your courses content -->
+         
+     
+        <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            
+            <p class="mb-4 leading-relaxed">
+GITAM School of Medical Sciences offers a range of undergraduate and postgraduate medical programs designed to meet the evolving needs of the healthcare sector. The curriculum is designed to provide a strong foundation in medical sciences along with practical clinical training. </p>
+<h3 class="text-2xl font-bold mb-4">UNDERGRADUATE PROGRAMS
+</h3>
+           
+            <p class="mb-4 leading-relaxed">
+The undergraduate programs at GITAM School of Medical Sciences focus on building a strong foundation in medical sciences and developing clinical skills. The flagship program is the MBBS course, which is approved by the National Medical Commission (NMC).</p>
+<h4 class="text-2xl font-bold mb-4">Bachelor of Medicine and Bachelor of Surgery (MBBS) :</h4>
+<p>The MBBS program at GITAM School of Medical Sciences is a 5.5-year course including a one-year compulsory rotating internship. The program follows the curriculum prescribed by the National Medical Commission (NMC) and is designed to produce competent medical professionals.
+</p>
+<!-- Table for MBBS Course Details -->
+<table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Attribute</th>
+      <th class="py-3 px-4">Details</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Duration</td>
+      <td class="py-3 px-4">5.5 years (4.5 years academics + 1 year internship)</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Intake Capacity</td>
+      <td class="py-3 px-4">150 seats per year</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Eligibility</td>
+      <td class="py-3 px-4">10+2 with Physics, Chemistry, Biology, and English</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Admission Process</td>
+      <td class="py-3 px-4">Based on NEET UG score</td>
+    </tr>
+    <tr>
+      <td class="py-3 px-4 font-semibold">Curriculum</td>
+      <td class="py-3 px-4">As per NMC guidelines with integrated teaching approach</td>
+    </tr>
+  </tbody>
+</table>
+            <p>The MBBS curriculum is divided into three phases:</p>
+            <ul class="list-disc ml-6 mb-4">
+              <li><strong>Phase I (Pre-Clinical):</strong> Anatomy, Physiology, and Biochemistry</li>
+              <li><strong>Phase II (Para-Clinical):</strong> Pathology, Pharmacology, Microbiology, Forensic Medicine, and Community Medicine</li>
+              <li><strong>Phase III (Clinical):</strong> Medicine and allied specialties, Surgery and allied specialties, Obstetrics & Gynecology, Pediatrics, and other clinical subjects</li>
+            </ul>
+          </div>
+        </div>
+    <!-- Enhanced Content Card-2 added to  -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">B.Sc Nursing Program
+</h3>
+      <p>The B.Sc Nursing program at GITAM School of Medical Sciences is a 4-year undergraduate program designed to prepare students to become competent nursing professionals. The program combines theoretical knowledge with extensive practical training.</p>
+<h4 class="text-2xl font-bold mb-4">B.Sc Nursing Course Details:</h4>
+<table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Attribute</th>
+      <th class="py-3 px-4">Details</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Duration</td>
+      <td class="py-3 px-4">4 years</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Intake Capacity</td>
+      <td class="py-3 px-4">60 seats per year</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Eligibility</td>
+      <td class="py-3 px-4">10+2 with Physics, Chemistry, Biology, and English</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Admission Process</td>
+      <td class="py-3 px-4">Based on merit in qualifying examination and entrance test</td>
+    </tr>
+    <tr>
+      <td class="py-3 px-4 font-semibold">Curriculum</td>
+      <td class="py-3 px-4">As per Indian Nursing Council guidelines</td>
+    </tr>
+  </tbody>
+</table>
+   </div>   </div></div>
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">POSTGRADUATE PROGRAMS
+</h3>  <p>GITAM School of Medical Sciences offers various postgraduate medical programs in different specialties. These programs are designed to provide advanced knowledge and skills in specific medical disciplines.</p></div>
+         <h4 class="text-2xl font-bold mb-4">MD/MS Programs
+</h4><table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Program</th>
+      <th class="py-3 px-4">Duration</th>
+      <th class="py-3 px-4">Specialties Available</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Doctor of Medicine (MD)</td>
+      <td class="py-3 px-4">3 years</td>
+      <td class="py-3 px-4">Anatomy, Physiology, Biochemistry, Pharmacology, Pathology, Microbiology, Forensic Medicine, Community Medicine, General Medicine, Pediatrics, Dermatology, Psychiatry, Radio-diagnosis, Anesthesiology</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Master of Surgery (MS)</td>
+      <td class="py-3 px-4">3 years</td>
+      <td class="py-3 px-4">General Surgery, Orthopedics, Ophthalmology, Otorhinolaryngology (ENT)</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Master of Dental Surgery (MDS)</td>
+      <td class="py-3 px-4">3 years</td>
+      <td class="py-3 px-4">Various dental specialties</td>
+    </tr>
+  </tbody>
+</table>
+          <h4 class="text-2xl font-bold mb-4">Super Specialty Programs (DM/MCh)
+</h4>
+           <table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Program</th>
+      <th class="py-3 px-4">Duration</th>
+      <th class="py-3 px-4">Specialties Available</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Doctorate of Medicine (DM)</td>
+      <td class="py-3 px-4">3 years</td>
+      <td class="py-3 px-4">Cardiology, Neurology, Nephrology, Gastroenterology, Endocrinology</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Master of Chirurgiae (MCh)</td>
+      <td class="py-3 px-4">3 years</td>
+      <td class="py-3 px-4">Cardiothoracic Surgery, Neurosurgery, Urology, Plastic Surgery, Pediatric Surgery</td>
+    </tr>
+  </tbody>
+</table>
+<h4 class="text-2xl font-bold mb-4">Postgraduate Nursing Programs
+</h4>
+           <table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Program</th>
+      <th class="py-3 px-4">Duration</th>
+      <th class="py-3 px-4">Specialties Available</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">M.Sc Nursing</td>
+      <td class="py-3 px-4">2 years</td>
+      <td class="py-3 px-4">Medical-Surgical Nursing, Pediatric Nursing, Obstetrics & Gynecology Nursing, Community Health Nursing, Psychiatric Nursing</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Post Basic B.Sc Nursing</td>
+      <td class="py-3 px-4">2 years</td>
+      <td class="py-3 px-4">General Nursing</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+      </div>
+<!-- Admissions Pane -->
+<div id="admissions" class="tab-pane hidden px-4 py-6">
+  <h2 class="text-3xl font-bold text-indigo-700 mb-6">📝 Admissions – GITAM School of Medical Sciences</h2>
+  <!-- Timeline CSS -->
+  <style>
+    .timeline-container {
+      position: relative;
+      margin: 2rem auto;
+      padding: 2rem 0;
+      max-width: 1100px;
+    }
+    .timeline-line {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(to bottom, #6366f1, #9333ea);
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+    .timeline-item {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+    .timeline-item-left,
+    .timeline-item-right {
+      width: 47%;
+      background-color: #f9fafb;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      z-index: 1;
+      transition: transform 0.3s ease;
+    }
+    .timeline-item-left:hover,
+    .timeline-item-right:hover {
+      transform: scale(1.03);
+    }
+    .timeline-circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: linear-gradient(to bottom right, #4f46e5, #7c3aed);
+      border-radius: 9999px;
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: white;
+      z-index: 2;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    @media (max-width: 768px) {
+      .timeline-item-left,
+      .timeline-item-right {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+      .timeline-circle {
+        top: -1.5rem;
+        left: 5%;
+        transform: none;
+      }
+    }
+  </style>
+  <!-- Timeline Content -->
+  <section class="timeline-container">
+    <div class="timeline-line"></div>
+    <div class="timeline-item">
+      <div class="timeline-item-left">
+        <h3 class="text-xl font-bold text-blue-700 mb-2">1. Appear for NEET UG (For MBBS)</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Conducted by NTA (National Testing Agency)</li>
+          <li>Mandatory for admission to MBBS program</li>
+          <li>Subjects: Physics, Chemistry, Biology, English</li>
+          <li>Qualifying marks required as per NMC guidelines</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">1</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-right ml-auto">
+        <h3 class="text-xl font-bold text-purple-700 mb-2">2. Qualify NEET UG with Required Score</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>General category: 50th percentile</li>
+          <li>SC/ST/OBC: 40th percentile</li>
+          <li>General-PH: 45th percentile</li>
+          <li>SC/ST/OBC-PH: 40th percentile</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">2</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-left">
+        <h3 class="text-xl font-bold text-green-700 mb-2">3. Register for GITAM Medical Counseling</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Visit <a href="https://www.gitam.edu" target="_blank" class="text-blue-600 underline">www.gitam.edu</a></li>
+          <li>Fill the online application form</li>
+          <li>Pay the application fee</li>
+          <li>Upload required documents</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">3</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-right ml-auto">
+        <h3 class="text-xl font-bold text-pink-700 mb-2">4. Document Verification and Counseling</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Attend the counseling session as per schedule</li>
+          <li>Seat allotment based on:
+            <ul class="list-disc ml-6">
+              <li>NEET UG rank</li>
+              <li>Category (UR/OBC/SC/ST/EWS)</li>
+              <li>Availability of seats</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="timeline-circle">4</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-left">
+        <h3 class="text-xl font-bold text-red-600 mb-2">5. Seat Allotment & Fee Payment</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>If allotted a seat:
+            <ul class="list-disc ml-6">
+              <li>Download the allotment letter</li>
+              <li>Pay the admission fee</li>
+              <li>Report to the institution as per schedule</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="timeline-circle">5</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-right ml-auto">
+        <h3 class="text-xl font-bold text-yellow-700 mb-2">6. Final Admission & Document Verification</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Submit original documents:
+            <ul class="list-disc ml-6">
+              <li>NEET UG Admit Card & Scorecard</li>
+              <li>Class 10 & 12 Mark Sheets</li>
+              <li>Transfer Certificate</li>
+              <li>Migration Certificate</li>
+              <li>Category Certificate (if applicable)</li>
+              <li>Passport-sized photographs</li>
+              <li>Government-issued ID proof (Aadhaar/Passport)</li>
+            </ul>
+          </li>
+          <li>Complete the admission formalities</li>
+          <li>Pay the remaining tuition fee</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">6</div>
+    </div>
+  </section>
+  
+  <!-- Additional Information -->
+  <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden mt-8">
+    <!-- Diagonal Overlays -->
+    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+    <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+    
+    <!-- Accent Bar -->
+    <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+    <div class="relative">
+      <h3 class="text-2xl font-bold mb-4">Admission for Other Programs</h3>
+      <p class="mb-4 leading-relaxed">
+        For B.Sc Nursing and other paramedical programs, admissions are based on merit in the qualifying examination and/or entrance test conducted by GITAM University. Candidates must register through the university's admission portal and follow the specified process.
+      </p>
+      <p class="mb-4 leading-relaxed">
+        For postgraduate medical programs (MD/MS/DM/MCh), candidates must qualify NEET PG/NEET SS and participate in the counseling process conducted by GITAM University.
+      </p>
+    </div>
+  </div>
+</div>
+      <!-- Fees Pane -->
+      <div id="fees" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-2">💵 Academic Fees (2025-26)</h2>
+       <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+  <!-- Diagonal Overlays -->
+  <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+  <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+  
+  <!-- Accent Bar -->
+  <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+  <div class="relative">
+    <h2 class="text-2xl font-bold text-indigo-700 mb-4">💰 GITAM School of Medical Sciences Fee Structure</h2>
+    <p class="mb-4 leading-relaxed text-gray-700">
+      GITAM School of Medical Sciences offers various medical and healthcare programs at competitive fees. The fee structure is designed to provide value for money while maintaining high standards of education and infrastructure.
+    </p>
+    <!-- Fees Table -->
+    <div class="overflow-x-auto mt-6">
+      <table class="min-w-full text-sm border border-gray-300">
+        <thead class="bg-indigo-100 text-indigo-800">
+          <tr>
+            <th class="text-left px-4 py-2 border border-gray-300">Program</th>
+            <th class="text-left px-4 py-2 border border-gray-300">Duration</th>
+            <th class="text-left px-4 py-2 border border-gray-300">Annual Fees (Approx.)</th>
+            <th class="text-left px-4 py-2 border border-gray-300">Other Fees (Approx.)</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-800">
+          <tr class="bg-white">
+            <td class="px-4 py-2 border border-gray-300">MBBS</td>
+            <td class="px-4 py-2 border border-gray-300">5.5 years</td>
+            <td class="px-4 py-2 border border-gray-300">INR 11,50,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 25,000</td>
+          </tr>
+          <tr class="bg-gray-50">
+            <td class="px-4 py-2 border border-gray-300">B.Sc Nursing</td>
+            <td class="px-4 py-2 border border-gray-300">4 years</td>
+            <td class="px-4 py-2 border border-gray-300">INR 1,20,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 15,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-2 border border-gray-300">MD/MS</td>
+            <td class="px-4 py-2 border border-gray-300">3 years</td>
+            <td class="px-4 py-2 border border-gray-300">INR 15,00,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 30,000</td>
+          </tr>
+          <tr class="bg-gray-50">
+            <td class="px-4 py-2 border border-gray-300">DM/MCh</td>
+            <td class="px-4 py-2 border border-gray-300">3 years</td>
+            <td class="px-4 py-2 border border-gray-300">INR 20,00,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 35,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-2 border border-gray-300">M.Sc Nursing</td>
+            <td class="px-4 py-2 border border-gray-300">2 years</td>
+            <td class="px-4 py-2 border border-gray-300">INR 1,50,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 20,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <h3 class="text-xl font-bold mt-6 mb-3">Hostel Fees (Per Annum)</h3>
+    <div class="overflow-x-auto">
+      <table class="min-w-full text-sm border border-gray-300">
+        <thead class="bg-indigo-100 text-indigo-800">
+          <tr>
+            <th class="text-left px-4 py-2 border border-gray-300">Type of Accommodation</th>
+            <th class="text-left px-4 py-2 border border-gray-300">Annual Fees (Approx.)</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-800">
+          <tr class="bg-white">
+            <td class="px-4 py-2 border border-gray-300">AC Room (Single Occupancy)</td>
+            <td class="px-4 py-2 border border-gray-300">INR 1,20,000</td>
+          </tr>
+          <tr class="bg-gray-50">
+            <td class="px-4 py-2 border border-gray-300">AC Room (Double Occupancy)</td>
+            <td class="px-4 py-2 border border-gray-300">INR 80,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-2 border border-gray-300">Non-AC Room (Single Occupancy)</td>
+            <td class="px-4 py-2 border border-gray-300">INR 60,000</td>
+          </tr>
+          <tr class="bg-gray-50">
+            <td class="px-4 py-2 border border-gray-300">Non-AC Room (Double Occupancy)</td>
+            <td class="px-4 py-2 border border-gray-300">INR 40,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <p class="mt-4 text-sm text-gray-600">
+      Note: The fees mentioned above are approximate and subject to change. Please check the official website for the latest fee structure.
+    </p>
+  </div>
+</div>
+      </div>
+     <!-- Campus Life Pane -->
+      <div id="campus" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-4">🏕️ Campus Life</h2>
+        <!-- Enhanced Content Card added to Campus Life -->
+        <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+           
+            <p class="mb-4 leading-relaxed">
+GITAM School of Medical Sciences offers a vibrant campus life that promotes academic excellence, personal growth, and holistic development. The campus is spread over 100 acres and provides state-of-the-art facilities for students to pursue their medical education in a conducive environment.</p>
+          
+          </div>
+        </div>
+                <!-- Enhanced Content Card-2 added to Campus Life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Infrastructure and Facilities</h3>
+             
+             
+<div>
+<p>The campus boasts modern infrastructure with well-equipped lecture halls, laboratories, and libraries. The lecture halls are designed to facilitate interactive learning with audio-visual aids. The laboratories are equipped with the latest equipment and technology to provide hands-on training to students.</p>
+<p>The central library houses an extensive collection of medical books, journals, and digital resources. It provides a quiet and conducive environment for study and research. The campus also has high-speed internet connectivity throughout, enabling students to access online resources easily.</p> </div>
+          
+              
+              
+             
+         
+        </div>   </div>
+      </div>
+            <!-- Enhanced Content Card-3 added to Campus Life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Hostel Life</h3>
+             
+             
+<div>
+<p>GITAM School of Medical Sciences provides comfortable and secure hostel facilities for students. The hostels are separate for boys and girls and offer various accommodation options including AC and non-AC rooms with single or double occupancy. Each hostel has common rooms, recreation areas, and round-the-clock security.</p>
+<p>The hostel mess provides nutritious and hygienic food catering to diverse tastes. The campus also has cafeterias and food courts that offer a variety of cuisines. The hostel environment promotes camaraderie among students and provides a home away from home.</p> </div>
+          
+              
+              
+             
+         
+        </div>   </div>
+      </div>
+                  <!-- Enhanced Content Card-2 added to Campus Life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Sports and Extracurricular Activities</h3>
+             
+             
+<div>
+<p>The campus encourages students to participate in sports and extracurricular activities for their overall development. It has facilities for various indoor and outdoor games including cricket, football, basketball, volleyball, badminton, and table tennis. The college organizes annual sports meets and tournaments to promote sportsmanship and physical fitness.</p>
+<p>Cultural activities are an integral part of campus life at GITAM School of Medical Sciences. The college celebrates various festivals and organizes cultural events throughout the year. Students can join various clubs and societies based on their interests such as music, dance, drama, literature, and fine arts.</p> </div>
+          
+              
+              
+             
+         
+        </div>   </div>
+      </div>
+       <!-- Enhanced Content Card-2 added to Campus Life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Healthcare and Wellness</h3>
+             
+             
+<div>
+<p>The institute has a dedicated healthcare center on campus to provide medical care to students. Regular health check-ups are conducted, and counseling services are available for students' mental and emotional well-being. The campus also has a gymnasium and yoga center to promote physical fitness and stress management.</p>
+<p>The attached teaching hospital provides students with opportunities for clinical training and exposure to real-life medical scenarios. Students can also participate in community health programs and outreach activities organized by the institute, helping them develop empathy and social responsibility.</p> </div>
+          
+              
+              
+             
+         
+        </div>   </div>
+      </div>
+</div>
+     
+      <!-- Placements Pane -->
+      <div id="placements" class="tab-pane hidden">
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+           
+             
+  <h3 class="text-xl font-semibold mb-4 text-gray-800">GITAM School of Medical Sciences Placements</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <p>GITAM School of Medical Sciences has a dedicated placement cell that assists students in securing employment opportunities after completion of their courses. The institute has a strong track record of placements with students being recruited by reputed hospitals, healthcare organizations, and research institutions.</p>
+<table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Program</th>
+      <th class="py-3 px-4">Placement Rate</th>
+      <th class="py-3 px-4">Average Starting Package</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">MBBS</td>
+      <td class="py-3 px-4">95%</td>
+      <td class="py-3 px-4">INR 8-12 LPA</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">B.Sc Nursing</td>
+      <td class="py-3 px-4">90%</td>
+      <td class="py-3 px-4">INR 3-5 LPA</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">MD/MS</td>
+      <td class="py-3 px-4">98%</td>
+      <td class="py-3 px-4">INR 15-25 LPA</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">DM/MCh</td>
+      <td class="py-3 px-4">100%</td>
+      <td class="py-3 px-4">INR 25-40 LPA</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">M.Sc Nursing</td>
+      <td class="py-3 px-4">92%</td>
+      <td class="py-3 px-4">INR 5-8 LPA</td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+</div></div>
+   <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+              <h3 class="text-xl font-semibold mb-4 text-gray-800">Career Opportunities</h3>
+<p>Graduates from GITAM School of Medical Sciences have diverse career opportunities in various sectors of healthcare. The institute's strong academic foundation and practical training prepare students for successful careers in medicine, research, and healthcare administration.</p>
+<h4 class="text-lg font-semibold mt-4 mb-2">Career Paths for MBBS Graduates:</h4>
+<ul class="list-disc ml-6 mb-4">
+  <li>Practice as General Physicians in private or government hospitals</li>
+  <li>Pursue postgraduate specialization (MD/MS)</li>
+  <li>Join Armed Forces Medical Services</li>
+  <li>Work in healthcare administration and management</li>
+  <li>Engage in medical research and academics</li>
+  <li>Join public health organizations and NGOs</li>
+</ul>
+
+<h4 class="text-lg font-semibold mt-4 mb-2">Career Paths for Nursing Graduates:</h4>
+<ul class="list-disc ml-6 mb-4">
+  <li>Clinical Nurse in hospitals and healthcare facilities</li>
+  <li>Nurse Educator in academic institutions</li>
+  <li>Specialized Nurse in critical care, oncology, pediatrics, etc.</li>
+  <li>Healthcare Administrator</li>
+  <li>Public Health Nurse in community health programs</li>
+</ul>
+
+<h4 class="text-lg font-semibold mt-4 mb-2">Top Recruiters:</h4>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
+  <div class="bg-gray-50 p-3 rounded-lg">
+    <p class="font-medium">Apollo Hospitals</p>
+  </div>
+  <div class="bg-gray-50 p-3 rounded-lg">
+    <p class="font-medium">Fortis Healthcare</p>
+  </div>
+  <div class="bg-gray-50 p-3 rounded-lg">
+    <p class="font-medium">Max Healthcare</p>
+  </div>
+  <div class="bg-gray-50 p-3 rounded-lg">
+    <p class="font-medium">AIIMS</p>
+  </div>
+  <div class="bg-gray-50 p-3 rounded-lg">
+    <p class="font-medium">Manipal Hospitals</p>
+  </div>
+  <div class="bg-gray-50 p-3 rounded-lg">
+    <p class="font-medium">CARE Hospitals</p>
+  </div>
+</div>
+              </div>
+      </div>
+    </div></div>
+              </div>
+      <!-- Gallery Pane -->
+      <div id="Gallery" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-2">Campus Gallery</h2>
+       <div class="p-6 bg-gray-100 rounded-xl">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+    
+    <!-- Image 1 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.gitam.edu/assets/images/medical-sciences-banner.jpg" 
+        
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+    <!-- Image 2 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.gitam.edu/assets/images/medical-college-building.jpg" 
+          
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+    <!-- Image 3 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.gitam.edu/assets/images/medical-hospital.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+    <!-- Image 4 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.gitam.edu/assets/images/medical-lab.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+<!-- Image 5 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.gitam.edu/assets/images/medical-library.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+<!-- Image 6 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.gitam.edu/assets/images/medical-hostel.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+<!-- Image 7 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.gitam.edu/assets/images/medical-campus.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+  </div>
+</div>
+      </div>
+    <!-- alumni Pane -->
+<div id="alumni" class="tab-pane hidden">
+  <!-- Alumni Table -->
+  <div class="max-w-6xl mx-auto p-4">
+    <section class="max-w-6xl mx-auto p-6">
+      <h2 class="text-3xl font-bold mb-6 text-center text-indigo-700">🎓 Notable Alumni – GITAM School of Medical Sciences</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-white">
+        <!-- Alumni Cards -->
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Ramesh Babu</h3>
+          <p class="text-gray-600 mt-1">Cardiologist, Apollo Hospitals</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Priya Sharma</h3>
+          <p class="text-gray-600 mt-1">Pediatrician, AIIMS Delhi</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Suresh Kumar</h3>
+          <p class="text-gray-600 mt-1">Neurosurgeon, NIMHANS</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Anjali Reddy</h3>
+          <p class="text-gray-600 mt-1">Gynecologist, Fortis Healthcare</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Rajesh Verma</h3>
+          <p class="text-gray-600 mt-1">Orthopedic Surgeon, Max Healthcare</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Meena Patel</h3>
+          <p class="text-gray-600 mt-1">Dermatologist, Private Practice</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Vikram Singh</h3>
+          <p class="text-gray-600 mt-1">Anesthesiologist, CARE Hospitals</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Nisha Gupta</h3>
+          <p class="text-gray-600 mt-1">Radiologist, Manipal Hospitals</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Arjun Rao</h3>
+          <p class="text-gray-600 mt-1">Psychiatrist, NIMHANS</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Kavita Menon</h3>
+          <p class="text-gray-600 mt-1">Pathologist, Apollo Diagnostics</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Sanjay Iyer</h3>
+          <p class="text-gray-600 mt-1">General Surgeon, Global Hospitals</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Deepa Nair</h3>
+          <p class="text-gray-600 mt-1">Ophthalmologist, L.V. Prasad Eye Institute</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+</div>
+      </div>
+    <div id="Student Talks" class="tab-pane hidden">
+  <h2 class="text-2xl font-semibold mb-2">🎓 Student Reviews</h2>
+  <section class="px-6 py-12 bg-white space-y-6">
+    <!-- Review 1 -->
+    <div style="background: white; padding: 20px; border-radius: 12px;">
+      <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+        <strong>Review 1: Excellent infrastructure and faculty.</strong>
+        <p>
+          <b>Placements:</b> The college provides good placement opportunities. After completing MBBS, most students get placed in reputed hospitals with good salary packages ranging from 8-12 LPA. The college also supports those who want to pursue higher studies.
+          <br><b>Infrastructure:</b> The infrastructure is top-notch with modern laboratories, well-equipped classrooms, and a huge library. The attached hospital provides excellent clinical exposure to students.
+          <br><b>Faculty:</b> The faculty members are highly qualified and experienced. They are supportive and always ready to help students. The teaching methodology is excellent with a good balance of theory and practical sessions.
+          <br><b>Other:</b> The campus life is vibrant with various cultural and sports activities. The hostel facilities are good with all necessary amenities.
+        </p>
+      </div>
+    </div>
+    <!-- Review 2 -->
+    <div style="background: white; padding: 20px; border-radius: 12px;">
+      <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+        <strong>Review 2: Good college but expensive.</strong>
+        <p>
+          <b>Placements:</b> The placement cell is active and helps students secure good positions in reputed healthcare organizations. The average package for MBBS graduates is around 10 LPA.
+          <br><b>Infrastructure:</b> The college has excellent infrastructure with modern facilities. The laboratories are well-equipped, and the library has a vast collection of medical books and journals.
+          <br><b>Faculty:</b> The faculty is knowledgeable and experienced. They use modern teaching methods and provide practical exposure to students.
+          <br><b>Other:</b> The only downside is the high fee structure. The college is quite expensive compared to other medical colleges in the region. However, the quality of education justifies the cost to some extent.
+        </p>
+      </div>
+    </div>
+    <!-- Review 3 -->
+    <div style="background: white; padding: 20px; border-radius: 12px;">
+      <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+        <strong>Review 3: Great learning experience.</strong>
+        <p>
+          <b>Placements:</b> The college has a good placement record. Most students get placed in reputed hospitals or pursue higher studies. The college also provides internship opportunities in its own hospital.
+          <br><b>Infrastructure:</b> The campus is beautiful with green surroundings. The classrooms are spacious and well-ventilated. The laboratories are equipped with the latest equipment.
+          <br><b>Faculty:</b> The faculty members are experts in their respective fields. They are approachable and provide guidance to students whenever needed. The curriculum is well-structured and updated regularly.
+          <br><b>Other:</b> The college organizes various seminars, workshops, and conferences to enhance the knowledge of students. The hostel life is enjoyable with good food and accommodation facilities.
+        </p>
+      </div>
+    </div>
+    <!-- Review 4 -->
+    <div style="background: white; padding: 20px; border-radius: 12px;">
+      <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+        <strong>Review 4: Good clinical exposure.</strong>
+        <p>
+          <b>Placements:</b> The college provides good placement opportunities. The attached hospital gives students excellent clinical exposure, which helps in securing good positions after graduation.
+          <br><b>Infrastructure:</b> The college has modern infrastructure with well-equipped laboratories and a huge library. The hospital attached to the college has all the modern facilities for patient care.
+          <br><b>Faculty:</b> The faculty members are experienced and knowledgeable. They focus on practical learning and provide hands-on training to students.
+          <br><b>Other:</b> The college encourages research activities and provides opportunities for students to participate in research projects. The campus life is good with various extracurricular activities.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+  <script>
+    const buttons = document.querySelectorAll('.tab-button');
+    const panes = document.querySelectorAll('.tab-pane');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active-tab'));
+        btn.classList.add('active-tab');
+        panes.forEach(p => p.classList.add('hidden'));
+        document.getElementById(btn.dataset.tab).classList.remove('hidden');
+      });
+    });
+  </script>
+  <style>
+    .tab-button { padding: .5rem 1rem; font-size: .875rem; font-weight: 500; color: #374151; border-bottom:2px solid transparent; transition: .2s; cursor: pointer; }
+    .tab-button:hover { color: #3b82f6; border-color: #3b82f6; }
+    .active-tab { border-color: #2563eb; color: #2563eb; }
+    .tab-pane { background: #fff; padding:1rem; border-radius:.5rem; box-shadow:0 1px 2px rgb(0 0 0 / .05); }
+  </style>
+</body>
+</html>

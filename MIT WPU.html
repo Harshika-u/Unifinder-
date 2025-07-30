@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MIT World Peace University (MIT-WPU) – UniFinder</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- 1) HERO BANNER -->
+  <section
+    class="rounded-lg shadow-lg p-12 mb-8"
+    style="background-image: url('https://admissionindia.co.in/wp-content/uploads/2023/01/MIT-WPU-1024x415.png'); background-size: cover; background-position: center;"
+  >
+    <div
+      class="flex flex-col md:flex-row items-center max-w-4xl mx-auto bg-black bg-opacity-50 p-8 rounded-lg"
+    >
+      <img
+        src="data:image/png;base64,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"
+        alt="Logo"
+        class="w-24 h-24 rounded-full mb-4 md:mb-0 md:mr-6 shadow-lg"
+      />
+      <div class="text-white">
+        <h1 class="text-4xl font-extrabold mb-2">MIT World Peace University (MIT-WPU)</h1>
+        <p class="text-lg">🏆 Ranked #1 in Engineering by NIRF 2024</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-6xl mx-auto p-4">
+    <h1 class="text-4xl font-bold text-center mb-6">
+      Shiv Nadar University
+    </h1>
+
+    <!-- Tabs Navigation -->
+    <div class="flex space-x-4 border-b mb-6" id="tabs">
+        <button class="tab-button active-tab" data-tab="Collegeinfo">🎓 College infomation</button>
+      <button class="tab-button " data-tab="courses">🎓 Courses</button>
+      <button class="tab-button" data-tab="admissions">📝 Admissions</button>
+      <button class="tab-button" data-tab="fees">💰 Fees</button>
+      <button class="tab-button" data-tab="campus">🏕️ Campus Life</button>
+      <button class="tab-button" data-tab="placements">💼 Placements</button>
+      <button class="tab-button" data-tab="Gallery">🌐Gallery</button>
+      <button class="tab-button" data-tab="alumni">🌐 Alumni</button>
+      <button class="tab-button" data-tab="Student Talks">🎓 Student Talks</button>
+    </div>
+
+    <!-- Tab Content -->
+    <div id="tab-content">
+      <!-- Collage info Pane -->
+       <div id="Collegeinfo" class="tab-pane block">
+        <h2 class="text-2xl font-semibold mb-2">🎓  Information – MIT World Peace University (MIT-WPU)  </h2>
+        <!--  collage info content -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Full Name: </h3><p class="text-rose-700 text-xl font-semibold"> Vishwanath Karad MIT World Peace University (MIT-WPU)</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Established: </h3><p class="text-rose-700 text-xl font-semibold">Originally founded as the Maharashtra Institute of Technology (MIT) in 1983; attained university status as MIT World Peace University in 2017.
+</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+     <h3 class="font-bold text-xl">Type:</h3><p class="text-rose-700 text-xl font-semibold">Private University, multidisciplinary with a focus on technical, professional, management, arts, law, science, and peace studies.</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+     <h3 class="font-bold text-xl">Location:</h3><p class="text-rose-700 text-xl font-semibold">Kothrud, Pune, Maharashtra, India.
+</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Motto: </h3><p class="text-rose-700 text-xl font-semibold"> “Union of Science and Spirituality will alone bring Harmony and Peace to Humanity”.
+</p>
+    </div>	
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Status: </h3><p class="text-rose-700 text-xl font-semibold"> Private, Autonomous University recognized by the Government of Maharashtra under University Act No. XXXV 2017; affiliated with the University Grants Commission (UGC).
+</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Accreditation:  </h3><p class="text-rose-700 text-xl font-semibold"> <ul class="list-disc ml-6 mb-4">
+ <li> <strong>		National Assessment and Accreditation Council (NAAC) Grade A</strong>
+</li>
+<li> <strong>		Approved by All India Council for Technical Education (AICTE)</strong>
+</li><li> <strong>National Board of Accreditation (NBA) (for various technical courses)</strong>
+</li>
+<li> <strong>	Recognized by UGC</strong>
+</li>
+</ul>
+</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Campus Size: </h3><p class="text-rose-700 text-xl font-semibold">more than 100 acres
+</p>
+    </div>
+  </div>
+  <!--  Content Card 1 -->
+<div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px">
+ <!-- Enhanced Content Card added to College Info -->
+        <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+
+          <div class="relative">
+<h3 class="text-2xl font-bold mb-4">Basic Information </h3>
+             
+
+           
+            <p class="mb-4 leading-relaxed">
+MIT World Peace University,(MIT-WPU) is a private university located in Kothrud, Pune, India.It is a part of the MIT Group of Institutions.It is officially named Vishwanath Karad MIT World Peace University. It was established under the Government of Maharashtra Act No. XXXV 2017 and recognized by the University Grants Commission
+          </div></div>
+        </div>
+                <!-- Enhanced Content Card-2 added to College Info -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">History</h3>
+             
+             
+<div>
+<p> MIT World Peace University traces its origins to the visionary efforts of Dr. Vishwanath Karad, who founded the Maharashtra Institute of Technology in 1983 under the Maharashtra Academy of Engineering and Educational Research (MAEER). MIT was among the pioneers in private engineering education in Maharashtra. Over the years, the institution expanded by establishing various colleges in engineering, medical, management, arts, commerce, and peace studies. A significant transformation occurred in 2017, when MIT was granted private university status, evolving into MIT World Peace University (MIT-WPU). Today, it stands as a comprehensive, globally recognized university committed to holistic development, innovation, and world peace.</p> </div>
+          
+             
+              
+              <img src=" https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/MIT-WPU-1.tif/lossless-page1-250px-MIT-WPU-1.tif.png" alt="pes college " style="width:100%; max-width:600px; margin-top:10px; border-radius:10px;">
+
+              
+        </div></div></div>
+      
+      <!-- Enhanced Content Card-3 added to College Info -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Why to choose MIT-WPU?</h3>
+             
+             
+<div>
+<p>Choosing MIT-WPU as your higher education destination in Pune is a smart move. Renowned as one of the best colleges in Pune, MIT-WPU stands out for its exceptional academic programme and industry-aligned curriculum. Unlike many Indian universities that heavily rely on JEE mains scores, MIT-WPU offers a variety of entrance exams and admission requirements, making it accessible to a diverse range of students. Whether or not you've aced the JEE mains, MIT-WPU allows talented individuals to thrive. With its stellar reputation, cutting-edge facilities, and commitment to student success, MIT-WPU is the ideal choice for aspiring engineers. </p>
+
+                        
+             
+
+
+</div>
+
+      </div>
+ </div> </div></div>
+      <div id="courses" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-2">🎓 Courses Offered </h2>
+        <!-- your courses content -->
+         
+     
+        <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+
+          <div class="relative">
+
+           
+<section class="max-w-7xl mx-auto px-4 py-10">
+  
+  <div class="overflow-x-auto p-4">
+  <table class="min-w-full border border-gray-300 text-sm text-left">
+    <thead class="bg-gray-100">
+      <tr>
+        <th class="px-4 py-2 border">Courses</th>
+        <th class="px-4 py-2 border">Tuition Fees</th>
+        <th class="px-4 py-2 border">Eligibility</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y">
+      <tr><td class="px-4 py-2">B.E. / B.Tech (44 courses)</td><td class="px-4 py-2">7.2 L - 17 L</td><td class="px-4 py-2">10+2: 50%, Exams: JEE Main, MHT CET</td></tr>
+      <tr><td class="px-4 py-2">MBA/PGDM (12 courses)</td><td class="px-4 py-2">9.4 L - 16.3 L</td><td class="px-4 py-2">10+2: 50-60%, Graduation: 60%, Exams: MAT, XAT</td></tr>
+      <tr><td class="px-4 py-2">M.Sc. (16 courses)</td><td class="px-4 py-2">1.4 L - 6.8 L</td><td class="px-4 py-2">10+2: 50%, Graduation: 50%</td></tr>
+      <tr><td class="px-4 py-2">BBA (14 courses)</td><td class="px-4 py-2">7 L - 16.3 L</td><td class="px-4 py-2">10+2: 50%</td></tr>
+      <tr><td class="px-4 py-2">B.Sc. (7 courses)</td><td class="px-4 py-2">2.5 L - 6.8 L</td><td class="px-4 py-2">10+2: 50%</td></tr>
+      <tr><td class="px-4 py-2">MCA (1 course)</td><td class="px-4 py-2">4.8 L</td><td class="px-4 py-2">Graduation: 60%</td></tr>
+      <tr><td class="px-4 py-2">Diploma (7 courses)</td><td class="px-4 py-2">1.3 L - 11.7 L</td><td class="px-4 py-2">10th</td></tr>
+      <tr><td class="px-4 py-2">M.E./M.Tech (15 courses)</td><td class="px-4 py-2">3.9 L - 9.1 L</td><td class="px-4 py-2">Graduation: 50%</td></tr>
+      <tr><td class="px-4 py-2">BCA (1 course)</td><td class="px-4 py-2">5.4 L</td><td class="px-4 py-2">10+2: 50%</td></tr>
+      <tr><td class="px-4 py-2">B.Com (5 courses)</td><td class="px-4 py-2">2.5 L - 4.3 L</td><td class="px-4 py-2">10+2: 50%</td></tr>
+      <tr><td class="px-4 py-2">B.A. (9 courses)</td><td class="px-4 py-2">3.5 L - 10.7 L</td><td class="px-4 py-2">10+2: 50%</td></tr>
+      <tr><td class="px-4 py-2">B.Pharma (2 courses)</td><td class="px-4 py-2">7 L - 9.4 L</td><td class="px-4 py-2">10+2: 50%</td></tr>
+      <tr><td class="px-4 py-2">M.A. (7 courses)</td><td class="px-4 py-2">1.3 L - 6.5 L</td><td class="px-4 py-2">Graduation: 50-55%</td></tr>
+      <tr><td class="px-4 py-2">B.Des (6 courses)</td><td class="px-4 py-2">17 L</td><td class="px-4 py-2">10+2: 50%</td></tr>
+      <tr><td class="px-4 py-2">PG Diploma (2 courses)</td><td class="px-4 py-2">1.1 L - 1.3 L</td><td class="px-4 py-2">Graduation: 50%</td></tr>
+      <tr><td class="px-4 py-2">B.A. LL.B. (1 course)</td><td class="px-4 py-2">12 L</td><td class="px-4 py-2">10+2: 50%</td></tr>
+      <tr><td class="px-4 py-2">M.Pharma (6 courses)</td><td class="px-4 py-2">4.6 L - 5.1 L</td><td class="px-4 py-2">Graduation: 60%</td></tr>
+      <tr><td class="px-4 py-2">B.Ed (1 course)</td><td class="px-4 py-2">1.2 L</td><td class="px-4 py-2">Graduation</td></tr>
+      <tr><td class="px-4 py-2">BBA LL.B. (Hons) (1 course)</td><td class="px-4 py-2">13 L</td><td class="px-4 py-2">10+2: 50%</td></tr>
+      <tr><td class="px-4 py-2">BFA (2 courses)</td><td class="px-4 py-2">7.2 L - 14.2 L</td><td class="px-4 py-2">10+2: 50%</td></tr>
+      <tr><td class="px-4 py-2">UG Diploma (6 courses)</td><td class="px-4 py-2">12.8 L - 17 L</td><td class="px-4 py-2">10+2</td></tr>
+      <tr><td class="px-4 py-2">Pharm.D (2 courses)</td><td class="px-4 py-2">7.7 L - 15.3 L</td><td class="px-4 py-2">10+2: 50%</td></tr>
+      <tr><td class="px-4 py-2">Ph.D. (32 courses)</td><td class="px-4 py-2">3 L</td><td class="px-4 py-2">--</td></tr>
+      <tr><td class="px-4 py-2">LL.M. (1 course)</td><td class="px-4 py-2">1.5 L</td><td class="px-4 py-2">Graduation: 50%</td></tr>
+      <tr><td class="px-4 py-2">M.Des (2 courses)</td><td class="px-4 py-2">8.5 L</td><td class="px-4 py-2">Graduation: 60%</td></tr>
+      <tr><td class="px-4 py-2">LL.B. (1 course)</td><td class="px-4 py-2">5 L</td><td class="px-4 py-2">Graduation</td></tr>
+      <tr><td class="px-4 py-2">MPH (1 course)</td><td class="px-4 py-2">3.7 L</td><td class="px-4 py-2">Graduation: 55%</td></tr>
+      <tr><td class="px-4 py-2">M.Com (2 courses)</td><td class="px-4 py-2">1.6 L</td><td class="px-4 py-2">Graduation: 50%</td></tr>
+      <tr><td class="px-4 py-2">M.Ed (1 course)</td><td class="px-4 py-2">1.3 L</td><td class="px-4 py-2">Graduation: 50%</td></tr>
+      <tr><td class="px-4 py-2">MFA (1 course)</td><td class="px-4 py-2">3.1 L</td><td class="px-4 py-2">Graduation: 50%</td></tr>
+      <tr><td class="px-4 py-2">Certificate (1 course)</td><td class="px-4 py-2">1.3 L</td><td class="px-4 py-2">10th</td></tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+      </div></div></div></div>
+<!-- Admissions Pane -->
+<div id="admissions" class="tab-pane hidden px-4 py-6">
+  <h2 class="text-3xl font-bold text-indigo-700 mb-6">📝 Admissions –  MIT World Peace University (MIT-WPU)</h2>
+
+  <!-- Timeline CSS -->
+  <style>
+    .timeline-container {
+      position: relative;
+      margin: 2rem auto;
+      padding: 2rem 0;
+      max-width: 1100px;
+    }
+    .timeline-line {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(to bottom, #6366f1, #9333ea);
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+    .timeline-item {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+    .timeline-item-left,
+    .timeline-item-right {
+      width: 47%;
+      background-color: #f9fafb;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      z-index: 1;
+      transition: transform 0.3s ease;
+    }
+    .timeline-item-left:hover,
+    .timeline-item-right:hover {
+      transform: scale(1.03);
+    }
+    .timeline-circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: linear-gradient(to bottom right, #4f46e5, #7c3aed);
+      border-radius: 9999px;
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: white;
+      z-index: 2;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    @media (max-width: 768px) {
+      .timeline-item-left,
+      .timeline-item-right {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+      .timeline-circle {
+        top: -1.5rem;
+        left: 5%;
+        transform: none;
+      }
+    }
+  </style>
+
+  <!-- Timeline Content -->
+  <section class="timeline-container">
+    <div class="timeline-line"></div>
+
+    <div class="timeline-item">
+      <div class="timeline-item-left">
+        <h3 class="text-xl font-bold text-blue-700 mb-2">Step
+
+01</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Apply online on
+admissions.mitwpu.edu.in
+and submit registration form</li>
+          <li>You must first qualify JEE Main to become eligible for JEE Advanced
+
+</li>
+          <li>Receive Login ID and Password (Auto redirect to Student Dashboard)</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">1</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-item-right ml-auto">
+        <h3 class="text-xl font-bold text-purple-700 mb-2">Step
+
+02</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Fill Application Form (Pay application form Fees - Rs.1800)" target="_blank" class="text-blue-600 underline">jeeadv.ac.in</a></li>
+          <li>Receive provisional offer letter</li>
+          
+        </ul>
+      </div>
+      <div class="timeline-circle">2</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-item-left">
+        <h3 class="text-xl font-bold text-green-700 mb-2">Step
+
+03</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Complete Fee Payment (Pay Processing Fee & 1st Instalment of Programme Fee)</li>
+          <li>Verification (Payment/Personal/Education/Documents)</li>
+         
+        </ul>
+      </div>
+      <div class="timeline-circle">3</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-item-right ml-auto">
+        <h3 class="text-xl font-bold text-pink-700 mb-2">Step
+
+04
+</h3>
+       <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Receive Final Offer Letter and Offer Guide with Student PRN Number
+            
+          </li>
+          <li>Original Document Submission</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">4</div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-item-left">
+        <h3 class="text-xl font-bold text-red-600 mb-2">Please Note:</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>On submission of application IEC department will share email with programme details, fees, scholarship, list of documents and provisional admission process</li>
+          <li>To confirm the admission in all undergraduate programmes is submission of a certificate equivalent to Class 12th examination of the country and meeting the equivalence criteria of Association of Indian University (AIU).</li>
+          <li>To confirm the admission in all postgraduate programmes is the submission of degree awarded by a university in a particular country and meeting the equivalence criteria of Association of Indian Universities (AIU).
+            
+          </li>
+        </ul></section>
+</div>
+
+      <!-- Fees Pane -->
+      <div id="fees" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-2">💵 Academic Fees (2025-26)</h2>
+        <div class="space-y-4 text-base leading-relaxed text-gray-700">
+          <p>Annual tuition for undergraduate courses is typically in the range of ₹3–4.5 lakh, with hostel and other charges additional. Scholarships and 100% fee refund for withdrawals within a stipulated period are available.</p>
+          
+  <section class="max-w-5xl mx-auto p-6 bg-white shadow-md rounded-lg mt-10">
+ 
+  <h2 class="text-2xl font-semibold text-center mb-4 text-gray-800">📚 MIT WPU Courses & Fees 2025
+</h2>
+  <p>MIT-WPU has an array of courses for the students to choose from. They can opt to pursue UG or PG courses from the MIT WPU. A few of the listed MIT-WPU courses are B.E. / B.Tech, B.Sc. and M.E./M.Tech, etc. For admission to these courses, eligibility criteria play a significant role. It is recommended to go through the following table for a better understanding of the eligibility criteria along with the course fees:</p>
+<div class="overflow-x-auto p-4">
+  <table class="min-w-full border border-gray-300 text-sm text-left">
+    <thead class="bg-gray-100">
+      <tr>
+        <th class="px-4 py-2 border">Courses</th>
+        <th class="px-4 py-2 border">Tuition Fees</th>
+        <th class="px-4 py-2 border">Eligibility</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y">
+      <tr><td class="px-4 py-2">B.E. / B.Tech (44 courses)</td><td class="px-4 py-2">7.2 L - 17 L</td><td class="px-4 py-2">10+2: 50%, Exams: JEE Main, MHT CET</td></tr>
+      <tr><td class="px-4 py-2">MBA/PGDM (12 courses)</td><td class="px-4 py-2">9.4 L - 16.3 L</td><td class="px-4 py-2">10+2: 50-60%, Graduation: 60%, Exams: MAT, XAT</td></tr>
+      <tr><td class="px-4 py-2">M.Sc. (16 courses)</td><td class="px-4 py-2">1.4 L - 6.8 L</td><td class="px-4 py-2">10+2: 50%, Graduation: 50%</td></tr>
+      <tr><td class="px-4 py-2">BBA (14 courses)</td><td class="px-4 py-2">7 L - 16.3 L</td><td class="px-4 py-2">10+2: 50%</td></tr>
+      <tr><td class="px-4 py-2">B.Sc. (7 courses)</td><td class="px-4 py-2">2.5 L - 6.8 L</td><td class="px-4 py-2">10+2: 50%</td></tr>
+      <tr><td class="px-4 py-2">MCA (1 course)</td><td class="px-4 py-2">4.8 L</td><td class="px-4 py-2">Graduation: 60%</td></tr>
+      <tr><td class="px-4 py-2">Diploma (7 courses)</td><td class="px-4 py-2">1.3 L - 11.7 L</td><td class="px-4 py-2">10th</td></tr>
+      <tr><td class="px-4 py-2">M.E./M.Tech (15 courses)</td><td class="px-4 py-2">3.9 L - 9.1 L</td><td class="px-4 py-2">Graduation: 50%</td></tr>
+      <tr><td class="px-4 py-2">BCA (1 course)</td><td class="px-4 py-2">5.4 L</td><td class="px-4 py-2">10+2: 50%</td></tr>
+      <tr><td class="px-4 py-2">B.Com (5 courses)</td><td class="px-4 py-2">2.5 L - 4.3 L</td><td class="px-4 py-2">10+2: 50%</td></tr>
+      <tr><td class="px-4 py-2">B.A. (9 courses)</td><td class="px-4 py-2">3.5 L - 10.7 L</td><td class="px-4 py-2">10+2: 50%</td></tr>
+      <tr><td class="px-4 py-2">B.Pharma (2 courses)</td><td class="px-4 py-2">7 L - 9.4 L</td><td class="px-4 py-2">10+2: 50%</td></tr>
+      <tr><td class="px-4 py-2">M.A. (7 courses)</td><td class="px-4 py-2">1.3 L - 6.5 L</td><td class="px-4 py-2">Graduation: 50-55%</td></tr>
+      <tr><td class="px-4 py-2">B.Des (6 courses)</td><td class="px-4 py-2">17 L</td><td class="px-4 py-2">10+2: 50%</td></tr>
+      <tr><td class="px-4 py-2">PG Diploma (2 courses)</td><td class="px-4 py-2">1.1 L - 1.3 L</td><td class="px-4 py-2">Graduation: 50%</td></tr>
+      <tr><td class="px-4 py-2">B.A. LL.B. (1 course)</td><td class="px-4 py-2">12 L</td><td class="px-4 py-2">10+2: 50%</td></tr>
+      <tr><td class="px-4 py-2">M.Pharma (6 courses)</td><td class="px-4 py-2">4.6 L - 5.1 L</td><td class="px-4 py-2">Graduation: 60%</td></tr>
+      <tr><td class="px-4 py-2">B.Ed (1 course)</td><td class="px-4 py-2">1.2 L</td><td class="px-4 py-2">Graduation</td></tr>
+      <tr><td class="px-4 py-2">BBA LL.B. (Hons) (1 course)</td><td class="px-4 py-2">13 L</td><td class="px-4 py-2">10+2: 50%</td></tr>
+      <tr><td class="px-4 py-2">BFA (2 courses)</td><td class="px-4 py-2">7.2 L - 14.2 L</td><td class="px-4 py-2">10+2: 50%</td></tr>
+      <tr><td class="px-4 py-2">UG Diploma (6 courses)</td><td class="px-4 py-2">12.8 L - 17 L</td><td class="px-4 py-2">10+2</td></tr>
+      <tr><td class="px-4 py-2">Pharm.D (2 courses)</td><td class="px-4 py-2">7.7 L - 15.3 L</td><td class="px-4 py-2">10+2: 50%</td></tr>
+      <tr><td class="px-4 py-2">Ph.D. (32 courses)</td><td class="px-4 py-2">3 L</td><td class="px-4 py-2">--</td></tr>
+      <tr><td class="px-4 py-2">LL.M. (1 course)</td><td class="px-4 py-2">1.5 L</td><td class="px-4 py-2">Graduation: 50%</td></tr>
+      <tr><td class="px-4 py-2">M.Des (2 courses)</td><td class="px-4 py-2">8.5 L</td><td class="px-4 py-2">Graduation: 60%</td></tr>
+      <tr><td class="px-4 py-2">LL.B. (1 course)</td><td class="px-4 py-2">5 L</td><td class="px-4 py-2">Graduation</td></tr>
+      <tr><td class="px-4 py-2">MPH (1 course)</td><td class="px-4 py-2">3.7 L</td><td class="px-4 py-2">Graduation: 55%</td></tr>
+      <tr><td class="px-4 py-2">M.Com (2 courses)</td><td class="px-4 py-2">1.6 L</td><td class="px-4 py-2">Graduation: 50%</td></tr>
+      <tr><td class="px-4 py-2">M.Ed (1 course)</td><td class="px-4 py-2">1.3 L</td><td class="px-4 py-2">Graduation: 50%</td></tr>
+      <tr><td class="px-4 py-2">MFA (1 course)</td><td class="px-4 py-2">3.1 L</td><td class="px-4 py-2">Graduation: 50%</td></tr>
+      <tr><td class="px-4 py-2">Certificate (1 course)</td><td class="px-4 py-2">1.3 L</td><td class="px-4 py-2">10th</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="flex items-start gap-2 mt-4 text-sm text-gray-500">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mt-0.5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M12 20c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z" />
+  </svg>
+  <p><span class="font-medium text-gray-600">Info:</span> These are estimated fees information. Actual values may differ.</p>
+</div>
+
+
+</div></div>
+
+     <!-- Campus Life Pane -->
+      <div id="campus" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-4">🏕️ Campus Life</h2>
+
+        <!-- Enhanced Content Card added to Campus Life -->
+        <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+
+          <div class="relative">
+           
+            <p class="mb-4 leading-relaxed">
+A dynamic blend of academic rigour, cultural diversity, and community engagement characterizes life at MIT-WPU. Our campus is a world where students from diverse backgrounds come together to learn, explore, and grow. From state-of-the-art infrastructure to world-class faculty, every aspect of MIT-WPU campus life is designed to foster excellence, creativity, and holistic development.
+Academic culture is rigorous and interdisciplinary, backed by experienced faculty, collaborative research opportunities, and industry partnerships. Students participate in industry-sponsored capstone projects, innovation labs, and technical events such as ‘TESLA’—a multi-disciplinary festival that includes competitions, workshops, and national-level seminars. International immersion and study-abroad programs further boost students’ exposure.
+Beyond academics, MIT-WPU encourages participation in clubs and societies aligned with students’ interests—ranging from technical innovation (Robotics Club, IEEE Student Chapter, Cosmos Astronomy Club) to the arts (MIT CREON art and literary club, Spandan magazine, Shutterbugs photography). There are also language, gaming, entrepreneurship, and business societies, ensuring space for every passion.
+MIT-WPU’s cultural calendar is dense and dynamic. Annual fests such as ‘Bhartiya Chhatra Sansad’, ‘TEDxMIT-WPU’, theatre competitions, and musical events provide avenues for creative expression and leadership. The university is known for its participation and accolades in inter-collegiate drama and linguistic competitions, reflecting its vibrant heritage in the cultural arts.
+Sports form an integral part of student life with cricket and football fields, basketball and tennis courts, and indoor recreational facilities. Sports tournaments regularly attract enthusiastic participation, fostering team spirit and camaraderie. The university’s philosophy also emphasizes holistic well-being through yoga and meditation sessions.
+Community service and social outreach are core aspects of MIT-WPU life. Through structured social leadership development programs, students undertake projects in rural areas, work with NGOs, and engage with local communities. This cultivates not just academic and professional skills, but also values of empathy, social responsibility, and spiritual awareness, in keeping with the university’s unique vision.
+The hostels at MIT-WPU are well-maintained and modern, offering safe and comfortable accommodation to students from outside Pune and abroad. Food courts, health services, 24/7 security, and Wi-Fi ensure physical and mental well-being. The campus is also lush and eco-friendly, with an emphasis on sustainability.
+The university actively supports innovation and entrepreneurship via the Center for Innovation, Incubation & Entrepreneurship, offering mentorship, funding, and networking to turn student ideas into startups. There is a robust support system for academic and psychological counseling as well.
+Ultimately, campus life at MIT-WPU is described by students and faculty alike as transformative—encouraging students to discover and develop their potential not just intellectually, but also socially, creatively, and morally. The union of science, technology, and spirituality, as championed by the World Peace Dome at the heart of the campus, underscores the institute’s commitment to nurturing global citizens who value peace, harmony, and holistic development.
+
+
+</p>
+            <img src="data:image/jpeg;base64,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">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHhcrvJ5SWZ-uHzEiFV2--iC6LXt5Qr-Tr1Q&s">
+            
+                     <!-- Diagonal Overlays -->
+
+          </div>
+        </div>
+             <!-- Enhanced Content Card-2 added to Campus life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4"> Campus Infrastructure
+</h3>
+             
+             
+<div>
+<p> The sprawling campus of MIT-WPU is equipped with to support our students' academic and extracurricular pursuits. From well-equipped laboratories and libraries to recreational spaces and sports facilities, our infrastructure is designed to inspire learning, innovation, and collaboration.</p> </div>
+</div>  
+        </div>    </div>
+<!-- Enhanced Content Card-3 added to Campus life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Academic Excellence:
+
+</h3>
+             
+             
+<div>
+<p> At MIT-WPU, academic excellence is not just a goal but a commitment. Our faculty members are leading experts in their respective fields, dedicated to nurturing our students' intellectual curiosity and critical thinking skills. Through innovative teaching methodologies, interdisciplinary research opportunities, and industry collaborations, we strive to provide our students with a transformative learning experience that prepares them for success in a rapidly evolving world.
+.</p> </div>
+          </div></div></div>
+
+<!-- Enhanced Content Card-4 added to Campus life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4"> 
+Vibrant Student Life:
+</h3>
+             
+             
+<div>
+<p>  Beyond the classroom, MIT-WPU offers various extracurricular activities, clubs, and cultural events that enrich the student experience. From cultural festivals and talent shows to sports tournaments and community service projects, there is always something happening on campus to engage, inspire, and connect students from all walks of life.
+.</p> </div>
+
+          </div></div></div>
+
+<!-- Enhanced Content Card- 5 added to Campus life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4"> 
+Community Engagement:
+</h3>
+             
+             
+<div>
+<p>At MIT-WPU, community engagement is at the heart of our educational philosophy. Through social service initiatives, environmental sustainability projects, and outreach programs, students can make a tangible difference in the lives of others while developing empathy, leadership skills, and a sense of social responsibility.</p> </div>
+          </div></div></div>
+<!-- Enhanced Content Card-6 added to Campus life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4"> 
+Technological Integration: 
+</h3>
+             
+             
+<div>
+<p> We believe in harnessing the power of technology to enhance the learning experience. We empower our students to embrace innovation, adapt to change, and thrive in a digital world through state-of-the-art digital classrooms, online learning platforms, and interactive multimedia resources.
+.</p> </div>
+          </div></div></div>
+<!-- Enhanced Content Card-7 added to Campus life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4"> 
+Support Services: 
+</h3>
+             
+             
+<div>
+<p>  The well-being and success of our students are paramount. That's why MIT-WPU offers comprehensive support services, including academic counselling, career guidance, health and wellness programs, and student support centres. We are committed to providing our students with the resources, support, and guidance they need to achieve their academic and personal goals.
+
+.</p> </div>
+          </div></div></div>
+<!-- Enhanced Content Card-8 added to Campus life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+
+          <div class="relative">
+           
+             
+             
+<div>
+<p> The MIT-WPU experience offers students a transformative journey characterised by academic excellence, vibrant campus life, and community engagement. Our campus is a nurturing environment where students can explore their passions, discover their strengths, and prepare for a successful future in an ever-changing world. With a commitment to holistic development and inclusive education, MIT-WPU continues to inspire and empower the leaders of tomorrow.</p> </div>
+          
+
+   
+</div></div></div></div>
+
+     
+
+      <!-- Placements Pane -->
+      <div id="placements" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-2">💼 Placements</h2>
+        <div class="p-4">
+  <h3 class="text-xl font-semibold mb-4 text-gray-800">Placement Highlights (2024-2025)</h3>
+  <p>MIT World Peace University’s placement record stands out among private universities in India. The placements are centrally managed by an efficient placement cell, known as the Center for Industry-Academia Partnerships (CIAP), which works actively to bridge the gap between academia and industry.
+In the 2024-25 session, over 500+ companies visited the campus, making 1,083 job offers. The highest package secured was an impressive ₹51.36LPA, while the average salary hovered around ₹7LPA. Prestigious recruiters included Amazon, Google, IBM, Infosys, Capgemini, Wipro, TCS, HCL, Barclays, Hitachi, Michelin India, ONGC, and many other multinational corporations.
+Placement rates are strong, averaging 80–90% across streams, with some programs recording near 100% placement for eligible students. Computer Science, Electronics, Mechanical, and Management students routinely see the top placement records, but opportunities are available across all programmes, including Arts, Sciences, Pharmacy, and Law.
+Branch-wise average packages are competitive: Computer Science graduates average ₹7.25LPA, Mechanical ₹6LPA, and Civil Engineering ₹5LPA. The university’s biggest success stories have come from students in emerging tech fields, who secured premium designations with global players.
+MIT-WPU also offers substantial internship opportunities starting as early as the second year, with companies like Deloitte, TCS, and HCL offering stipends up to ₹50,000/month for roles such as software development, analytics, and project management. These internships, mandated for most degrees, prepare students for real-world challenges.
+The university organizes training modules for skill enhancement—including aptitude, soft skills, interview techniques, and technical expertise—ensuring graduates stand out. Industry-focused capstone projects and certifications further add to their employability.
+A distinguishing feature is the university’s extensive engagement with industry: MIT-WPU regularly hosts job fairs, industrial visits, tech talks, and alumni networking events. Corporate leaders are involved in curriculum design, guest lectures, and career counseling, ensuring the academic experience is market-relevant.
+The entrepreneurial ecosystem is equally robust, with incubation facilities, seed funding, and support for student startups. Students have developed disruptive innovations and social ventures, some of which have won national and international accolades.
+Feedback from recruiters is consistently positive, with MIT-WPU graduates seen as job-ready, adaptable, and well-rounded. The large and active alumni network also supports placement efforts by facilitating industry connections.
+In summary, MIT-WPU’s placement process is comprehensive, offering ample support and ensuring excellent outcomes for a wide range of students through robust industry partnerships, skill development initiatives, and personalized mentoring.
+
+</p>
+
+ 
+
+      </div> </div>
+
+      <!-- Gallery Pane -->
+      <div id="Gallery" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-2">Campus Gallery</h2>
+       <div class="p-6 bg-gray-100 rounded-xl">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+    
+    <!-- Image 1 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://mitwpu.edu.in/uploads/album/banner/Convocation-ceremony.webp" 
+        
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+
+    <!-- Image 2 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://mitwpu.edu.in/uploads/album/1674226877_676f18ddf84b0583af03.jpg" 
+          
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+
+    <!-- Image 3 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://mitwpu.edu.in/uploads/album/1674227092_296d3b3c6640780c93fb.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+
+    <!-- Image 4 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://mitwpu.edu.in/uploads/album/1674227344_678f878ad951bb34ab8c.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+<!-- Image 5 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://mitwpu.edu.in/uploads/album/1674227239_ca6cb9415ec76f1935e0.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+<!-- Image 6 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://mitwpu.edu.in/uploads/album/1674227271_7fde05620c6080431be8.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+<!-- Image 7 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://mitwpu.edu.in/uploads/album/1674227214_4d8cf9dcc4e28d8a1985.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+<!-- Image 8 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://mitwpu.edu.in/uploads/album/1674227057_80bd1e11218fe8a96bb9.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+ <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://mitwpu.edu.in/uploads/album/1674227410_19fc0df944c288edac4e.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+ <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.snuchennai.edu.in/wp-content/uploads/2024/01/New-Project-2024-01-30T202520.456.webp" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+ <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://mitwpu.edu.in/uploads/album/1674227478_9e88654698cf6e513035.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+ <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://mitwpu.edu.in/uploads/album/1674227532_5fb46998c8ef741b8ebc.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+ <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://mitwpu.edu.in/uploads/album/1674227436_de00673d26a08c904ff3.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+<div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="
+    https://mitwpu.edu.in/uploads/album/1694067519_772c59751bba64ddd234.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+
+
+  </div>
+</div>
+
+      </div>
+
+      <!-- alumni Pane -->
+      <div id="alumni" class="tab-pane hidden">
+       <!-- Alumni Table -->
+<div class="max-w-6xl mx-auto p-4">
+
+ <section class="max-w-6xl mx-auto p-6">
+  <h2 class="text-3xl font-bold mb-6 text-center text-indigo-700">🎓 Notable Alumni – MIT-World Peace University</h2>
+ <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-white">
+  
+  <!-- Alumni Card -->
+  <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+    <h3 class="text-lg font-semibold text-gray-800">Rashmi Maniyar <span class="text-sm font-normal text-gray-500">B.E '24</span></h3>
+    <p class="text-gray-600 mt-1">Global Head of Virtu Execution Services Coreops</p>
+  </div>
+
+  <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+    <h3 class="text-lg font-semibold text-gray-800">Sarang Kadoo <span class="text-sm font-normal text-gray-500">B.E '24</span></h3>
+    <p class="text-gray-600 mt-1">WATER AND ENERGY MANAGER</p>
+  </div>
+
+  <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+    <h3 class="text-lg font-semibold text-gray-800">Vinamra Tandon <span class="text-sm font-normal text-gray-500">B.COM. '24</span></h3>
+    <p class="text-gray-600 mt-1">Student at MIT-World Peace University</p>
+  </div>
+
+  <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+    <h3 class="text-lg font-semibold text-gray-800">Karan Sukhija <span class="text-sm font-normal text-gray-500">B.COM. '24</span></h3>
+    <p class="text-gray-600 mt-1">Student at MIT-World Peace University</p>
+  </div>
+
+  <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+    <h3 class="text-lg font-semibold text-gray-800">Ayam Saif Siddiqui <span class="text-sm font-normal text-gray-500">B.COM. '24</span></h3>
+    <p class="text-gray-600 mt-1">Student at MIT-World Peace University</p>
+  </div>
+
+  <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+    <h3 class="text-lg font-semibold text-gray-800">Anuj Pathak <span class="text-sm font-normal text-gray-500">B.COM. '24</span></h3>
+    <p class="text-gray-600 mt-1">Student at MIT-World Peace University</p>
+  </div>
+
+  <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+    <h3 class="text-lg font-semibold text-gray-800">Nishit Thakkar <span class="text-sm font-normal text-gray-500">B.COM. '24</span></h3>
+    <p class="text-gray-600 mt-1">Student at MIT-World Peace University</p>
+  </div>
+
+  <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+    <h3 class="text-lg font-semibold text-gray-800">Aman Mishra <span class="text-sm font-normal text-gray-500">B.COM. '24</span></h3>
+    <p class="text-gray-600 mt-1">Student at MIT-World Peace University</p>
+  </div>
+
+  <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+    <h3 class="text-lg font-semibold text-gray-800">Sameer Awasthi <span class="text-sm font-normal text-gray-500">P.G.P.M. '24</span></h3>
+    <p class="text-gray-600 mt-1">Seasoned Infrastructure and Construction Professional | Driving Excellence in Construction Engineering and Project Management</p>
+  </div>
+
+  <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+    <h3 class="text-lg font-semibold text-gray-800">Ekta Nigam <span class="text-sm font-normal text-gray-500">B.COM. '24</span></h3>
+    <p class="text-gray-600 mt-1">Student</p>
+  </div>
+
+  <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+    <h3 class="text-lg font-semibold text-gray-800">Pankaj Khandekar <span class="text-sm font-normal text-gray-500">B.E '24</span></h3>
+    <p class="text-gray-600 mt-1">Student at MIT-World Peace University</p>
+  </div>
+
+  <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+    <h3 class="text-lg font-semibold text-gray-800">Ashutosh Gupta <span class="text-sm font-normal text-gray-500">B.COM. '24</span></h3>
+    <p class="text-gray-600 mt-1">Student at Dr. Vishwanath Karad MIT World Peace University</p>
+  </div>
+
+</div>
+
+
+</div>
+      </div>
+
+      <!-- Student Talks Pane -->
+      <div id="Student Talks" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-2">🎓 Scholarships</h2>
+       <section class="px-6 py-12 bg-white">
+  
+  <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+    <strong>Rewiew 1:Ms. Vishakha Naik</strong>MITWPU has always been motivating and supportive. The unique trimester pattern, holistic approach towards education, peace program, highly experienced and supportive teachers, high end technologies and laboratories, updated curriculum makes it an ideal college for any student. The concept of Mentor-Mentee is really helpful and is my go to for any guidance or help. There is always an inspiration to take up challenges and emerge victorious.
+
+MIT-WPU is truly helping me in transforming into a strong professional with vision and good education.
+  </div>
+<div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+   <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+    <strong>Rewiew 2:Soumya Bajpai</strong>During my time at MIT-WPU, I was presented with a multitude of enriching opportunities that allowed me to refine my academic, leadership, and public speaking skills, among others. My growth extended beyond academics, as I undertook the responsibility of orchestrating the college-level annual event "Prism," a role that honed my leadership and management capabilities. The HackMITWPU hackathon provided another platform for me to shine, emerging as the 1st Rank winner with the innovative AgroExpert solution tailored for farmers' needs.
+
+  </div></div>
+  <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+   <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+    <strong>Rewiew 3:Ms. Kritika Gulati</strong>
+The excellent pedagogy of teachers and their helping nature enhances our skill and improved knowledge.
+
+The peace program run by MIT-WPU is different from other universities which give us a proper way of thinking and utilizing our skills and knowledge.
+
+
+  </div></div>
+  <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+   <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+    <strong>Rewiew 4:Pragati Borkar</strong>
+At MIT-WPU, it has been a wonderful experience. I had the incredible good fortune and luck to be a member of the MIT-WPU SOLA, which fostered my personal development. Lots of admiration, dedication, and affection for the whole faculty and department.
+
+The whole faculty and department
+
+work relessly to mold one's destiny. It
+
+has been a tremendous three years of
+
+study and exposure to the outside
+
+world at MIT. I consider myself to be a
+
+much better professional and person
+
+because of their efforts and hardwork.
+
+Forever grateful.
+  </div>
+  
+</div>
+     </div>
+  <script>
+    const buttons = document.querySelectorAll('.tab-button');
+    const panes = document.querySelectorAll('.tab-pane');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active-tab'));
+        btn.classList.add('active-tab');
+        panes.forEach(p => p.classList.add('hidden'));
+        document.getElementById(btn.dataset.tab).classList.remove('hidden');
+      });
+    });
+  </script>
+
+  <style>
+    .tab-button { padding: .5rem 1rem; font-size: .875rem; font-weight: 500; color: #374151; border-bottom:2px solid transparent; transition: .2s; cursor: pointer; }
+    .tab-button:hover { color: #3b82f6; border-color: #3b82f6; }
+    .active-tab { border-color: #2563eb; color: #2563eb; }
+    .tab-pane { background: #fff; padding:1rem; border-radius:.5rem; box-shadow:0 1px 2px rgb(0 0 0 / .05); }
+  </style>
+</body>
+</html>
+
+

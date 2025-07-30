@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medical Universities in India</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .banner {
+      background-image: url('../images/stream-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+
+    .banner h1 {
+      font-size: 2rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 40px 60px;
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-name {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    @media (max-width: 600px) {
+      .banner h1 {
+        font-size: 1.5rem;
+        padding: 8px 16px;
+      }
+
+      .card-container {
+        padding: 20px;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body class="universities1-bg">
+  <div class="banner">
+    <h1>Explore India's Top Medical & Healthcare Institutions</h1>
+  </div>
+
+  <div class="card-container">
+    <a href="aiims.html" class="card">
+      <img src="https://i.pinimg.com/1200x/cf/5a/9d/cf5a9d8d9d5d603d12af35c605985d24.jpg" alt="AIIMS Delhi">
+      <div class="card-name">AIIMS Delhi</div>
+    </a>
+    <a href="cmc.html" class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/CMCH_Vellore.JPG" alt="CMC Vellore">
+      <div class="card-name">CMC Vellore</div>
+    </a>
+    <a href="jipmer.html" class="card">
+      <img src="https://www.jipmer.edu.in/sites/default/files/jipmer-entrance.jpg" alt="JIPMER">
+      <div class="card-name">JIPMER</div>
+    </a>
+    <a href="kasturba.html" class="card">
+      <img src="https://manage.collnod.com/Upload/Content/web_img_1_11_4_2025_10_53_49.jpg" alt="KMC Manipal">
+      <div class="card-name">Kasturba Medical College (Manipal)</div>
+    </a>
+    <a href="gimsr.html" class="card">
+      <img src="https://images.shiksha.com/mediadata/images/1618476607phpJpFOok.jpeg" alt="GITAM Medical">
+      <div class="card-name">GITAM School of Medical Sciences</div>
+    </a>
+    <a href="sri_ramachandra.html" class="card">
+      <img src="https://theacademicinsights.com/wp-content/uploads/2023/10/college-22.webp" alt="Sri Ramachandra">
+      <div class="card-name">Sri Ramachandra Institute of Higher Ed.</div>
+    </a>
+    <a href="afmc.html" class="card">
+      <img src="https://www.afmcdg1d.gov.in/WriteReadData/MD32145/1693552872.jpg" alt="AFMC">
+      <div class="card-name">AFMC Pune</div>
+    </a>
+    <a href="kmc_mangalore.html" class="card">
+      <img src="https://colleges18.s3.ap-south-1.amazonaws.com/Kasturba_Medical_College_Mangalore_Campus_View_1_352c2be05c.jpg" alt="KMC Mangalore">
+      <div class="card-name">KMC Mangalore</div>
+    </a>
+    <a href="st_johns.html" class="card">
+      <img src="https://www.guidanceforever.org/wp-content/uploads/2023/10/st-johns-medical-college-bengaluru-featured.jpg" alt="St. John's">
+      <div class="card-name">St. John's Medical College</div>
+    </a>
+    <a href="bharati_vidyapeeth.html" class="card">
+      <img src="https://images.shiksha.com/mediadata/images/1583487340phpuJ1Riz.jpeg" alt="Bharati Vidyapeeth">
+      <div class="card-name">Bharati Vidyapeeth Deemed University</div>
+    </a>
+    <a href="saveetha_institute.html" class="card">
+      <img src="https://images.squarespace-cdn.com/content/v1/62a71ce8ab0ee81e4c941ab2/c4d06524-3545-41b6-b628-d77d158f5458/DSC_4036.JPG" alt="Saveetha">
+      <div class="card-name">Saveetha Institute of Medical Sciences</div>
+    </a>
+    <a href="chettinad.html" class="card">
+      <img src="https://media.collegedekho.com/media/img/news/Chettinad_Academy_of_Research_and_Education_CARE.jpg" alt="Chettinad">
+      <div class="card-name">Chettinad Academy of Research and Ed.</div>
+    </a>
+    <a href="sri_balaji.html" class="card">
+      <img src="https://image-static.collegedunia.com/public/reviewPhotos/895667/1000109601.jpg" alt="Sri Balaji">
+      <div class="card-name">Sri Balaji Vidyapeeth Deemed University</div>
+    </a>
+    <a href="bhu_ims.html" class="card">
+      <img src="https://ik.imagekit.io/syustaging/SYU_PREPROD/Cover_bWtMA60-rb.webp" alt="BHU IMS">
+      <div class="card-name">Banaras Hindu Institute of Medical Sciences</div>
+    </a>
+    <a href="avvm.html" class="card">
+      <img src="https://webfiles.amrita.edu/2022/12/YYUWrBAM-amritahospitals-faridabad-delhi.jpg" alt="Amrita">
+      <div class="card-name">Amrita Vishwa Vidyapeetham</div>
+    </a>
+    <a href="jnmc.html" class="card">
+      <img src="https://images.shiksha.com/mediadata/images/1745216165phpjsNaHe.jpeg" alt="JNMC">
+      <div class="card-name">Jawaharlal Nehru Medical College(JNMC)</div>
+    </a>
+    <a href="atal.html" class="card">
+      <img src="https://images.indianexpress.com/2024/09/rml-4col.jpg" alt="RML">
+      <div class="card-name">Atal Bihari Vajpayee Institute of Medical Sciences and Dr. RML Hospital, New Delhi</div>
+    </a>
+    <a href="SMC.html" class="card">
+      <img src="data:image/jpeg;base64,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" alt="SMC">
+      <div class="card-name">Stanley Medical College (SMC), Chennai</div>
+    </a>
+    <a href="PGIMER.html" class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGG5To9rlxpLKwJ1W-9dkxUEs9YSYKqHCpFg&s" alt="PGIMER">
+      <div class="card-name">Post Graduate Institute of Medical Education & Research (PGIMER), Chandigarh</div>
+    </a>
+    <a href="mgmcari.html" class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyp4Ve7DOyzsdsTxz6M7r55sdiD9O8yjk7IQ&s" alt="MGMCRI">
+      <div class="card-name">Mahatma Gandhi Medical College and Research Institute, Puducherry</div>
+    </a>
+    <a href="Osmania.html" class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Osmania_Medical_College_Image.jpg" alt="Osmania">
+      <div class="card-name">Osmania Medical College, Hyderabad</div>
+    </a>
+  </div>
+</body>
+</html>

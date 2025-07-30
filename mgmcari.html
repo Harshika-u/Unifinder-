@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mahatma Gandhi Medical College and Research Institute – UniFinder</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- 1) HERO BANNER -->
+  <section
+    class="rounded-lg shadow-lg p-12 mb-8"
+    style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyp4Ve7DOyzsdsTxz6M7r55sdiD9O8yjk7IQ&s'); background-size: cover; background-position: center;"
+  >
+    <div
+      class="flex flex-col md:flex-row items-center max-w-4xl mx-auto bg-black bg-opacity-50 p-8 rounded-lg"
+    >
+      <img
+        src="data:image/jpeg;base64,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"
+        alt="Logo"
+        class="w-24 h-24 rounded-full mb-4 md:mb-0 md:mr-6 shadow-lg bg-white p-2"
+      />
+      <div class="text-white">
+        <h1 class="text-4xl font-extrabold mb-2">Mahatma Gandhi Medical College and Research Institute</h1>
+        <p class="text-lg">🏆 Constituent College of Sri Balaji Vidyapeeth, Puducherry</p>
+      </div>
+    </div>
+  </section>
+  <div class="max-w-6xl mx-auto p-4">
+    <h1 class="text-4xl font-bold text-center mb-6">
+      Mahatma Gandhi Medical College and Research Institute
+    </h1>
+    <!-- Tabs Navigation -->
+    <div class="flex space-x-4 border-b mb-6" id="tabs">
+      <button class="tab-button active-tab" data-tab="Collegeinfo">🎓College Info</button>
+      <button class="tab-button " data-tab="courses">🎓 Courses</button>
+      <button class="tab-button" data-tab="admissions">📝 Admissions</button>
+      <button class="tab-button" data-tab="fees">💰 Fees</button>
+      <button class="tab-button" data-tab="campus">🏕️ Campus Life</button>
+      <button class="tab-button" data-tab="placements">💼 Placements</button>
+      <button class="tab-button" data-tab="Gallery">🌐 Gallery</button>
+      <button class="tab-button" data-tab="alumni">🌐 Alumni</button>
+      <button class="tab-button" data-tab="Student Talks">🎓 Student Talks</button>
+    </div>
+    <!-- Tab Content -->
+    <div id="tab-content">
+      <!-- Collage info Pane -->
+       <div id="Collegeinfo" class="tab-pane block">
+        <h2 class="text-2xl font-semibold mb-2">🎓 Information – Mahatma Gandhi Medical College and Research Institute</h2>
+        <!--  collage info content -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Full Name: </h3><p class="text-rose-700 text-xl font-semibold">Mahatma Gandhi Medical College and Research Institute</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Established: </h3><p class="text-rose-700 text-xl font-semibold">2001</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+     <h3 class="font-bold text-xl">Type:</h3><p class="text-rose-700 text-xl font-semibold">Constituent College of Sri Balaji Vidyapeeth (Deemed University)</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+     <h3 class="font-bold text-xl">Location:</h3><p class="text-rose-700 text-xl font-semibold">Puducherry, India</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Motto: </h3><p class="text-rose-700 text-xl font-semibold">"Service to Humanity is Service to God"</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Status: </h3><p class="text-rose-700 text-xl font-semibold">Deemed to be University</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Accreditation:  </h3><p class="text-rose-700 text-xl font-semibold">Medical Council of India (MCI), NAAC</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Campus Size: </h3><p class="text-rose-700 text-xl font-semibold">40 acres</p>
+    </div>
+  </div>
+  <!--  Content Card 1 -->
+<div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+ <!-- Enhanced Content Card added to College Info -->
+        <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+<h3 class="text-2xl font-bold mb-4">Basic Information </h3>
+             
+           
+            <p class="mb-4 leading-relaxed">
+Mahatma Gandhi Medical College and Research Institute (MGMCRI) is a premier medical institution located in Puducherry, India. Established in 2001, it is a constituent college of Sri Balaji Vidyapeeth, a Deemed to be University. The institute is dedicated to providing quality medical education, research, and healthcare services to the community. MGMCRI is recognized by the Medical Council of India (MCI) and is known for its state-of-the-art infrastructure and excellent academic standards.</p>
+<p class="mb-4 leading-relaxed">
+The institute is located in a serene campus spread over 40 acres in Puducherry. It is equipped with modern facilities for teaching, research, and patient care. The attached hospital, Sri Balaji Medical College and Hospital, provides tertiary healthcare services to the people of Puducherry and neighboring regions. The institute has a strong commitment to community service and regularly conducts health camps and outreach programs.</p>
+                     <!-- Diagonal Overlays -->
+          </div></div>
+        </div>
+                <!-- Enhanced Content Card-2 added to College Info -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">History</h3>
+             
+             
+<div>
+<p>
+Mahatma Gandhi Medical College and Research Institute was established in 2001 under the aegis of Sri Balaji Vidyapeeth. The institute was founded with the vision of providing quality medical education and healthcare services to the people of Puducherry and surrounding regions. The institution was named after Mahatma Gandhi, the Father of the Nation, reflecting its commitment to the values of service, compassion, and social responsibility.</p>
+<p>
+Over the years, MGMCRI has grown into a premier medical institution with excellent infrastructure, highly qualified faculty, and a strong focus on research. The institute has been recognized by the Medical Council of India and has been consistently ranked among the top medical colleges in India. The attached hospital has also expanded its services and now provides comprehensive healthcare facilities to the community.</p>
+<p>
+The institute has been at the forefront of medical education and research in the region. It has produced numerous competent medical professionals who are serving in various parts of the country and abroad. MGMCRI continues to strive for excellence in medical education, research, and healthcare services.</p> </div>
+          
+             
+              
+           
+             
+          </div>
+        </div></div>
+      
+      <!-- Enhanced Content Card-3 added to College Info -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Vision and Mission</h3>
+<ul class="list-disc ml-6 mb-4">
+  <li><strong>Vision:</strong> To be a global leader in medical education, research, and healthcare services, and to produce compassionate and competent healthcare professionals.</li>
+  <li><strong>Mission:</strong> To provide quality medical education, advance research in health sciences, and deliver affordable healthcare services to all sections of society.</li>
+</ul>
+<h3 class="text-2xl font-bold mb-4">Key Features</h3>	
+</ul>    <ul class="list-disc ml-6 mb-4">
+  <li>State-of-the-art infrastructure and teaching facilities</li>
+  <li>Highly qualified and experienced faculty</li>
+  <li>Well-equipped laboratories and research centers</li>
+    <li>750-bedded Sri Balaji Medical College and Hospital</li>
+<li>Advanced diagnostic and treatment facilities</li>
+<li>Extensive library with medical journals and books</li>
+<li>Active research programs funded by national and international agencies</li>
+</ul>        
+             
+             
+          
+</div>
+      </div>
+ </div> </div></div>
+      <div id="courses" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-2">🎓 Courses Offered </h2>
+        <!-- your courses content -->
+         
+     
+        <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            
+            <p class="mb-4 leading-relaxed">
+Mahatma Gandhi Medical College and Research Institute offers a range of undergraduate, postgraduate, and doctoral programs in medical and health sciences. The institute is known for its rigorous academic curriculum, practical training, and research opportunities. The courses are designed to produce competent healthcare professionals who can meet the challenges of modern healthcare.</p>
+<h3 class="text-2xl font-bold mb-4">UNDERGRADUATE PROGRAMS
+</h3>
+           
+            <p class="mb-4 leading-relaxed">
+The institute offers undergraduate programs that provide a strong foundation in medical sciences and prepare students for professional careers. The undergraduate programs include MBBS and B.Sc in various paramedical disciplines. The duration of these programs ranges from 3 to 5.5 years, including internship.</p>
+<h4 class="text-2xl font-bold mb-4">Undergraduate Courses:</h4>
+<table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Course Name</th>
+      <th class="py-3 px-4">Duration</th>
+      <th class="py-3 px-4">Intake</th>
+      <th class="py-3 px-4">Eligibility</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">MBBS</td>
+      <td class="py-3 px-4">5.5 Years (including internship)</td>
+      <td class="py-3 px-4">150</td>
+      <td class="py-3 px-4">10+2 with PCB, NEET qualified</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">B.Sc (Hons) Medical Technology</td>
+      <td class="py-3 px-4">4 Years</td>
+      <td class="py-3 px-4">60</td>
+      <td class="py-3 px-4">10+2 with PCB</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">B.Sc Nursing</td>
+      <td class="py-3 px-4">4 Years</td>
+      <td class="py-3 px-4">100</td>
+      <td class="py-3 px-4">10+2 with PCB</td>
+    </tr>
+    <tr>
+      <td class="py-3 px-4 font-semibold">BMLT (Bachelor in Medical Laboratory Technology)</td>
+      <td class="py-3 px-4">3 Years</td>
+      <td class="py-3 px-4">40</td>
+      <td class="py-3 px-4">10+2 with PCB</td>
+    </tr>
+  </tbody>
+</table>
+          </div>
+        </div>
+    <!-- Enhanced Content Card-2 added to  -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">POSTGRADUATE PROGRAMS
+</h3>
+      <p>The institute offers a wide range of postgraduate programs that provide advanced knowledge and specialized skills in various medical disciplines. These programs include MD, MS, and various diploma courses. The duration of these programs ranges from 2 to 3 years, depending on the course.</p>
+<h4 class="text-2xl font-bold mb-4">Postgraduate Courses:</h4>
+<table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Course Name</th>
+      <th class="py-3 px-4">Duration</th>
+      <th class="py-3 px-4">Intake</th>
+      <th class="py-3 px-4">Specializations</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">MD</td>
+      <td class="py-3 px-4">3 Years</td>
+      <td class="py-3 px-4">Varies</td>
+      <td class="py-3 px-4">Medicine, Pediatrics, Psychiatry, etc.</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">MS</td>
+      <td class="py-3 px-4">3 Years</td>
+      <td class="py-3 px-4">Varies</td>
+      <td class="py-3 px-4">Surgery, Orthopedics, Ophthalmology, etc.</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">M.Sc Medical Technology</td>
+      <td class="py-3 px-4">2 Years</td>
+      <td class="py-3 px-4">Varies</td>
+      <td class="py-3 px-4">Lab Technology, Radiology, etc.</td>
+    </tr>
+    <tr>
+      <td class="py-3 px-4 font-semibold">Diploma Courses</td>
+      <td class="py-3 px-4">2 Years</td>
+      <td class="py-3 px-4">Varies</td>
+      <td class="py-3 px-4">Various clinical specialties</td>
+    </tr>
+  </tbody>
+</table>
+   </div>   </div></div>
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">SUPER-SPECIALTY PROGRAMS
+</h3>  <p>The institute offers super-specialty programs (DM/M.Ch) in various medical and surgical disciplines. These programs provide advanced training and expertise in specific areas of medicine and surgery. The duration of these programs is typically 3 years.</p>
+<h4 class="text-2xl font-bold mb-4">Super-Specialty Courses:</h4>
+<table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Course Name</th>
+      <th class="py-3 px-4">Duration</th>
+      <th class="py-3 px-4">Intake</th>
+      <th class="py-3 px-4">Specializations</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">DM</td>
+      <td class="py-3 px-4">3 Years</td>
+      <td class="py-3 px-4">Varies</td>
+      <td class="py-3 px-4">Cardiology, Neurology, Gastroenterology, etc.</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">M.Ch</td>
+      <td class="py-3 px-4">3 Years</td>
+      <td class="py-3 px-4">Varies</td>
+      <td class="py-3 px-4">Cardiothoracic Surgery, Neurosurgery, Urology, etc.</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Ph.D</td>
+      <td class="py-3 px-4">3-5 Years</td>
+      <td class="py-3 px-4">Varies</td>
+      <td class="py-3 px-4">Various Medical Disciplines</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+      </div></div>
+<!-- Admissions Pane -->
+<div id="admissions" class="tab-pane hidden px-4 py-6">
+  <h2 class="text-3xl font-bold text-indigo-700 mb-6">📝 Admissions – Mahatma Gandhi Medical College and Research Institute</h2>
+  <!-- Timeline CSS -->
+  <style>
+    .timeline-container {
+      position: relative;
+      margin: 2rem auto;
+      padding: 2rem 0;
+      max-width: 1100px;
+    }
+    .timeline-line {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(to bottom, #6366f1, #9333ea);
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+    .timeline-item {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+    .timeline-item-left,
+    .timeline-item-right {
+      width: 47%;
+      background-color: #f9fafb;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      z-index: 1;
+      transition: transform 0.3s ease;
+    }
+    .timeline-item-left:hover,
+    .timeline-item-right:hover {
+      transform: scale(1.03);
+    }
+    .timeline-circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: linear-gradient(to bottom right, #4f46e5, #7c3aed);
+      border-radius: 9999px;
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: white;
+      z-index: 2;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    @media (max-width: 768px) {
+      .timeline-item-left,
+      .timeline-item-right {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+      .timeline-circle {
+        top: -1.5rem;
+        left: 5%;
+        transform: none;
+      }
+    }
+  </style>
+  <!-- Timeline Content -->
+  <section class="timeline-container">
+    <div class="timeline-line"></div>
+    <div class="timeline-item">
+      <div class="timeline-item-left">
+        <h3 class="text-xl font-bold text-blue-700 mb-2">1. Check Eligibility Criteria</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>For MBBS: 10+2 with Physics, Chemistry, Biology, and English with minimum 50% marks (40% for SC/ST/OBC)</li>
+          <li>For B.Sc Nursing: 10+2 with PCB and English with minimum 50% marks</li>
+          <li>For MD/MS: MBBS degree with completion of internship</li>
+          <li>For M.Sc: Bachelor's degree in relevant field</li>
+          <li>For DM/M.Ch: MD/MS degree in relevant specialty</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">1</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-right ml-auto">
+        <h3 class="text-xl font-bold text-purple-700 mb-2">2. Appear for Entrance Exam</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>For MBBS: National Eligibility cum Entrance Test (NEET UG)</li>
+          <li>For MD/MS: National Eligibility cum Entrance Test (NEET PG)</li>
+          <li>For DM/M.Ch: National Eligibility cum Entrance Test (NEET SS)</li>
+          <li>For B.Sc Nursing: Entrance test conducted by Sri Balaji Vidyapeeth</li>
+          <li>For M.Sc: Entrance test conducted by Sri Balaji Vidyapeeth</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">2</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-left">
+        <h3 class="text-xl font-bold text-green-700 mb-2">3. Register for Counseling</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>For MBBS: Register for Medical Counseling Committee (MCC) counseling</li>
+          <li>For MD/MS: Register for MCC counseling</li>
+          <li>For DM/M.Ch: Register for MCC counseling</li>
+          <li>For B.Sc Nursing/M.Sc: Register for Sri Balaji Vidyapeeth counseling process</li>
+          <li>Fill choices of courses and colleges</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">3</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-right ml-auto">
+        <h3 class="text-xl font-bold text-pink-700 mb-2">4. Seat Allotment</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Seats are allotted based on entrance exam rank and choices filled</li>
+          <li>For MBBS/MD/MS/DM/M.Ch: Allotment through MCC</li>
+          <li>For B.Sc Nursing/M.Sc: Allotment through Sri Balaji Vidyapeeth counseling</li>
+          <li>Check allotment result on respective counseling portals</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">4</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-left">
+        <h3 class="text-xl font-bold text-red-600 mb-2">5. Document Verification</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Report to the allotted institute for document verification</li>
+          <li>Carry original documents:
+            <ul class="list-disc ml-6">
+              <li>10th and 12th mark sheets and certificates</li>
+              <li>Entrance exam scorecard</li>
+              <li>Transfer certificate</li>
+              <li>Migration certificate (if applicable)</li>
+              <li>Category certificate (if applicable)</li>
+              <li>Passport-sized photographs</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="timeline-circle">5</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-right ml-auto">
+        <h3 class="text-xl font-bold text-yellow-700 mb-2">6. Fee Payment and Admission</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Pay the admission fee to confirm the seat</li>
+          <li>Complete all admission formalities</li>
+          <li>Submit all required documents</li>
+          <li>Attend orientation program</li>
+          <li>Commence classes as per schedule</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">6</div>
+    </div>
+  </section>
+</div>
+      <!-- Fees Pane -->
+      <div id="fees" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-2">💵 Academic Fees (2025-26)</h2>
+       <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+  <!-- Diagonal Overlays -->
+  <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+  <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+  
+  <!-- Accent Bar -->
+  <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+  <div class="relative">
+    <h2 class="text-2xl font-bold text-indigo-700 mb-4">💰 MGMCRI Fee Structure</h2>
+    <p class="mb-4 leading-relaxed text-gray-700">
+      Mahatma Gandhi Medical College and Research Institute, being a constituent college of Sri Balaji Vidyapeeth, offers quality education at competitive fees. The fee structure varies for different courses and categories of students. The fees include tuition fees, hostel fees, and other miscellaneous charges. Below is the approximate fee structure for some of the popular courses.
+    </p>
+    <!-- Fees Table -->
+    <div class="overflow-x-auto mt-6">
+      <table class="min-w-full text-sm border border-gray-300">
+        <thead class="bg-indigo-100 text-indigo-800">
+          <tr>
+            <th class="text-left px-4 py-2 border border-gray-300">Course</th>
+            <th class="text-left px-4 py-2 border border-gray-300">Duration</th>
+            <th class="text-left px-4 py-2 border border-gray-300">Annual Fee (Approx.)</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-800">
+          <tr class="bg-white">
+            <td class="px-4 py-2 border border-gray-300">MBBS</td>
+            <td class="px-4 py-2 border border-gray-300">5.5 Years</td>
+            <td class="px-4 py-2 border border-gray-300">INR 23,50,000</td>
+          </tr>
+          <tr class="bg-gray-50">
+            <td class="px-4 py-2 border border-gray-300">B.Sc Nursing</td>
+            <td class="px-4 py-2 border border-gray-300">4 Years</td>
+            <td class="px-4 py-2 border border-gray-300">INR 1,20,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-2 border border-gray-300">B.Sc Medical Technology</td>
+            <td class="px-4 py-2 border border-gray-300">4 Years</td>
+            <td class="px-4 py-2 border border-gray-300">INR 1,00,000</td>
+          </tr>
+          <tr class="bg-gray-50">
+            <td class="px-4 py-2 border border-gray-300">MD/MS</td>
+            <td class="px-4 py-2 border border-gray-300">3 Years</td>
+            <td class="px-4 py-2 border border-gray-300">INR 30,00,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-2 border border-gray-300">DM/M.Ch</td>
+            <td class="px-4 py-2 border border-gray-300">3 Years</td>
+            <td class="px-4 py-2 border border-gray-300">INR 40,00,000</td>
+          </tr>
+          <tr class="bg-gray-50">
+            <td class="px-4 py-2 border border-gray-300">M.Sc Medical Technology</td>
+            <td class="px-4 py-2 border border-gray-300">2 Years</td>
+            <td class="px-4 py-2 border border-gray-300">INR 1,50,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4 text-sm text-gray-600">
+      Note: The fees mentioned above are approximate and for general category students. Fees for SC/ST/OBC categories may vary. Hostel fees are additional and vary depending on the type of accommodation. For exact fee details, please visit the official website or contact the university.
+    </p>
+  </div>
+</div>
+      </div>
+     <!-- Campus Life Pane -->
+      <div id="campus" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-4">🏕️ Campus Life</h2>
+        <!-- Enhanced Content Card added to Campus Life -->
+        <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+           
+            <p class="mb-4 leading-relaxed">
+Mahatma Gandhi Medical College and Research Institute provides a vibrant and enriching campus life that complements the academic experience. The campus is spread over 40 acres in Puducherry and provides a serene environment for learning and personal growth. The institute believes in the holistic development of students and provides numerous opportunities for extracurricular activities, sports, cultural events, and community engagement.</p>
+          
+          </div>
+        </div>
+                <!-- Enhanced Content Card-2 added to Campus Life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Hostel Life</h3>
+             
+             
+<div>
+<p>The institute provides excellent hostel facilities for students. Separate hostels for boys and girls are available with well-furnished rooms, mess facilities, and round-the-clock security. The hostels create a home away from home and foster a sense of community among students. Common rooms, TV rooms, and recreational areas are provided for relaxation and social interaction. The mess serves nutritious and hygienic food catering to diverse tastes. Wardens and support staff ensure the well-being of students and maintain discipline.</p> </div>
+          
+              
+              
+             
+         
+        </div>   </div>
+      </div>
+            <!-- Enhanced Content Card-3 added to Campus Life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Sports and Recreation</h3>
+             
+             
+<div>
+<p>The institute has excellent sports facilities that are available to all students. The campus has grounds for cricket, football, basketball, volleyball, and athletics. Indoor facilities for badminton, table tennis, chess, and carrom are also available. The institute organizes inter-collegiate and inter-university tournaments, encouraging students to participate and excel in sports. Regular fitness sessions, yoga classes, and adventure activities are conducted to promote overall well-being.</p> </div>
+          
+              
+              
+             
+         
+        </div>   </div>
+      </div>
+                  <!-- Enhanced Content Card-2 added to Campus Life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Cultural Activities</h3>
+             
+             
+<div>
+<p>The institute celebrates cultural diversity through various events and festivals throughout the year. The annual cultural festival is a major attraction that brings together students from all colleges. It features music, dance, drama, art exhibitions, literary events, and fashion shows. Various clubs and societies dedicated to music, dance, drama, photography, and fine arts provide platforms for students to showcase their talents. Cultural exchange programs and workshops by renowned artists are regularly organized to enrich the cultural experience of students.</p> </div>
+          
+              
+              
+             
+         
+        </div>   </div>
+      </div>
+       <!-- Enhanced Content Card-2 added to Campus Life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Student Clubs and Organizations</h3>
+             
+             
+<div>
+<p>The institute has various student clubs and organizations that cater to diverse interests. These include medical societies, debate clubs, environmental clubs, social service groups, and research forums. These clubs provide opportunities for students to pursue their passions, develop leadership skills, and engage with like-minded peers. Regular events, workshops, and competitions organized by these clubs enhance the overall learning experience and foster personal growth.</p> </div>
+          
+              
+              
+             
+         
+        </div>   </div>
+      </div>
+</div>
+     
+      <!-- Placements Pane -->
+      <div id="placements" class="tab-pane hidden">
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+           
+             
+  <h3 class="text-xl font-semibold mb-4 text-gray-800">MGMCRI Placements and Career Opportunities</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <p>Mahatma Gandhi Medical College and Research Institute has a dedicated placement cell that assists students in their career development. While traditional placements are not applicable to medical courses in the same way as engineering or management, the institute provides excellent career opportunities through various channels. Medical graduates from MGMCRI are highly sought after for residency programs, government jobs, and private practice.</p>
+<table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Particulars</th>
+      <th class="py-3 px-4">Details</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">MBBS Internship Stipend</td>
+      <td class="py-3 px-4">INR 15,000-20,000 per month</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">PG Stipend (Junior Resident)</td>
+      <td class="py-3 px-4">INR 50,000-60,000 per month</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Super-Specialty Stipend (Senior Resident)</td>
+      <td class="py-3 px-4">INR 70,000-80,000 per month</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Government Job Opportunities</td>
+      <td class="py-3 px-4">Excellent through UPSC, State PSCs</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Private Sector Opportunities</td>
+      <td class="py-3 px-4">Hospitals, Healthcare Companies</td>
+    </tr>
+    <tr>
+      <td class="py-3 px-4 font-semibold">Higher Studies</td>
+      <td class="py-3 px-4">Top institutions in India and abroad</td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+</div></div>
+   <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+              <h3 class="text-xl font-semibold mb-4 text-gray-800">Career Prospects</h3>
+<p>Graduates from MGMCRI have excellent career prospects in various fields of medicine and healthcare. The institute's reputation and quality of education ensure that its graduates are highly valued in the job market. Many alumni hold prestigious positions in government hospitals, private healthcare institutions, research organizations, and academic institutions worldwide.
+</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+  <div class="bg-gray-100 p-4 rounded-lg">
+    <h4 class="font-bold text-lg mb-2">Clinical Practice</h4>
+    <p>Many graduates establish successful private practices or join prestigious hospitals as consultants and specialists.</p>
+  </div>
+  <div class="bg-gray-100 p-4 rounded-lg">
+    <h4 class="font-bold text-lg mb-2">Academic Careers</h4>
+    <p>A significant number of graduates pursue academic careers and join medical colleges as faculty members.</p>
+  </div>
+  <div class="bg-gray-100 p-4 rounded-lg">
+    <h4 class="font-bold text-lg mb-2">Research</h4>
+    <p>Graduates contribute to medical research in national and international research institutions.</p>
+  </div>
+  <div class="bg-gray-100 p-4 rounded-lg">
+    <h4 class="font-bold text-lg mb-2">Public Health</h4>
+    <p>Many work in public health organizations, contributing to healthcare policy and implementation.</p>
+  </div>
+</div>
+              </div>
+      </div>
+    </div></div>
+              </div>
+      <!-- Gallery Pane -->
+      <div id="Gallery" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-2">Campus Gallery</h2>
+       <div class="p-6 bg-gray-100 rounded-xl">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+    
+    <!-- Image 1 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://sbvu.ac.in/mgmcri/images/mgmcri-building.jpg" 
+        
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+    <!-- Image 2 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://sbvu.ac.in/mgmcri/images/mgmcri-hospital.jpg" 
+          
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+    <!-- Image 3 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://sbvu.ac.in/mgmcri/images/mgmcri-labs.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+    <!-- Image 4 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://sbvu.ac.in/mgmcri/images/mgmcri-library.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+<!-- Image 5 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://sbvu.ac.in/mgmcri/images/mgmcri-hostel.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+<!-- Image 6 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://sbvu.ac.in/mgmcri/images/mgmcri-auditorium.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+<!-- Image 7 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://sbvu.ac.in/mgmcri/images/mgmcri-sports.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+  </div>
+</div>
+      </div>
+    <!-- alumni Pane -->
+<div id="alumni" class="tab-pane hidden">
+  <!-- Alumni Table -->
+  <div class="max-w-6xl mx-auto p-4">
+    <section class="max-w-6xl mx-auto p-6">
+      <h2 class="text-3xl font-bold mb-6 text-center text-indigo-700">🎓 Notable Alumni – MGMCRI</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-white">
+        <!-- Alumni Cards -->
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. K. S. Reddy</h3>
+          <p class="text-gray-600 mt-1">Cardiologist, Apollo Hospitals</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Priya Sharma</h3>
+          <p class="text-gray-600 mt-1">Neurologist, AIIMS Delhi</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Rajesh Kumar</h3>
+          <p class="text-gray-600 mt-1">Surgeon, Fortis Healthcare</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Anjali Nair</h3>
+          <p class="text-gray-600 mt-1">Pediatrician, CMC Vellore</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Suresh Babu</h3>
+          <p class="text-gray-600 mt-1">Oncologist, Tata Memorial Hospital</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Meena Patel</h3>
+          <p class="text-gray-600 mt-1">Gynecologist, Lilavati Hospital</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Vikram Singh</h3>
+          <p class="text-gray-600 mt-1">Orthopedic Surgeon, Max Healthcare</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Deepa Iyer</h3>
+          <p class="text-gray-600 mt-1">Dermatologist, Kaya Skin Clinic</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Arvind Kumar</h3>
+          <p class="text-gray-600 mt-1">Psychiatrist, NIMHANS</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Shweta Gupta</h3>
+          <p class="text-gray-600 mt-1">Radiologist, Medanta</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Sanjay Verma</h3>
+          <p class="text-gray-600 mt-1">Gastroenterologist, Apollo Hospitals</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Neha Singh</h3>
+          <p class="text-gray-600 mt-1">Anesthesiologist, AIIMS Delhi</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+</div>
+      </div>
+    <div id="Student Talks" class="tab-pane hidden">
+  <h2 class="text-2xl font-semibold mb-2">🎓 Student Reviews</h2>
+  <section class="px-6 py-12 bg-white space-y-6">
+    <!-- Review 1 -->
+    <div style="background: white; padding: 20px; border-radius: 12px;">
+      <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+        <strong>Review 1: Excellent medical education with great clinical exposure.</strong>
+        <p>
+          <b>Education:</b> MGMCRI provides excellent medical education with highly qualified faculty. The curriculum is comprehensive and updated regularly. The practical exposure in the attached hospital is immense and helps in developing clinical skills.
+          <br><b>Infrastructure:</b> The institute has excellent infrastructure with well-equipped labs, modern classrooms, and a huge library. The hospital is well-maintained with all modern facilities.
+          <br><b>Faculty:</b> The faculty members are highly experienced and supportive. They are always ready to help students and provide excellent guidance.
+          <br><b>Other:</b> The campus life is vibrant with various cultural and sports activities. The hostel facilities are good and affordable.
+        </p>
+      </div>
+    </div>
+    <!-- Review 2 -->
+    <div style="background: white; padding: 20px; border-radius: 12px;">
+      <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+        <strong>Review 2: Great learning experience with excellent clinical exposure.</strong>
+        <p>
+          <b>Education:</b> The MBBS program at MGMCRI is rigorous and comprehensive. The clinical exposure from the early years is a major advantage. The hospital sees a diverse patient population, which helps in learning various cases.
+          <br><b>Infrastructure:</b> The infrastructure is good with all necessary facilities. The labs are well-equipped and the library has a vast collection of books and journals.
+          <br><b>Faculty:</b> The faculty members are knowledgeable and experienced. The teaching methodology is effective with a good balance of theory and practical.
+        </p>
+      </div>
+    </div>
+    <!-- Review 3 -->
+    <div style="background: white; padding: 20px; border-radius: 12px;">
+      <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+        <strong>Review 3: One of the best medical colleges in Puducherry.</strong>
+        <p>
+          <b>Education:</b> MGMCRI is definitely one of the best medical colleges in Puducherry. The quality of education is top-notch and the curriculum is designed to produce competent doctors. The practical training is excellent.
+          <br><b>Infrastructure:</b> The infrastructure is excellent with state-of-the-art facilities. The hospital is well-equipped with modern diagnostic and treatment facilities.
+          <br><b>Faculty:</b> The faculty members are highly qualified and experienced. They are very supportive and provide excellent guidance.
+          <br><b>Other:</b> The campus life is enriching with various cultural and sports activities. The hostel facilities are good and the food is decent.
+        </p>
+      </div>
+    </div>
+    <!-- Review 4 -->
+    <div style="background: white; padding: 20px; border-radius: 12px;">
+      <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+        <strong>Review 4: Good college with some areas for improvement.</strong>
+        <p>
+          <b>Education:</b> The education quality is good and the faculty is knowledgeable. However, the curriculum could be more updated with recent advances in medicine. The clinical exposure is excellent.
+          <br><b>Infrastructure:</b> The infrastructure is good but some facilities need upgradation. The library is excellent with a vast collection of books and journals.
+          <br><b>Faculty:</b> Most faculty members are good and supportive, but some lack modern teaching methods. The practical training is excellent.
+          <br><b>Other:</b> The campus life is vibrant but the hostel facilities could be improved. The food quality in the mess is average.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+  <script>
+    const buttons = document.querySelectorAll('.tab-button');
+    const panes = document.querySelectorAll('.tab-pane');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active-tab'));
+        btn.classList.add('active-tab');
+        panes.forEach(p => p.classList.add('hidden'));
+        document.getElementById(btn.dataset.tab).classList.remove('hidden');
+      });
+    });
+  </script>
+  <style>
+    .tab-button { padding: .5rem 1rem; font-size: .875rem; font-weight: 500; color: #374151; border-bottom:2px solid transparent; transition: .2s; cursor: pointer; }
+    .tab-button:hover { color: #3b82f6; border-color: #3b82f6; }
+    .active-tab { border-color: #2563eb; color: #2563eb; }
+    .tab-pane { background: #fff; padding:1rem; border-radius:.5rem; box-shadow:0 1px 2px rgb(0 0 0 / .05); }
+  </style>
+</body>
+</html>

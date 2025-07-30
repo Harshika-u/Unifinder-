@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UniFinder – Engineering Universities</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ✅ Same-style header as india.html -->
+  <header class="page-header">
+    <h1>Engineering Universities</h1>
+    <p>Explore India's top Engineering & Technology campuses</p>
+  </header>
+
+  
+  <title>University Cards</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    .stream-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 107px;
+    }
+
+    .stream-grid a {
+      text-decoration: none;
+    }
+
+    .stream-grid a[class$='-card'] {
+      background-size: cover;
+      background-position: center;
+      height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .stream-grid a[class$='-card']:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .stream-title {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    /* Sample background images (replace with actual URLs) */
+    .iitmadras-card { background-image: url('https://askusedu.com/blogdashboard/wp-content/uploads/2024/05/iit-madras-online-bsc.webp'); }
+    .iitbombay-card { background-image: url('https://www.ieor.iitb.ac.in/sites/default/files/files/banner-1%20iitb_0.jpg'); }
+    .iitdelhi-card { background-image: url('https://home.iitd.ac.in/images/for-faculty/camp8.jpg'); }
+    .iitkanpur-card { background-image: url('https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_1200,h_675/https://phodu.club/wp-content/uploads/2025/06/kanpur-iit.webp'); }
+    .iitkgp-card { background-image: url('https://c.ndtvimg.com/llvlorh_iit-kharagpur-website_625x300_03_August_18.jpg?downsize=545:307'); }
+    .iitroorkee-card { background-image: url('https://api.educationpost.in/s3-images/1719909107618-IITR_JT-1.jpg'); }
+    .iitguwahati-card { background-image: url('https://i.ytimg.com/vi/92C1QU4jr30/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLArP0OqMDTOgYD_Y-txMcYnH7ODig'); }
+    .nittrichy-card { background-image: url('https://media.collegedekho.com/media/img/institute/crawled_images/None/GFDFDGSFGGHDDF.jpg'); }
+    .nitwarangal-card { background-image: url('https://media.collegedekho.com/media/uploads/2023/10/18/nit-warangal-campus.jpg'); }
+    .vit-card { background-image: url('https://images.shiksha.com/mediadata/images/articles/1584528545phpdljDz1.jpeg'); }
+    .srm-card { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTPbKLmQBTTQJ66QT7ViPuaFhm2ifiCxVzMQ&s'); }
+    .gitam-card { background-image: url('https://media.collegedekho.com/media/img/institute/crawled_images/None/hyderabad-campus-image.jpg'); }
+    .hitam-card { background-image: url('https://hitam.org/wp-content/uploads/2025/03/0B7A9137.jpg'); }
+    .amrita-card { background-image: url('https://images.shiksha.com/mediadata/images/articles/1587994716phpmjYKDq.jpeg'); }
+    .manipal-card { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhP-wjjNSIda_2fgph6xaDKmsyvKW04_uoBg&s'); }
+    .iiith-card { background-image: url('https://cdn1.byjus.com/wp-content/uploads/2018/11/jee/2017/10/06101120/IIIT-Hyderabad-3-1.png'); }
+    .nitsurathkal-card { background-image: url('https://ik.imagekit.io/syustaging/SYU_PREPROD/image_1734687146870_ub_WnNP7V.webp?tr=w-3840'); }
+    .nitrourkela-card { background-image: url('https://images.odishatv.in/uploadimage/library/16_9/16_9_0/recent_photo_1745131042.jpg'); }
+    .nitcalicut-card { background-image: url('https://abped-college-dashboard.s3.us-east-2.amazonaws.com/tted/college-backend/college/9118d480-1688-4a3f-9bc8-af094d45471c.jpg'); }
+    .bits-card { background-image: url('https://www.catalyser.in/public/img/blog/bitcblog1.jpg'); }
+    .coep-card { background-image: url('https://www.coeptech.ac.in/wp-content/uploads/elementor/thumbs/COEP-Website-Pic-6-r4qfmbqfe8bwc0r15m898t1radkhlgc2hsiukrh0uw.jpg'); }
+    .mitwpu-card { background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/MIT-WPU-1.tif/lossless-page1-1200px-MIT-WPU-1.tif.png'); }
+    .shivnadar-card { background-image: url('https://cache.careers360.mobi/media/presets/1200X675/article_images/2025/1/9/Shiv-nadar-university-delhi.jpg'); }
+    .pes-card { background-image: url('https://images.shiksha.com/mediadata/images/1579493357phpSyKONr.jpeg'); }
+  </style>
+</head>
+<body>
+  <!-- ✅ University cards with image backgrounds -->
+  <div class="stream-grid">
+    <a href="iitmadras.html" class="stream-card iitmadras-card"><div class="stream-title">IIT Madras</div></a>
+    <a href="iitbombay.html" class="stream-card iitbombay-card"><div class="stream-title">IIT Bombay</div></a>
+    <a href="iitdelhi.html" class="stream-card iitdelhi-card"><div class="stream-title">IIT Delhi</div></a>
+    <a href="iitkanpur.html" class="stream-card iitkanpur-card"><div class="stream-title">IIT Kanpur</div></a>
+    <a href="IIT Kharagpur.html" class="stream-card iitkgp-card"><div class="stream-title">IIT Kharagpur</div></a>
+    <a href="IIT Roorkee.html" class="stream-card iitroorkee-card"><div class="stream-title">IIT Roorkee</div></a>
+    <a href="IIT Guwahati.html" class="stream-card iitguwahati-card"><div class="stream-title">IIT Guwahati</div></a>
+    <a href="NIT Trichy.html" class="stream-card nittrichy-card"><div class="stream-title">NIT Trichy</div></a>
+    <a href=">NIT Warangal.html" class="stream-card nitwarangal-card"><div class="stream-title">NIT Warangal</div></a>
+    <a href="VIT.html" class="stream-card vit-card"><div class="stream-title">VIT</div></a>
+    <a href="SRM Institute.html" class="stream-card srm-card"><div class="stream-title">SRM Institute</div></a>
+    <a href="GITAM University.html" class="stream-card gitam-card"><div class="stream-title">GITAM University</div></a>
+    <a href="HITAM.html" class="stream-card hitam-card"><div class="stream-title">HITAM</div></a>
+    <a href="Amrita Vishwa Vidyapeetham.html" class="stream-card amrita-card"><div class="stream-title">Amrita Vishwa Vidyapeetham</div></a>
+    <a href="manipal.html" class="stream-card manipal-card"><div class="stream-title">Manipal University</div></a>
+    <a href="IIIT Hyderabad.html" class="stream-card iiith-card"><div class="stream-title">IIIT Hyderabad</div></a>
+    <a href="NIT Surathkal.html" class="stream-card nitsurathkal-card"><div class="stream-title">NIT Surathkal</div></a>
+    <a href="NIT Rourkela.html" class="stream-card nitrourkela-card"><div class="stream-title">NIT Rourkela</div></a>
+    <a href="NIT Calicut.html" class="stream-card nitcalicut-card"><div class="stream-title">NIT Calicut</div></a>
+    <a href="BITS Pilani.html" class="stream-card bits-card"><div class="stream-title">BITS Pilani</div></a>
+    <a href="COEP Technological University.html" class="stream-card coep-card"><div class="stream-title">COEP Technological University</div></a>
+    <a href="MIT WPU.html" class="stream-card mitwpu-card"><div class="stream-title">MIT World Peace University</div></a>
+    <a href="Shiv Nadar University.html" class="stream-card shivnadar-card"><div class="stream-title">Shiv Nadar University</div></a>
+    <a href="PES University.html" class="stream-card pes-card"><div class="stream-title">PES University</div></a>
+  </div>
+</body>
+</html>

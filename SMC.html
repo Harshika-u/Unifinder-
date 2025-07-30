@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stanley Medical College, Chennai – UniFinder</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- HERO BANNER -->
+  <section
+    class="rounded-lg shadow-lg p-12 mb-8"
+    style="background-image: url('data:image/jpeg;base64,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'); background-size: cover; background-position: center;"
+  >
+    <div
+      class="flex flex-col md:flex-row items-center max-w-4xl mx-auto bg-black bg-opacity-50 p-8 rounded-lg"
+    >
+      <img
+        src="data:image/jpeg;base64,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"
+        alt="Logo"
+        class="w-24 h-24 rounded-full mb-4 md:mb-0 md:mr-6 shadow-lg"
+      />
+      <div class="text-white">
+        <h1 class="text-4xl font-extrabold mb-2">Stanley Medical College, Chennai</h1>
+        <p class="text-lg">🏆 Premier Government Medical Institution in Tamil Nadu</p>
+      </div>
+    </div>
+  </section>
+  <div class="max-w-6xl mx-auto p-4">
+    <h1 class="text-4xl font-bold text-center mb-6">
+      Stanley Medical College, Chennai
+    </h1>
+    <!-- Tabs Navigation -->
+    <div class="flex space-x-4 border-b mb-6" id="tabs">
+      <button class="tab-button active-tab" data-tab="Collegeinfo">🎓College Info</button>
+      <button class="tab-button " data-tab="courses">🎓 Courses</button>
+      <button class="tab-button" data-tab="admissions">📝 Admissions</button>
+      <button class="tab-button" data-tab="fees">💰 Fees</button>
+      <button class="tab-button" data-tab="campus">🏕️ Campus Life</button>
+      <button class="tab-button" data-tab="placements">💼 Placements</button>
+      <button class="tab-button" data-tab="Gallery">🌐 Gallery</button>
+      <button class="tab-button" data-tab="alumni">🌐 Alumni</button>
+      <button class="tab-button" data-tab="Student Talks">🎓 Student Talks</button>
+    </div>
+    <!-- Tab Content -->
+    <div id="tab-content">
+      <!-- College info Pane -->
+       <div id="Collegeinfo" class="tab-pane block">
+        <h2 class="text-2xl font-semibold mb-2">🎓 Information – Stanley Medical College, Chennai</h2>
+        <!-- College info content -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Full Name: </h3><p class="text-rose-700 text-xl font-semibold">Stanley Medical College (SMC)</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Established: </h3><p class="text-rose-700 text-xl font-semibold">1938</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+     <h3 class="font-bold text-xl">Type:</h3><p class="text-rose-700 text-xl font-semibold">Government Medical College</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+     <h3 class="font-bold text-xl">Location:</h3><p class="text-rose-700 text-xl font-semibold">Chennai, Tamil Nadu, India</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Affiliation: </h3><p class="text-rose-700 text-xl font-semibold">The Tamil Nadu Dr. M.G.R. Medical University</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Status: </h3><p class="text-rose-700 text-xl font-semibold">Autonomous Institution</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Accreditation:  </h3><p class="text-rose-700 text-xl font-semibold">National Medical Commission (NMC)</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Campus Size: </h3><p class="text-rose-700 text-xl font-semibold">Approx. 50 acres</p>
+    </div>
+  </div>
+  <!-- Content Card 1 -->
+<div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+ <!-- Enhanced Content Card added to College Info -->
+        <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+<h3 class="text-2xl font-bold mb-4">Basic Information </h3>
+             
+            <p class="mb-4 leading-relaxed">
+Stanley Medical College (SMC) is a government medical college and hospital located in Chennai, Tamil Nadu. Established in 1938, it is one of the oldest and most prestigious medical institutions in India. The college is affiliated with The Tamil Nadu Dr. M.G.R. Medical University and recognized by the National Medical Commission (NMC). Stanley Medical College is known for its high academic standards, excellent clinical training, and significant contributions to healthcare in the region.</p>
+                     <!-- Diagonal Overlays -->
+          </div></div>
+        </div>
+                <!-- Enhanced Content Card-2 added to College Info -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">History</h3>
+             
+<div>
+<p>
+Stanley Medical College has a rich history dating back to the colonial era. It was established in 1938 during the British Raj and was named after George Frederick Stanley, a British statesman who served as the Governor of Madras. The college started as a small institution and has grown over the decades to become one of the leading medical colleges in India.</p>
+<p>
+The college was initially affiliated with the University of Madras and later became part of The Tamil Nadu Dr. M.G.R. Medical University. Over the years, Stanley Medical College has produced numerous distinguished medical professionals who have made significant contributions to healthcare in India and abroad.</p> </div>
+          
+             
+              
+           
+             
+          </div>
+        </div></div>
+      
+      <!-- Enhanced Content Card-3 added to College Info -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Vision and Mission</h3>
+<ul class="list-disc ml-6 mb-4">
+  <li>To provide quality medical education and training to students.</li>
+  <li>To deliver comprehensive healthcare services to all sections of society.</li>
+  <li>To promote research and innovation in medical sciences.</li>
+  <li>To develop compassionate and competent healthcare professionals.</li>
+</ul>
+<div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Key Features</h3>	
+</ul>    <ul class="list-disc ml-6 mb-4">
+  <li>Attached Government Stanley Hospital with 1280 beds.</li>
+  <li>State-of-the-art medical facilities and equipment.</li>
+  <li>Experienced faculty members with expertise in various specialties.</li>
+  <li>Strong emphasis on research and community healthcare.</li>
+  <li>Active student participation in extracurricular activities.</li>
+</ul>        
+             
+             
+          
+</div>
+      </div>
+ </div> </div>
+      <div id="courses" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-2">🎓 Courses Offered </h2>
+        <!-- Courses content -->
+         
+        <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            
+            <p class="mb-4 leading-relaxed">
+Stanley Medical College offers a wide range of undergraduate, postgraduate, and doctoral programs in medical sciences. The college is known for its rigorous curriculum and comprehensive clinical training.</p>
+<h3 class="text-2xl font-bold mb-4">UNDERGRADUATE PROGRAMS</h3>
+           
+            <p class="mb-4 leading-relaxed">
+The undergraduate program at Stanley Medical College includes the MBBS course, which is the primary medical degree offered by the institution. The college admits 250 students annually to the MBBS program through the NEET-UG examination.</p>
+<h4 class="text-2xl font-bold mb-4">Bachelor of Medicine and Bachelor of Surgery (MBBS):</h4>
+<p>The MBBS program at Stanley Medical College is a 5.5-year course including a one-year compulsory rotating internship. The curriculum is designed to provide students with a strong foundation in medical sciences and extensive clinical exposure.</p>
+<!-- Table for MBBS Details -->
+<table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Course Duration</th>
+      <th class="py-3 px-4">Annual Intake</th>
+      <th class="py-3 px-4">Eligibility</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">5.5 years (including 1 year internship)</td>
+      <td class="py-3 px-4">250 students</td>
+      <td class="py-3 px-4">10+2 with Physics, Chemistry, Biology and English; NEET-UG qualified</td>
+    </tr>
+  </tbody>
+</table>
+            <p>The college follows the curriculum prescribed by The Tamil Nadu Dr. M.G.R. Medical University and the National Medical Commission. Students undergo rigorous training in pre-clinical, para-clinical, and clinical subjects during the course.</p>
+          </div>
+        </div>
+    <!-- Enhanced Content Card-2 added to Courses -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">POSTGRADUATE PROGRAMS</h3>
+      <p>Stanley Medical College offers a wide range of postgraduate programs including Doctor of Medicine (MD), Master of Surgery (MS), and Diploma courses in various specialties. The college admits students through the NEET-PG examination.</p>
+<h4 class="text-2xl font-bold mb-4">MD/MS Programs:</h4>
+<table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Specialty</th>
+      <th class="py-3 px-4">Degree</th>
+      <th class="py-3 px-4">Duration</th>
+      <th class="py-3 px-4">Seats</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">General Medicine</td>
+      <td class="py-3 px-4">MD</td>
+      <td class="py-3 px-4">3 years</td>
+      <td class="py-3 px-4">15</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">General Surgery</td>
+      <td class="py-3 px-4">MS</td>
+      <td class="py-3 px-4">3 years</td>
+      <td class="py-3 px-4">12</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Obstetrics & Gynaecology</td>
+      <td class="py-3 px-4">MD/MS</td>
+      <td class="py-3 px-4">3 years</td>
+      <td class="py-3 px-4">10</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Paediatrics</td>
+      <td class="py-3 px-4">MD</td>
+      <td class="py-3 px-4">3 years</td>
+      <td class="py-3 px-4">8</td>
+    </tr>
+    <tr>
+      <td class="py-3 px-4 font-semibold">Orthopaedics</td>
+      <td class="py-3 px-4">MS</td>
+      <td class="py-3 px-4">3 years</td>
+      <td class="py-3 px-4">6</td>
+    </tr>
+  </tbody>
+</table>
+   <h4 class="text-2xl font-bold mb-4">Diploma Programs:</h4> <table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Specialty</th>
+      <th class="py-3 px-4">Diploma</th>
+      <th class="py-3 px-4">Duration</th>
+      <th class="py-3 px-4">Seats</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Child Health</td>
+      <td class="py-3 px-4">DCH</td>
+      <td class="py-3 px-4">2 years</td>
+      <td class="py-3 px-4">6</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Obstetrics & Gynaecology</td>
+      <td class="py-3 px-4">DGO</td>
+      <td class="py-3 px-4">2 years</td>
+      <td class="py-3 px-4">8</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Orthopaedics</td>
+      <td class="py-3 px-4">D.Ortho</td>
+      <td class="py-3 px-4">2 years</td>
+      <td class="py-3 px-4">4</td>
+    </tr>
+    <tr>
+      <td class="py-3 px-4 font-semibold">Radio Diagnosis</td>
+      <td class="py-3 px-4">DMRD</td>
+      <td class="py-3 px-4">2 years</td>
+      <td class="py-3 px-4">4</td>
+    </tr>
+  </tbody>
+</table>
+   </div>   </div></div>
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">SUPER-SPECIALTY AND PARAMEDICAL COURSES</h3>  
+            <p>The college also offers super-specialty courses (DM/M.Ch) and various paramedical courses to meet the growing demand for specialized healthcare professionals.</p>
+<h4 class="text-2xl font-bold mb-4">Super-Specialty Courses:</h4>
+<table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Specialty</th>
+      <th class="py-3 px-4">Degree</th>
+      <th class="py-3 px-4">Duration</th>
+      <th class="py-3 px-4">Seats</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Cardiology</td>
+      <td class="py-3 px-4">DM</td>
+      <td class="py-3 px-4">3 years</td>
+      <td class="py-3 px-4">2</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Neurology</td>
+      <td class="py-3 px-4">DM</td>
+      <td class="py-3 px-4">3 years</td>
+      <td class="py-3 px-4">2</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Urology</td>
+      <td class="py-3 px-4">M.Ch</td>
+      <td class="py-3 px-4">3 years</td>
+      <td class="py-3 px-4">2</td>
+    </tr>
+    <tr>
+      <td class="py-3 px-4 font-semibold">Plastic Surgery</td>
+      <td class="py-3 px-4">M.Ch</td>
+      <td class="py-3 px-4">3 years</td>
+      <td class="py-3 px-4">2</td>
+    </tr>
+  </tbody>
+</table>
+<h4 class="text-2xl font-bold mb-4">Paramedical Courses:</h4>
+<table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Course</th>
+      <th class="py-3 px-4">Duration</th>
+      <th class="py-3 px-4">Seats</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">B.Sc Nursing</td>
+      <td class="py-3 px-4">4 years</td>
+      <td class="py-3 px-4">50</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">B.Sc Medical Laboratory Technology</td>
+      <td class="py-3 px-4">3 years</td>
+      <td class="py-3 px-4">30</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">B.Sc Radiography</td>
+      <td class="py-3 px-4">3 years</td>
+      <td class="py-3 px-4">20</td>
+    </tr>
+    <tr>
+      <td class="py-3 px-4 font-semibold">Diploma in Pharmacy</td>
+      <td class="py-3 px-4">2 years</td>
+      <td class="py-3 px-4">60</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+      </div>
+<!-- Admissions Pane -->
+<div id="admissions" class="tab-pane hidden px-4 py-6">
+  <h2 class="text-3xl font-bold text-indigo-700 mb-6">📝 Admissions – Stanley Medical College</h2>
+  <!-- Timeline CSS -->
+  <style>
+    .timeline-container {
+      position: relative;
+      margin: 2rem auto;
+      padding: 2rem 0;
+      max-width: 1100px;
+    }
+    .timeline-line {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(to bottom, #6366f1, #9333ea);
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+    .timeline-item {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+    .timeline-item-left,
+    .timeline-item-right {
+      width: 47%;
+      background-color: #f9fafb;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      z-index: 1;
+      transition: transform 0.3s ease;
+    }
+    .timeline-item-left:hover,
+    .timeline-item-right:hover {
+      transform: scale(1.03);
+    }
+    .timeline-circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: linear-gradient(to bottom right, #4f46e5, #7c3aed);
+      border-radius: 9999px;
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: white;
+      z-index: 2;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    @media (max-width: 768px) {
+      .timeline-item-left,
+      .timeline-item-right {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+      .timeline-circle {
+        top: -1.5rem;
+        left: 5%;
+        transform: none;
+      }
+    }
+  </style>
+  <!-- Timeline Content -->
+  <section class="timeline-container">
+    <div class="timeline-line"></div>
+    <div class="timeline-item">
+      <div class="timeline-item-left">
+        <h3 class="text-xl font-bold text-blue-700 mb-2">1. Appear for NEET UG (For MBBS)</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Conducted by NTA (National Testing Agency)</li>
+          <li>Mandatory for admission to MBBS program</li>
+          <li>Subjects: Physics, Chemistry, Biology, English</li>
+          <li>Qualifying marks required as per NMC norms</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">1</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-right ml-auto">
+        <h3 class="text-xl font-bold text-purple-700 mb-2">2. Qualify NEET UG with Required Score</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>General category: 50th percentile</li>
+          <li>SC/ST/OBC: 40th percentile</li>
+          <li>Higher score increases chances of admission</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">2</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-left">
+        <h3 class="text-xl font-bold text-green-700 mb-2">3. State Counselling Process</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Register for Tamil Nadu State Counselling</li>
+          <li>Document verification process</li>
+          <li>Choice filling and locking</li>
+          <li>Seat allotment based on merit and category</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">3</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-right ml-auto">
+        <h3 class="text-xl font-bold text-pink-700 mb-2">4. PG Admissions (MD/MS/Diploma)</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Qualify NEET PG examination</li>
+          <li>Register for state PG counselling</li>
+          <li>Seat allotment based on NEET PG rank</li>
+          <li>Separate process for super-specialty courses</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">4</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-left">
+        <h3 class="text-xl font-bold text-red-600 mb-2">5. Document Verification & Reporting</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Submit required documents:
+            <ul class="list-disc ml-6">
+              <li>NEET Scorecard</li>
+              <li>Class 10 & 12 Mark Sheets</li>
+              <li>Transfer Certificate</li>
+              <li>Community Certificate (if applicable)</li>
+              <li>Nativity Certificate</li>
+            </ul>
+          </li>
+          <li>Report to the college within stipulated time</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">5</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-right ml-auto">
+        <h3 class="text-xl font-bold text-yellow-700 mb-2">6. Final Admission Process</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Medical fitness examination</li>
+          <li>Payment of tuition fees</li>
+          <li>Completion of admission formalities</li>
+          <li>Orientation program for new students</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">6</div>
+    </div>
+  </section>
+</div>
+      <!-- Fees Pane -->
+      <div id="fees" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-2">💵 Academic Fees (2023-24)</h2>
+       <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+  <!-- Diagonal Overlays -->
+  <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+  <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+  
+  <!-- Accent Bar -->
+  <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+  <div class="relative">
+    <h2 class="text-2xl font-bold text-indigo-700 mb-4">💰 Stanley Medical College Fees Structure</h2>
+    <p class="mb-4 leading-relaxed text-gray-700">
+      Stanley Medical College is a government institution with affordable fee structure. The fees are regulated by the Government of Tamil Nadu and The Tamil Nadu Dr. M.G.R. Medical University. The college offers various scholarships and financial assistance to deserving students.
+    </p>
+    <!-- Fees Table -->
+    <div class="overflow-x-auto mt-6">
+      <table class="min-w-full text-sm border border-gray-300">
+        <thead class="bg-indigo-100 text-indigo-800">
+          <tr>
+            <th class="text-left px-4 py-2 border border-gray-300">Particulars</th>
+            <th class="text-left px-4 py-2 border border-gray-300">Details</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-800">
+          <tr class="bg-white">
+            <td class="px-4 py-2 border border-gray-300">MBBS Fees (Annual)</td>
+            <td class="px-4 py-2 border border-gray-300">INR 13,000 - 25,000 (varies by category)</td>
+          </tr>
+          <tr class="bg-gray-50">
+            <td class="px-4 py-2 border border-gray-300">MD/MS Fees (Annual)</td>
+            <td class="px-4 py-2 border border-gray-300">INR 60,000 - 1,20,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-2 border border-gray-300">Hostel Fees (Annual)</td>
+            <td class="px-4 py-2 border border-gray-300">INR 5,000 - 10,000</td>
+          </tr>
+          <tr class="bg-gray-50">
+            <td class="px-4 py-2 border border-gray-300">No of MBBS Seats</td>
+            <td class="px-4 py-2 border border-gray-300">250</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-2 border border-gray-300">Scholarships Available</td>
+            <td class="px-4 py-2 border border-gray-300">Yes, for meritorious and economically disadvantaged students</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+      </div>
+     <!-- Campus Life Pane -->
+      <div id="campus" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-4">🏕️ Campus Life</h2>
+        <!-- Enhanced Content Card added to Campus Life -->
+        <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+           
+            <p class="mb-4 leading-relaxed">
+Stanley Medical College offers a vibrant campus life with a perfect blend of academics, extracurricular activities, and cultural events. The college campus spans approximately 50 acres and provides a conducive environment for learning and personal growth. The attached Government Stanley Hospital, one of the largest government hospitals in Chennai, provides excellent clinical exposure to students.</p>
+          
+          </div>
+        </div>
+                <!-- Enhanced Content Card-2 added to Campus Life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Hostel Facilities</h3>
+             
+             
+<div>
+<p>The college provides separate hostel facilities for male and female students. The hostels are well-equipped with all necessary amenities including Wi-Fi, mess facilities, recreation rooms, and 24/7 security. The hostel life at Stanley Medical College fosters camaraderie among students and provides a home away from home.</p>
+<p>Each hostel has its own warden and resident tutors to ensure the well-being of students. The mess provides nutritious and hygienic food at subsidized rates. Common rooms are equipped with televisions, newspapers, and indoor games for recreation.</p> </div>
+          
+              
+              
+             
+         
+        </div>   </div>
+      </div>
+            <!-- Enhanced Content Card-3 added to Campus Life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Sports and Recreation</h3>
+             
+             
+<div>
+<p>The college encourages students to participate in various sports and recreational activities. The campus has facilities for cricket, football, volleyball, basketball, badminton, and table tennis. Annual sports meet is organized where students showcase their athletic talents.</p>
+<p>The college also has a well-equipped gymnasium and a swimming pool. Students can join various sports clubs and participate in inter-college tournaments. Physical fitness is given importance alongside academics to ensure overall development of students.</p> </div>
+          
+              
+              
+             
+         
+        </div>   </div>
+      </div>
+                  <!-- Enhanced Content Card-2 added to Campus Life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Cultural Events</h3>
+             
+             
+<div>
+<p>Stanley Medical College organizes various cultural events throughout the year. The annual college fest "Stanzo" is a much-awaited event that includes cultural performances, literary competitions, and social activities. Students actively participate in music, dance, drama, and fine arts competitions.</p>
+<p>The college also celebrates various festivals and national events with great enthusiasm. These events provide a platform for students to showcase their talents and foster a sense of community and cultural exchange among the diverse student population.</p> </div>
+          
+              
+              
+             
+         
+        </div>   </div>
+      </div>
+       <!-- Enhanced Content Card-2 added to Campus Life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Student Organizations</h3>
+             
+             
+<div>
+<p>The college has various student organizations and clubs that cater to different interests. These include the Student Union, Medical Students Association, Literary Club, Debate Club, Photography Club, and more. These organizations provide opportunities for students to develop leadership skills and pursue their interests beyond academics.</p>
+<p>The college also has active NSS (National Service Scheme) and Youth Red Cross units that engage students in community service and social welfare activities. These initiatives help students develop empathy and social responsibility while serving the community.</p> </div>
+          
+              
+              
+             
+         
+        </div>   </div>
+      </div>
+</div>
+     
+      <!-- Placements Pane -->
+      <div id="placements" class="tab-pane hidden">
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+           
+             
+  <h3 class="text-xl font-semibold mb-4 text-gray-800">Career Opportunities</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <p>As a government medical college, Stanley Medical College doesn't have a traditional placement cell. However, the college has an excellent track record of producing competent medical professionals who are highly sought after in the healthcare industry. Graduates from Stanley Medical College have established successful careers in various fields of medicine.</p>
+<p>The college provides comprehensive clinical training at Government Stanley Hospital, which has 1280 beds and caters to a large patient population. This extensive clinical exposure prepares students to handle diverse medical cases and challenges in their professional careers.</p>
+<p>Many graduates pursue higher studies in prestigious institutions in India and abroad. Others join government hospitals, private healthcare institutions, or start their own practice. The college alumni network is strong and provides support and guidance to recent graduates in their career endeavors.</p>
+  </div>
+</div></div>
+   <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+              <h3 class="text-xl font-semibold mb-4 text-gray-800">Internship Opportunities</h3>
+<p>The one-year compulsory rotating internship is an integral part of the MBBS program. During this period, students work in various departments of Government Stanley Hospital, gaining hands-on experience in patient care under the supervision of experienced faculty members.</p>
+<p>The internship provides exposure to different specialties including Medicine, Surgery, Obstetrics & Gynaecology, Paediatrics, Orthopaedics, and more. This practical training is invaluable in shaping the professional skills of future doctors.</p>
+<p>After completing the internship, students are eligible to register with the Tamil Nadu Medical Council and practice as medical professionals. Many students choose to pursue postgraduate studies to specialize in their area of interest.</p>
+              </div>
+      </div>
+    </div></div>
+              </div>
+      <!-- Gallery Pane -->
+      <div id="Gallery" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-2">Campus Gallery</h2>
+       <div class="p-6 bg-gray-100 rounded-xl">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+    
+    <!-- Image 1 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Stanley_Medical_College_and_Hospital.jpg/1200px-Stanley_Medical_College_and_Hospital.jpg" 
+        
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+    <!-- Image 2 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Stanley_Medical_College_logo.png/220px-Stanley_Medical_College_logo.png" 
+          
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+    <!-- Image 3 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.educationafter12th.com/wp-content/uploads/2019/07/Stanley-Medical-College-Chennai.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+    <!-- Image 4 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.collegechalo.com/assets/college_photo/1593489129-Stanley%20Medical%20College%20and%20Hospital%20-%20Chennai.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+<!-- Image 5 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.admissionfever.com/college_image/stanley-medical-college-chennai-1569464583.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+<!-- Image 6 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.medi-fever.com/uploads/college/gallery/Stanley-Medical-College-Chennai-5f3e4c0d6f6b3.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+<!-- Image 7 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.medi-fever.com/uploads/college/gallery/Stanley-Medical-College-Chennai-5f3e4c0d6f6b3.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+  </div>
+</div>
+      </div>
+    <!-- alumni Pane -->
+<div id="alumni" class="tab-pane hidden">
+  <!-- Alumni Table -->
+  <div class="max-w-6xl mx-auto p-4">
+    <section class="max-w-6xl mx-auto p-6">
+      <h2 class="text-3xl font-bold mb-6 text-center text-indigo-700">🎓 Notable Alumni – Stanley Medical College</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-white">
+        <!-- Alumni Cards -->
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. S. Arulrhaj</h3>
+          <p class="text-gray-600 mt-1">Former President, Indian Medical Association</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. K. Srinath Reddy</h3>
+          <p class="text-gray-600 mt-1">Cardiologist, Public Health Expert</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. R. Sivakumar</h3>
+          <p class="text-gray-600 mt-1">Nephrologist, Renowned Researcher</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. V. Shanta</h3>
+          <p class="text-gray-600 mt-1">Oncologist, Padma Shri Awardee</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. M. S. Ramakrishnan</h3>
+          <p class="text-gray-600 mt-1">Cardiothoracic Surgeon</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. K. R. Sethuraman</h3>
+          <p class="text-gray-600 mt-1">Vice Chancellor, Sri Balaji Vidyapeeth</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. S. P. Thyagarajan</h3>
+          <p class="text-gray-600 mt-1">Former Vice Chancellor, University of Madras</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. G. S. Kailasam</h3>
+          <p class="text-gray-600 mt-1">Orthopaedic Surgeon, Padma Shri Awardee</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. S. M. Balaji</h3>
+          <p class="text-gray-600 mt-1">Maxillofacial Surgeon</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. J. Amalorpavanathan</h3>
+          <p class="text-gray-600 mt-1">Neurosurgeon, Former Director of Institute of Neurology</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. S. Rajasabapathy</h3>
+          <p class="text-gray-600 mt-1">Plastic Surgeon</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. K. Kannan</h3>
+          <p class="text-gray-600 mt-1">Gastroenterologist</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+</div>
+      </div>
+    <div id="Student Talks" class="tab-pane hidden">
+  <h2 class="text-2xl font-semibold mb-2">🎓 Student Reviews</h2>
+  <section class="px-6 py-12 bg-white space-y-6">
+    <!-- Review 1 -->
+    <div style="background: white; padding: 20px; border-radius: 12px;">
+      <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+        <strong>Review 1: Excellent Clinical Exposure</strong>
+        <p>
+          <b>Academics:</b> The faculty at Stanley Medical College is highly knowledgeable and supportive. The curriculum is comprehensive and covers all aspects of medical education. The clinical exposure we get at Government Stanley Hospital is unparalleled.
+          <br><b>Infrastructure:</b> The college has good infrastructure with well-equipped laboratories and lecture halls. The library is well-stocked with medical books and journals. The hospital attached to the college provides excellent learning opportunities.
+          <br><b>Hostel Life:</b> The hostel facilities are basic but comfortable. The mess food is decent and affordable. The hostel environment is conducive to studying and building lifelong friendships.
+        </p>
+      </div>
+    </div>
+    <!-- Review 2 -->
+    <div style="background: white; padding: 20px; border-radius: 12px;">
+      <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+        <strong>Review 2: Great Value for Money</strong>
+        <p>
+          <b>Academics:</b> Stanley Medical College offers quality medical education at an affordable fee structure. The professors are experienced and always willing to help students. The teaching methodology is a good mix of theoretical and practical knowledge.
+          <br><b>Campus Life:</b> The college organizes various cultural and sports events throughout the year. The annual college fest "Stanzo" is a highlight where students showcase their talents in various fields.
+          <br><b>Placements:</b> While there are no campus placements in the traditional sense, the reputation of the college helps graduates secure good positions in hospitals and healthcare institutions. Many students also pursue higher studies in prestigious institutions.
+        </p>
+      </div>
+    </div>
+    <!-- Review 3 -->
+    <div style="background: white; padding: 20px; border-radius: 12px;">
+      <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+        <strong>Review 3: Challenging but Rewarding</strong>
+        <p>
+          <b>Academics:</b> The academic program at Stanley Medical College is rigorous and demanding. The schedule is packed with lectures, practical sessions, and clinical postings. It requires dedication and hard work to excel.
+          <br><b>Clinical Exposure:</b> The best part of studying at Stanley is the immense clinical exposure we get. The attached hospital has a high patient flow, giving us the opportunity to observe and learn from a wide variety of cases.
+          <br><b>Student Life:</b> The college has a diverse student community. There are various clubs and societies that students can join based on their interests. The campus life is vibrant and helps in overall personality development.
+        </p>
+      </div>
+    </div>
+    <!-- Review 4 -->
+    <div style="background: white; padding: 20px; border-radius: 12px;">
+      <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+        <strong>Review 4: Good Foundation for Medical Career</strong>
+        <p>
+          <b>Academics:</b> Stanley Medical College provides a strong foundation in medical sciences. The curriculum is up-to-date and follows the guidelines of the National Medical Commission. The faculty members are experts in their respective fields.
+          <br><b>Facilities:</b> The college has all the necessary facilities for medical education. The laboratories are well-equipped, and the library has a vast collection of medical literature. The hospital facilities are excellent for clinical training.
+          <br><b>Alumni Network:</b> The college has a strong alumni network that is very supportive. Many alumni hold prestigious positions in various medical institutions and are always willing to guide current students.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+  <script>
+    const buttons = document.querySelectorAll('.tab-button');
+    const panes = document.querySelectorAll('.tab-pane');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active-tab'));
+        btn.classList.add('active-tab');
+        panes.forEach(p => p.classList.add('hidden'));
+        document.getElementById(btn.dataset.tab).classList.remove('hidden');
+      });
+    });
+  </script>
+  <style>
+    .tab-button { padding: .5rem 1rem; font-size: .875rem; font-weight: 500; color: #374151; border-bottom:2px solid transparent; transition: .2s; cursor: pointer; }
+    .tab-button:hover { color: #3b82f6; border-color: #3b82f6; }
+    .active-tab { border-color: #2563eb; color: #2563eb; }
+    .tab-pane { background: #fff; padding:1rem; border-radius:.5rem; box-shadow:0 1px 2px rgb(0 0 0 / .05); }
+  </style>
+</body>
+</html>
