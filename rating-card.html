@@ -1,0 +1,22 @@
+<div class="max-w-md mx-auto mt-6 p-4 border rounded shadow" data-college="">
+  <h2 class="text-xl font-semibold mb-2">Rate This College</h2>
+
+  <!-- Rating Stars -->
+  <div id="stars" class="flex gap-1 mb-2">
+    <span class="star text-2xl cursor-pointer">☆</span>
+    <span class="star text-2xl cursor-pointer">☆</span>
+    <span class="star text-2xl cursor-pointer">☆</span>
+    <span class="star text-2xl cursor-pointer">☆</span>
+    <span class="star text-2xl cursor-pointer">☆</span>
+  </div>
+
+  <!-- Optional Comment -->
+  <textarea id="comment" placeholder="Your thoughts (optional)" class="w-full border p-2 rounded mb-2"></textarea>
+
+  <!-- Submit Button -->
+  <button onclick="submitRating()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+    Submit
+  </button>
+
+  <p id="thanks" class="mt-3 text-green-600 hidden">Thanks for rating!</p>
+</div>

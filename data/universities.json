@@ -1,0 +1,122 @@
+[
+  {
+    "id": "iitm",
+    "name": "IIT Madras",
+    "stream": "Engineering",
+    "location": "Tamil Nadu",
+    "type": "Government",
+    "rank": 1
+  },
+  {
+    "id": "iitb",
+    "name": "IIT Bombay",
+    "stream": "Engineering",
+    "location": "Maharashtra",
+    "type": "Government",
+    "rank": 2
+  },
+  {
+    "id": "bits",
+    "name": "BITS Pilani",
+    "stream": "Engineering",
+    "location": "Rajasthan",
+    "type": "Private",
+    "rank": 3
+  },
+  {
+    "id": "aiims",
+    "name": "AIIMS Delhi",
+    "stream": "Medical",
+    "location": "Delhi",
+    "type": "Government",
+    "rank": 1
+  },
+  {
+    "id": "cmc",
+    "name": "CMC Vellore",
+    "stream": "Medical",
+    "location": "Tamil Nadu",
+    "type": "Private",
+    "rank": 2
+  },
+  {
+    "id": "jipmer",
+    "name": "JIPMER Pondicherry",
+    "stream": "Medical",
+    "location": "Puducherry",
+    "type": "Government",
+    "rank": 3
+  },
+  {
+    "id": "sric",
+    "name": "SRCC Delhi",
+    "stream": "Commerce",
+    "location": "Delhi",
+    "type": "Government",
+    "rank": 1
+  },
+  {
+    "id": "loyola",
+    "name": "Loyola College",
+    "stream": "Commerce",
+    "location": "Tamil Nadu",
+    "type": "Private",
+    "rank": 2
+  },
+  {
+    "id": "xaviers",
+    "name": "St. Xavier's College Mumbai",
+    "stream": "Commerce",
+    "location": "Maharashtra",
+    "type": "Private",
+    "rank": 3
+  },
+  {
+    "id": "nlsiu",
+    "name": "NLSIU Bangalore",
+    "stream": "Civil Services",
+    "location": "Karnataka",
+    "type": "Government",
+    "rank": 1
+  },
+  {
+    "id": "jnu",
+    "name": "JNU Delhi",
+    "stream": "Civil Services",
+    "location": "Delhi",
+    "type": "Government",
+    "rank": 2
+  },
+  {
+    "id": "du",
+    "name": "Delhi University",
+    "stream": "Civil Services",
+    "location": "Delhi",
+    "type": "Government",
+    "rank": 3
+  },
+  {
+    "id": "duarts",
+    "name": "Delhi University",
+    "stream": "Arts",
+    "location": "Delhi",
+    "type": "Government",
+    "rank": 1
+  },
+  {
+    "id": "jadavpur",
+    "name": "Jadavpur University",
+    "stream": "Arts",
+    "location": "West Bengal",
+    "type": "Government",
+    "rank": 2
+  },
+  {
+    "id": "presidency",
+    "name": "Presidency University Kolkata",
+    "stream": "Arts",
+    "location": "West Bengal",
+    "type": "Government",
+    "rank": 3
+  }
+]

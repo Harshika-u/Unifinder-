@@ -494,6 +494,12 @@ Admissions to all postgraduate courses for Indian nationals as well as sponsored
 
 
       </div>
+       <!-- Compare Now Button -->
+  <div class="text-center">
+    <button class="bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition shadow-lg">
+      🔍 Compare Now
+    </button>
+  </div>
 <!-- Admissions Pane -->
 <div id="admissions" class="tab-pane hidden px-4 py-6">
   <h2 class="text-3xl font-bold text-indigo-700 mb-6">📝 Admissions – AIIMS MBBS 2025</h2>
@@ -1242,6 +1248,29 @@ Here are the placement details for AIIMS Delhi UG Placements 2023:
 
   </section>
 </div>
+<!-- ⬇️ Rating Card Goes Here -->
+<div class="max-w-md mx-auto mt-6 p-4 border rounded shadow" data-college="AIIMS Delhi">
+  <h2 class="text-xl font-semibold mb-2">Rate This College</h2>
+
+  <!-- Rating Stars -->
+  <div class="stars flex gap-1 mb-2">
+    <span class="star text-2xl cursor-pointer">☆</span>
+    <span class="star text-2xl cursor-pointer">☆</span>
+    <span class="star text-2xl cursor-pointer">☆</span>
+    <span class="star text-2xl cursor-pointer">☆</span>
+    <span class="star text-2xl cursor-pointer">☆</span>
+  </div>
+
+  <!-- Optional Comment -->
+  <textarea class="comment w-full border p-2 rounded mb-2" placeholder="Your thoughts (optional)"></textarea>
+
+  <!-- Submit Button -->
+  <button class="submit-rating bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+    Submit
+  </button>
+
+  <p class="thanks mt-3 text-green-600 hidden">Thanks for rating!</p>
+</div>
 
   <script>
     const buttons = document.querySelectorAll('.tab-button');
@@ -1262,5 +1291,39 @@ Here are the placement details for AIIMS Delhi UG Placements 2023:
     .active-tab { border-color: #2563eb; color: #2563eb; }
     .tab-pane { background: #fff; padding:1rem; border-radius:.5rem; box-shadow:0 1px 2px rgb(0 0 0 / .05); }
   </style>
+<script>
+  document.querySelectorAll('[data-college]').forEach((card) => {
+    const stars = card.querySelectorAll('.star');
+    const commentBox = card.querySelector('.comment');
+    const submitButton = card.querySelector('.submit-rating');
+    const thanksMsg = card.querySelector('.thanks');
+    let selectedRating = 0;
+
+    stars.forEach((star, i) => {
+      star.addEventListener('click', () => {
+        selectedRating = i + 1;
+        stars.forEach((s, idx) => {
+          s.textContent = idx < selectedRating ? '★' : '☆';
+        });
+      });
+    });
+
+    submitButton.addEventListener('click', () => {
+      const comment = commentBox.value;
+      const collegeName = card.getAttribute('data-college');
+      const key = `rating_${collegeName.replace(/\s+/g, '_')}`;
+      const previousRatings = JSON.parse(localStorage.getItem(key)) || [];
+      previousRatings.push({ rating: selectedRating, comment });
+      localStorage.setItem(key, JSON.stringify(previousRatings));
+
+      thanksMsg.classList.remove('hidden');
+      commentBox.value = "";
+      stars.forEach(s => s.textContent = '☆');
+      selectedRating = 0;
+    });
+  });
+</script>
+
 </body>
+
 </html>
