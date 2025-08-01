@@ -3,71 +3,622 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IIT Madras – UniFinder</title>
+  <title>Indian Institute of Technology Guwahati – UniFinder</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-800">
   <!-- 1) HERO BANNER -->
   <section
     class="rounded-lg shadow-lg p-12 mb-8"
-    style="background-image: url('https://generic.wordpress.soton.ac.uk/webscience/wp-content/uploads/sites/117/2019/04/madras.jpg'); background-size: cover; background-position: center;"
+    style="background-image: url('data:image/jpeg;base64,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'); background-size: cover; background-position: center;"
   >
     <div
       class="flex flex-col md:flex-row items-center max-w-4xl mx-auto bg-black bg-opacity-50 p-8 rounded-lg"
     >
       <img
-        src="https://upload.wikimedia.org/wikipedia/en/6/69/IIT_Madras_Logo.svg"
+        src="data:image/png;base64,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"
         alt="Logo"
-        class="w-24 h-24 rounded-full mb-4 md:mb-0 md:mr-6 shadow-lg"
+        class="w-24 h-24 rounded-full mb-4 md:mb-0 md:mr-6 shadow-lg bg-white p-2"
       />
       <div class="text-white">
-        <h1 class="text-4xl font-extrabold mb-2">IIT Madras</h1>
-        <p class="text-lg">🏆 Ranked #1 in Engineering by NIRF 2024</p>
+        <h1 class="text-4xl font-extrabold mb-2">Indian Institute of Technology Guwahati</h1>
+        <p class="text-lg">🏆 Ranked #7 in Engineering by NIRF 2023</p>
       </div>
     </div>
   </section>
-
   <div class="max-w-6xl mx-auto p-4">
     <h1 class="text-4xl font-bold text-center mb-6">
-      Indian Institute of Technology Madras (IIT Madras)
+      Indian Institute of Technology Guwahati
     </h1>
-
     <!-- Tabs Navigation -->
     <div class="flex space-x-4 border-b mb-6" id="tabs">
-      <button class="tab-button active-tab" data-tab="courses">🎓 Courses</button>
+      <button class="tab-button active-tab" data-tab="Collegeinfo">🎓College Info</button>
+      <button class="tab-button " data-tab="courses">🎓 Courses</button>
       <button class="tab-button" data-tab="admissions">📝 Admissions</button>
       <button class="tab-button" data-tab="fees">💰 Fees</button>
       <button class="tab-button" data-tab="campus">🏕️ Campus Life</button>
       <button class="tab-button" data-tab="placements">💼 Placements</button>
-      <button class="tab-button" data-tab="rankings">📊 Rankings</button>
-      <button class="tab-button" data-tab="global">🌐 Collaborations</button>
-      <button class="tab-button" data-tab="scholarships">🎓 Scholarships</button>
+      <button class="tab-button" data-tab="Gallery">🌐 Gallery</button>
+      <button class="tab-button" data-tab="alumni">🌐 Alumni</button>
+      <button class="tab-button" data-tab="Student Talks">🎓 Student Talks</button>
     </div>
-
     <!-- Tab Content -->
     <div id="tab-content">
-      <!-- Courses Pane -->
-      <div id="courses" class="tab-pane block">
-        <h2 class="text-2xl font-semibold mb-2">🎓 Academic Information – IIT Madras</h2>
+      <!-- Collage info Pane -->
+       <div id="Collegeinfo" class="tab-pane block">
+        <h2 class="text-2xl font-semibold mb-2">🎓 Information – Indian Institute of Technology Guwahati</h2>
+        <!--  collage info content -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Full Name: </h3><p class="text-rose-700 text-xl font-semibold">Indian Institute of Technology Guwahati (IITG)</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Established: </h3><p class="text-rose-700 text-xl font-semibold">1994</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+     <h3 class="font-bold text-xl">Type:</h3><p class="text-rose-700 text-xl font-semibold">Public Technical and Research University</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+     <h3 class="font-bold text-xl">Location:</h3><p class="text-rose-700 text-xl font-semibold">Guwahati, Assam, India</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Campus Size: </h3><p class="text-rose-700 text-xl font-semibold">285 hectares (705 acres)</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Director: </h3><p class="text-rose-700 text-xl font-semibold">Prof. T. G. Sitharam</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Affiliation:  </h3><p class="text-rose-700 text-xl font-semibold">Institute of National Importance</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Motto: </h3><p class="text-rose-700 text-xl font-semibold">"Knowledge is Power"</p>
+    </div>
+  </div>
+  <!--  Content Card 1 -->
+<div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+ <!-- Enhanced Content Card added to College Info -->
+        <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+<h3 class="text-2xl font-bold mb-4">About IIT Guwahati</h3>
+             
+           
+            <p class="mb-4 leading-relaxed">
+Indian Institute of Technology Guwahati (IITG) is a premier public technical and research university located in Guwahati, Assam, India. Established in 1994, it is the sixth Indian Institute of Technology established in India. IIT Guwahati is officially recognized as an Institute of National Importance by the Government of India.
+
+The institute is situated on the north bank of the Brahmaputra River, about 20 kilometers from the heart of Guwahati city. The campus is spread over a sprawling area of 285 hectares, which provides a serene environment for academic and research activities. IIT Guwahati is known for its picturesque beauty, with hills and lakes on one side and the mighty Brahmaputra River on the other.</p>
+                     <!-- Diagonal Overlays -->
+          </div></div>
+        </div>
+                <!-- Enhanced Content Card-2 added to College Info -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">History</h3>
+             
+             
+<div>
+<p>
+The history of IIT Guwahati traces back to the 1985 Assam Accord signed between the Assam government and the Government of India, which included a provision for setting up an IIT in Assam. The formal announcement for the establishment of IIT Guwahati was made in 1992.
+
+The institute started functioning in 1994 with a batch of 90 students in its temporary campus at the Assam Engineering College in Guwahati. The foundation stone of the permanent campus was laid in 1995, and the institute shifted to its present campus in 1998. Over the years, IIT Guwahati has grown from strength to strength, establishing itself as one of the premier engineering institutions in the country.
+
+In 2019, IIT Guwahati was ranked as the 7th best engineering college in India by the National Institutional Ranking Framework (NIRF). The institute has also been recognized internationally, being ranked among the top 100 universities in Asia by the QS World University Rankings.</p> </div>
+          
+             
+              
+           
+             
+          </div>
+        </div></div>
+      
+      <!-- Enhanced Content Card-3 added to College Info -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Vision and Mission</h3>
+<ul class="list-disc ml-6 mb-4">
+  <li>To bring out in a student the qualities of leadership, awareness of the social and economic environment, and a sense of responsibility towards the community.
+</li>
+<li>To provide an environment for the development of an individual's overall personality, with a focus on creativity and innovation.
+</li>
+ <li>To pursue excellence in all spheres of institute activities and to establish benchmarks that will be emulated by others.
+</li>
+ <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Objectives</h3>	
+</ul>    <ul class="list-disc ml-6 mb-4">
+  <li>To develop high-quality technical education and research facilities of international standards.
+</li>
+<li>To create a center of excellence in technical education that will foster creativity, innovation, and entrepreneurship.
+</li>
+ <li>To contribute to the development of the region through research, consultancy, and technology transfer.
+</li>
+    <li>To promote interdisciplinary research and collaboration with national and international institutions.
+</li>
+<li>To provide a platform for the overall development of students through extracurricular and co-curricular activities.
+</li>
+</ul>        
+             
+             
+          
+</div>
+      </div>
+ </div> </div>
+      <div id="courses" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-2">🎓 Courses Offered </h2>
         <!-- your courses content -->
+         
+     
+        <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            
+            <p class="mb-4 leading-relaxed">
+IIT Guwahati offers a wide range of academic programs across various disciplines of engineering, science, and humanities. The institute has 11 departments, 5 interdisciplinary centers, and 2 schools, covering a broad spectrum of technical and scientific education. The academic programs are designed to provide students with a strong foundation in their chosen field while also encouraging interdisciplinary learning and research.</p>
+<h3 class="text-2xl font-bold mb-4">Undergraduate Programs (B.Tech)
+</h3>
+           
+            <p class="mb-4 leading-relaxed">
+The Bachelor of Technology (B.Tech) program is the flagship undergraduate program at IIT Guwahati. It is a four-year program that provides students with a strong foundation in engineering principles and practices. The program includes coursework, laboratory work, and projects, and culminates in a final year project where students apply their knowledge to solve real-world problems.</p>
+<h4 class="text-2xl font-bold mb-4">B.Tech Programs Offered:</h4>
+<table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Department</th>
+      <th class="py-3 px-4">Program</th>
+      <th class="py-3 px-4">Intake</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Biosciences and Bioengineering</td>
+      <td class="py-3 px-4">B.Tech in Biosciences and Bioengineering</td>
+      <td class="py-3 px-4">40</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Chemical Engineering</td>
+      <td class="py-3 px-4">B.Tech in Chemical Engineering</td>
+      <td class="py-3 px-4">60</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Chemistry</td>
+      <td class="py-3 px-4">B.Tech in Chemistry</td>
+      <td class="py-3 px-4">40</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Civil Engineering</td>
+      <td class="py-3 px-4">B.Tech in Civil Engineering</td>
+      <td class="py-3 px-4">90</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Computer Science and Engineering</td>
+      <td class="py-3 px-4">B.Tech in Computer Science and Engineering</td>
+      <td class="py-3 px-4">110</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Design</td>
+      <td class="py-3 px-4">B.Des in Design</td>
+      <td class="py-3 px-4">20</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Electronics and Electrical Engineering</td>
+      <td class="py-3 px-4">B.Tech in Electronics and Electrical Engineering</td>
+      <td class="py-3 px-4">120</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Engineering Physics</td>
+      <td class="py-3 px-4">B.Tech in Engineering Physics</td>
+      <td class="py-3 px-4">40</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Mathematics</td>
+      <td class="py-3 px-4">B.Tech in Mathematics and Computing</td>
+      <td class="py-3 px-4">40</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Mechanical Engineering</td>
+      <td class="py-3 px-4">B.Tech in Mechanical Engineering</td>
+      <td class="py-3 px-4">110</td>
+    </tr>
+  </tbody>
+</table>
+          </div>
+        </div>
+    <!-- Enhanced Content Card-2 added to  -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Postgraduate Programs
+</h3>
+      <p>IIT Guwahati offers a variety of postgraduate programs, including Master of Technology (M.Tech), Master of Science (M.Sc), and Master of Design (M.Des). These programs provide advanced knowledge and research opportunities in specialized fields.</p>
+<h4 class="text-2xl font-bold mb-4">M.Tech Programs:</h4>
+<table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Department</th>
+      <th class="py-3 px-4">Specialization</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Biosciences and Bioengineering</td>
+      <td class="py-3 px-4">Biosciences and Bioengineering</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Chemical Engineering</td>
+      <td class="py-3 px-4">Chemical Engineering</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Civil Engineering</td>
+      <td class="py-3 px-4">Civil Engineering, Environmental Engineering, Geotechnical Engineering, Structural Engineering, Transportation Systems Engineering, Water Resources Engineering</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Computer Science and Engineering</td>
+      <td class="py-3 px-4">Computer Science and Engineering</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Design</td>
+      <td class="py-3 px-4">Design</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Electronics and Electrical Engineering</td>
+      <td class="py-3 px-4">Communication Engineering, Power and Energy Systems, VLSI</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Mechanical Engineering</td>
+      <td class="py-3 px-4">Mechanical Engineering</td>
+    </tr>
+  </tbody>
+</table>
+   <h4 class="text-2xl font-bold mb-4">M.Sc Programs:</h4>
+<table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Department</th>
+      <th class="py-3 px-4">Program</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Chemistry</td>
+      <td class="py-3 px-4">M.Sc in Chemistry</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Mathematics</td>
+      <td class="py-3 px-4">M.Sc in Mathematics</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Physics</td>
+      <td class="py-3 px-4">M.Sc in Physics</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Humanities and Social Sciences</td>
+      <td class="py-3 px-4">M.A in Development Studies</td>
+    </tr>
+  </tbody>
+</table>
+   </div>   </div></div>
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Doctoral Programs (PhD)
+</h3>  <p>IIT Guwahati offers doctoral programs in all departments and centers. The PhD program is aimed at developing researchers and scholars who can contribute to the advancement of knowledge in their chosen fields. The program involves coursework, comprehensive examinations, and original research leading to a thesis.</p>
+<p>Research at IIT Guwahati is organized around various thrust areas, including:</p>
+<ul class="list-disc ml-6 mb-4">
+  <li>Advanced Materials and Nanotechnology</li>
+  <li>Biotechnology and Bioengineering</li>
+  <li>Computational and Data Sciences</li>
+  <li>Energy and Environment</li>
+  <li>Information and Communication Technology</li>
+  <li>Infrastructure Engineering and Management</li>
+  <li>Manufacturing and Design</li>
+  <li>Water Resources and Management</li>
+</ul>
+<p>The institute also offers dual degree programs (B.Tech + M.Tech) in several departments, allowing students to complete both degrees in five years.</p></div>
+         <h4 class="text-2xl font-bold mb-4">Interdisciplinary Programs
+</h4><p>IIT Guwahati offers several interdisciplinary programs that cut across traditional departmental boundaries. These programs include:</p>
+<ul class="list-disc ml-6 mb-4">
+  <li>M.Tech in Data Science</li>
+  <li>M.Tech in Cyber Security</li>
+  <li>M.Tech in Artificial Intelligence</li>
+  <li>M.Tech in Renewable Energy</li>
+  <li>M.Tech in Robotics</li>
+</ul>
+          <p>These programs are designed to meet the emerging needs of industry and society, and provide students with a multidisciplinary perspective.</p>
+</div></div>
       </div>
-
-      <!-- Admissions Pane -->
-      <div id="admissions" class="tab-pane hidden">
-        <h2 class="text-2xl font-semibold mb-2">📝 Admissions</h2>
-        <!-- your admissions content -->
+       <!-- Compare Now Button -->
+  <div class="text-center">
+    <button class="bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition shadow-lg">
+      🔍 Compare Now
+    </button>
+  </div>
+<!-- Admissions Pane -->
+<div id="admissions" class="tab-pane hidden px-4 py-6">
+  <h2 class="text-3xl font-bold text-indigo-700 mb-6">📝 Admissions – IIT Guwahati</h2>
+  <!-- Timeline CSS -->
+  <style>
+    .timeline-container {
+      position: relative;
+      margin: 2rem auto;
+      padding: 2rem 0;
+      max-width: 1100px;
+    }
+    .timeline-line {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(to bottom, #6366f1, #9333ea);
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+    .timeline-item {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+    .timeline-item-left,
+    .timeline-item-right {
+      width: 47%;
+      background-color: #f9fafb;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      z-index: 1;
+      transition: transform 0.3s ease;
+    }
+    .timeline-item-left:hover,
+    .timeline-item-right:hover {
+      transform: scale(1.03);
+    }
+    .timeline-circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: linear-gradient(to bottom right, #4f46e5, #7c3aed);
+      border-radius: 9999px;
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: white;
+      z-index: 2;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    @media (max-width: 768px) {
+      .timeline-item-left,
+      .timeline-item-right {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+      .timeline-circle {
+        top: -1.5rem;
+        left: 5%;
+        transform: none;
+      }
+    }
+  </style>
+  <!-- Timeline Content -->
+  <section class="timeline-container">
+    <div class="timeline-line"></div>
+    <div class="timeline-item">
+      <div class="timeline-item-left">
+        <h3 class="text-xl font-bold text-blue-700 mb-2">1. Appear for JEE Advanced (For B.Tech/B.Des)</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Conducted by one of the IITs on a rotational basis</li>
+          <li>Only top 2,50,000 rank holders in JEE Main are eligible</li>
+          <li>Subjects: Physics, Chemistry, Mathematics</li>
+          <li>Includes negative marking</li>
+        </ul>
       </div>
-
+      <div class="timeline-circle">1</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-right ml-auto">
+        <h3 class="text-xl font-bold text-purple-700 mb-2">2. Qualify JEE Advanced with a Good Rank</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>IIT Guwahati cutoff ranks vary by branch and category</li>
+          <li>Popular branches like CSE require rank under 2000 for general category</li>
+          <li>Higher rank = better chances of getting preferred branch</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">2</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-left">
+        <h3 class="text-xl font-bold text-green-700 mb-2">3. Register for JoSAA Counselling</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Visit <a href="https://josaa.nic.in" target="_blank" class="text-blue-600 underline">josaa.nic.in</a></li>
+          <li>Register for Joint Seat Allocation Authority (JoSAA) counselling</li>
+          <li>Pay counselling and choice-locking fee</li>
+          <li>Select IIT Guwahati and branches in order of preference</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">3</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-right ml-auto">
+        <h3 class="text-xl font-bold text-pink-700 mb-2">4. Participate in JoSAA Counselling Rounds</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Conducted in Rounds: Round 1 to Round 6</li>
+          <li>Seat allotment based on:
+            <ul class="list-disc ml-6">
+              <li>JEE Advanced Rank</li>
+              <li>Category (UR/OBC/SC/ST/EWS/PwD)</li>
+              <li>Availability of seats in preferred branches</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="timeline-circle">4</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-left">
+        <h3 class="text-xl font-bold text-red-600 mb-2">5. Seat Allotment & Reporting</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>If allotted a seat at IIT Guwahati:
+            <ul class="list-disc ml-6">
+              <li>Accept the seat online</li>
+              <li>Download the allotment letter</li>
+              <li>Report online or at the reporting center as instructed</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="timeline-circle">5</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-right ml-auto">
+        <h3 class="text-xl font-bold text-yellow-700 mb-2">6. Final Admission & Document Verification</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Submit original documents:
+            <ul class="list-disc ml-6">
+              <li>JEE Advanced Admit Card & Scorecard</li>
+              <li>Class 10 & 12 Mark Sheets</li>
+              <li>Category Certificate (if applicable)</li>
+              <li>Passport-sized photographs</li>
+              <li>Government-issued ID proof (Aadhaar/Passport)</li>
+            </ul>
+          </li>
+          <li>Pay the admission and tuition fee</li>
+          <li>Complete the registration process at IIT Guwahati</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">6</div>
+    </div>
+  </section>
+  
+  <div class="mt-8 bg-blue-50 p-6 rounded-xl">
+    <h3 class="text-xl font-bold text-blue-800 mb-3">Admission to Postgraduate Programs</h3>
+    <ul class="list-disc ml-6 text-gray-700">
+      <li><strong>M.Tech:</strong> Through GATE examination followed by CCMT counselling</li>
+      <li><strong>M.Sc:</strong> Through IIT JAM examination followed by CCMN counselling</li>
+      <li><strong>PhD:</strong> Through written test and/or interview conducted by IIT Guwahati</li>
+      <li><strong>M.Des:</strong> Through CEED (Common Entrance Examination for Design) followed by counselling</li>
+    </ul>
+  </div>
+</div>
       <!-- Fees Pane -->
       <div id="fees" class="tab-pane hidden">
-        <h2 class="text-2xl font-semibold mb-2">💵 Fees</h2>
-        <!-- your fees content -->
+        <h2 class="text-2xl font-semibold mb-2">💵 Academic Fees (2025-26)</h2>
+       <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+  <!-- Diagonal Overlays -->
+  <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+  <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+  
+  <!-- Accent Bar -->
+  <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+  <div class="relative">
+    <h2 class="text-2xl font-bold text-indigo-700 mb-4">💰 IIT Guwahati Fees Structure</h2>
+    <p class="mb-4 leading-relaxed text-gray-700">
+      IIT Guwahati offers various undergraduate and postgraduate programs in engineering, sciences, and humanities. The fee structure is revised periodically by the institute. The following table provides an overview of the fee structure for the academic year 2025-26.
+    </p>
+    <!-- Fees Table -->
+    <div class="overflow-x-auto mt-6">
+      <table class="min-w-full text-sm border border-gray-300">
+        <thead class="bg-indigo-100 text-indigo-800">
+          <tr>
+            <th class="text-left px-4 py-2 border border-gray-300">Particulars</th>
+            <th class="text-left px-4 py-2 border border-gray-300">B.Tech/B.Des (Per Semester)</th>
+            <th class="text-left px-4 py-2 border border-gray-300">M.Tech/M.Sc/M.Des (Per Semester)</th>
+            <th class="text-left px-4 py-2 border border-gray-300">PhD (Per Semester)</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-800">
+          <tr class="bg-white">
+            <td class="px-4 py-2 border border-gray-300">Tuition Fee</td>
+            <td class="px-4 py-2 border border-gray-300">INR 1,00,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 1,00,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 35,000</td>
+          </tr>
+          <tr class="bg-gray-50">
+            <td class="px-4 py-2 border border-gray-300">Hostel Fee</td>
+            <td class="px-4 py-2 border border-gray-300">INR 12,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 12,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 12,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-2 border border-gray-300">Mess Advance</td>
+            <td class="px-4 py-2 border border-gray-300">INR 15,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 15,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 15,000</td>
+          </tr>
+          <tr class="bg-gray-50">
+            <td class="px-4 py-2 border border-gray-300">One-Time Fee</td>
+            <td class="px-4 py-2 border border-gray-300">INR 10,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 10,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 10,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-2 border border-gray-300">Medical Insurance</td>
+            <td class="px-4 py-2 border border-gray-300">INR 1,500</td>
+            <td class="px-4 py-2 border border-gray-300">INR 1,500</td>
+            <td class="px-4 py-2 border border-gray-300">INR 1,500</td>
+          </tr>
+          <tr class="bg-gray-50">
+            <td class="px-4 py-2 border border-gray-300">Student Welfare Fee</td>
+            <td class="px-4 py-2 border border-gray-300">INR 2,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 2,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 2,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-2 border border-gray-300">Total (Approximate)</td>
+            <td class="px-4 py-2 border border-gray-300">INR 1,30,500</td>
+            <td class="px-4 py-2 border border-gray-300">INR 1,30,500</td>
+            <td class="px-4 py-2 border border-gray-300">INR 65,500</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4 text-sm text-gray-600">
+      Note: The above fees are indicative and subject to change. Students from SC/ST/PwD categories are eligible for full tuition fee waiver. Economically Weaker Section (EWS) students whose family income is less than INR 1 lakh per annum are eligible for complete remission of tuition fee. Students whose family income is between INR 1 lakh to INR 5 lakh per annum are eligible for remission of 2/3rd of the tuition fee.
+    </p>
+  </div>
+</div>
       </div>
-
      <!-- Campus Life Pane -->
       <div id="campus" class="tab-pane hidden">
         <h2 class="text-2xl font-semibold mb-4">🏕️ Campus Life</h2>
-
         <!-- Enhanced Content Card added to Campus Life -->
         <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
           <!-- Diagonal Overlays -->
@@ -75,19 +626,11 @@
           <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
           <!-- Accent Bar -->
           <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
-
           <div class="relative">
            
             <p class="mb-4 leading-relaxed">
-IIT Madras is a residential institute that occupies a 2.5 km² (617 acre) campus that was formerly part of the adjoining Guindy National Park. The main entrance of IIT Madras is on Sardar Patel Road, flanked by the residential districts of Adyar and Velachery. The campus is close to the Raj Bhavan, the official seat of the Governor of Tamil Nadu.
-The campus is located 10 km from the Chennai Airport, 12 km from the Chennai Central Railway station, and is well connected by city buses. Kasturba Nagar is the nearest station on the Chennai MRTS line.
-Two parallel roads, Bonn Avenue and Delhi Avenue, cut through the faculty residential area, before they meet at the Gajendra Circle, near the Administrative Block. Buses regularly ply between the Main Gate, Gajendra Circle, the Academic Zone, and the Hostel Zone.
-Much of the campus is a protected forest, carved out of the Guindy National Park, home to many animals that are not commonly seen in a busy city like Chennai. The campus has the pride of having one of the most elegant antelopes in the world - the Blackbuck. The campus is also home to large numbers of chital (spotted deer), bonnet macaque, monkeys and other rare wildlife. There is a lot of other smaller and exquisite life forms that play a major role in the biodiversity of the campus. The IIT campus has about 300 species of trees and plants with quite a large number of native wild species, which are unique to the tropical, dry evergreen vegetation. IIT Madras campus is a haven for bird watchers in the city. There are about 100 species of birds seen at different times of the year. There are quite a number of resident species as well as few migrants like Forest Wagtail, Pied Crested Cuckoo, Golden Oriole etc. which are migratory.
-A natural lake, deepened in 1988 and 2003, drains most of its rainwater.
-            </p>
-            <img src="https://www.iitm.ac.in/sites/default/files/2020-03/static-Overview%20IITM%20lake.jpg" alt="Campus Lake" class="w-full rounded-lg mb-4 shadow-lg">
-                     <!-- Diagonal Overlays -->
-
+IIT Guwahati's campus is known for its natural beauty, nestled among hills and with the Brahmaputra River flowing nearby. The campus provides a vibrant and enriching environment for students to learn, grow, and develop holistically. With state-of-the-art facilities and a wide range of extracurricular activities, IIT Guwahati offers a well-rounded educational experience.</p>
+          
           </div>
         </div>
                 <!-- Enhanced Content Card-2 added to Campus Life -->
@@ -99,86 +642,394 @@ A natural lake, deepened in 1988 and 2003, drains most of its rainwater.
           <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
           <!-- Accent Bar -->
           <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
-
           <div class="relative">
-            <h3 class="text-2xl font-bold mb-4">🏫 Landmarks</h3>
+            <h3 class="text-2xl font-bold mb-4">Hostel Life</h3>
              
-              <li class="flex items-start">
-                <span class="text-indigo-600 text-2xl mr-3">•</span>
-<div><strong> Gajendra Circle:</strong> 
-<p>The first landmark that greets every visitor is GC or Gajendra Circle, which is about 2.5 km from the gate. The area from the main gate to GC is the residential zone of our campus where faculty and staff live. After GC you’ll enter the academic zone with various departments, laboratories, workshops and the computer centre, spread over a large area in a big array of buildings. Further into the campus towards the end, you will find the hostel zone with various facilities for students. </p> </div>
-              </li>
-              <li class="flex items-start">
-                <span class="text-indigo-600 text-2xl mr-3">•</span>
-                <div><strong> Himalaya:</strong><p> Himalaya is a giant building where all the messes are located. Infront is a beautiful lawn where you can relax in the evenings. </p></div>
-              </li>
-              <li class="flex items-start">
-                <span class="text-green-600 text-2xl mr-3">•</span>
-                <div><strong> New Academic Complex:</strong> <p>The new academic complex was constructed recently with a budget of 115 crores. It is equipped with all the latest technology classroom facilities. The view from outside is very scenic. It is presently hosting the Departments of Mathematics, Chemical Engineering, Metallurgical & Materials Engineering. </p></div>
-              </li>
-              <li class="flex items-start">
-                <span class="text-red-600 text-2xl mr-3">•</span>
-                <div><strong>OAT:</strong> <p>In between the GC and the hostel zone, you will spot a large arena called the Open Air Theatre, where the weekend movies are screened by the Film Club. Here, the best of the latest movies in English, Hindi, Tamil and other regional languages are screened. OAT is also the venue where the Saarang Pro-shows are held. </p></div>
-              </li>
-<img src="https://www.iitm.ac.in/sites/default/files/instigram/202004/static%20Campus%20Life%20Overview%20-%20Open%20Air%20Theatre.jpg" alt="Campus Lake" class="w-full rounded-lg mb-4 shadow-lg">
-           
-
-              <li class="flex items-start">
-                <span class="text-red-600 text-2xl mr-3">•</span>
-                <div><strong>CLT:</strong> <p>The Central Lecture Theatre is just opposite to the OAT in the middle of the Humanities and Sciences Block (HSB). This is an auditorium with a capacity of about 400, which is used for almost every in-house activity in the Institute. The Lit-Soc Schedule uses only this venue, not to mention the associations of the Institute which use this place all the time. </p></div>
-              </li>
-<img src=" https://www.iitm.ac.in/sites/default/files/2020-03/static-overview%20-Central%20Lecture%20Theatre.jpg " width="1000" height="200" alt="Campus Image">
-
-              <li class="flex items-start">
-                <span class="text-red-600 text-2xl mr-3">•</span>
-                <div><strong>CRC, Raman and Ramanujan Blocks:</strong><p> These are the places where most of your common classes take place. These are the places you would want to memorise in and out as this is where you would be headed to, most mornings, half- awake. The ground floor of the Class Room Complex is air-conditioned and is open for the use of students till 1 AM during the quiz weeks to serve as hangout spots for the muggu junta apart from the library.
-
-</p></div>
-              </li>
-
-            </ul>
-            <p class="italic text-gray-600">“The best blend of academics and campus life.” – Student Review</p>
-
-
-            <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-              <!-- List Items -->
-              <li class="flex items-start">
-                <span class="text-blue-600 text-2xl mr-3">🏠</span> 
-          </div>
-        </div>
+             
+<div>
+<p>IIT Guwahati has 13 hostels (11 for boys and 2 for girls) that accommodate over 4000 students. Each hostel has its own unique culture and traditions. The hostels are equipped with modern amenities including Wi-Fi, recreation rooms, gymnasiums, and mess facilities. The hostel life at IIT Guwahati is vibrant and forms an integral part of the student experience, fostering lifelong friendships and connections.</p> </div>
+          
+              
+              
+             
+         
+        </div>   </div>
       </div>
-
+            <!-- Enhanced Content Card-3 added to Campus Life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Sports and Recreation</h3>
+             
+             
+<div>
+<p>IIT Guwahati offers excellent sports facilities to its students. The campus has a Sports Complex with facilities for indoor games like badminton, table tennis, squash, and volleyball. Outdoor facilities include football and cricket grounds, basketball and tennis courts, and a running track. The institute also has a swimming pool and a gymnasium. The annual inter-hostel sports competition, known as "Spectra," is a major event that sees enthusiastic participation from students.</p> </div>
+          
+              
+              
+             
+         
+        </div>   </div>
+      </div>
+                  <!-- Enhanced Content Card-2 added to Campus Life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Cultural Activities</h3>
+             
+             
+<div>
+<p>The cultural scene at IIT Guwahati is vibrant and diverse, with numerous clubs and societies catering to various interests. The annual cultural festival, "Alcheringa," is one of the largest college festivals in Northeast India, attracting participants from across the country. The festival features music, dance, dramatics, literary events, and workshops by renowned artists and performers.</p> </div>
+          
+              
+              
+             
+         
+        </div>   </div>
+      </div>
+       <!-- Enhanced Content Card-2 added to Campus Life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Technical Clubs and Entrepreneurship</h3>
+             
+             
+<div>
+<p>IIT Guwahati has a strong culture of technical innovation and entrepreneurship. The institute has several technical clubs that focus on robotics, coding, electronics, and other technical fields. The annual technical festival, "Techniche," showcases technical prowess through competitions, workshops, and exhibitions. The Technology Incubation Center at IIT Guwahati supports student startups and entrepreneurial ventures, providing mentorship, funding, and infrastructure support.</p> </div>
+          
+              
+              
+             
+         
+        </div>   </div>
+      </div>
 </div>
-
-      </div>
-
+     
       <!-- Placements Pane -->
       <div id="placements" class="tab-pane hidden">
-        <h2 class="text-2xl font-semibold mb-2">💼 Placements</h2>
-        <!-- your placements content -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y/1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+           
+             
+  <h3 class="text-xl font-semibold mb-4 text-gray-800">IIT Guwahati Placements 2023 Report</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <p>IIT Guwahati has consistently maintained excellent placement records over the years. The institute's Placement Cell works tirelessly to ensure that students get placed in reputed organizations across various sectors. The placement process for the academic year 2022-23 saw participation from over 200 companies, including Fortune 500 organizations and leading Indian companies.</p>
+<table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Particulars</th>
+      <th class="py-3 px-4">Placement Statistics (2023)</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Number of Registered Students</td>
+      <td class="py-3 px-4">1,350</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Number of Offers</td>
+      <td class="py-3 px-4">1,280</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Placement Percentage</td>
+      <td class="py-3 px-4">94.8%</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Highest Package (Domestic)</td>
+      <td class="py-3 px-4">INR 2.4 CPA</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Highest Package (International)</td>
+      <td class="py-3 px-4">INR 3.8 CPA</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Average Package</td>
+      <td class="py-3 px-4">INR 23.5 LPA</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Median Package</td>
+      <td class="py-3 px-4">INR 20 LPA</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Number of PPOs</td>
+      <td class="py-3 px-4">210</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Number of Companies Visited</td>
+      <td class="py-3 px-4">220+</td>
+    </tr>
+    <tr>
+      <td class="py-3 px-4 font-semibold">Number of New Companies</td>
+      <td class="py-3 px-4">45</td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+</div></div>
+   <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y/1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+              <h3 class="text-xl font-semibold mb-4 text-gray-800">Sector-wise Placement Distribution</h3>
+<p>The placements at IIT Guwahati span across various sectors, with Information Technology/Software being the dominant recruiter. The following table provides a sector-wise distribution of placements for the academic year 2022-23:</p>
+<table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Sector</th>
+      <th class="py-3 px-4">Percentage of Students Placed</th>
+      <th class="py-3 px-4">Average Package (INR LPA)</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">IT/Software</td>
+      <td class="py-3 px-4">45%</td>
+      <td class="py-3 px-4">26.5</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Core Engineering</td>
+      <td class="py-3 px-4">20%</td>
+      <td class="py-3 px-4">18.5</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Consulting</td>
+      <td class="py-3 px-4">15%</td>
+      <td class="py-3 px-4">25.0</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Finance</td>
+      <td class="py-3 px-4">10%</td>
+      <td class="py-3 px-4">22.0</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Analytics/Data Science</td>
+      <td class="py-3 px-4">7%</td>
+      <td class="py-3 px-4">28.0</td>
+    </tr>
+    <tr>
+      <td class="py-3 px-4 font-semibold">Others</td>
+      <td class="py-3 px-4">3%</td>
+      <td class="py-3 px-4">20.0</td>
+    </tr>
+  </tbody>
+</table>
+              </div>
       </div>
-
-      <!-- Rankings Pane -->
-      <div id="rankings" class="tab-pane hidden">
-        <h2 class="text-2xl font-semibold mb-2">📊 Rankings</h2>
-        <!-- your rankings content -->
+    </div></div>
+              </div>
+      <!-- Gallery Pane -->
+      <div id="Gallery" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-2">Campus Gallery</h2>
+       <div class="p-6 bg-gray-100 rounded-xl">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+    
+    <!-- Image 1 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.iitg.ac.in/stud/gymkhana/technical/media/iitg_aerial.jpg" 
+        
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+    <!-- Image 2 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.iitg.ac.in/stud/gymkhana/technical/media/iitg_main_building.jpg" 
+          
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+    <!-- Image 3 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.iitg.ac.in/stud/gymkhana/technical/media/iitg_library.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+    <!-- Image 4 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.iitg.ac.in/stud/gymkhana/technical/media/iitg_hostel.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+<!-- Image 5 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.iitg.ac.in/stud/gymkhana/technical/media/iitg_sports_complex.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+<!-- Image 6 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.iitg.ac.in/stud/gymkhana/technical/media/iitg_brahmaputra.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+<!-- Image 7 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.iitg.ac.in/stud/gymkhana/technical/media/iitg_lake.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+  </div>
+</div>
       </div>
-
-      <!-- Global Collaborations Pane -->
-      <div id="global" class="tab-pane hidden">
-        <h2 class="text-2xl font-semibold mb-2">🌐 Collaborations</h2>
-        <!-- your collaborations content -->
+    <!-- alumni Pane -->
+<div id="alumni" class="tab-pane hidden">
+  <!-- Alumni Table -->
+  <div class="max-w-6xl mx-auto p-4">
+    <section class="max-w-6xl mx-auto p-6">
+      <h2 class="text-3xl font-bold mb-6 text-center text-indigo-700">🎓 Notable Alumni – IIT Guwahati</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-white">
+        <!-- Alumni Cards -->
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Vijay P. Bhatkar</h3>
+          <p class="text-gray-600 mt-1">Computer Scientist, Padma Bhushan Awardee</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Bikram Singh Bedi</h3>
+          <p class="text-gray-600 mt-1">Country Manager, Google Cloud India</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Deepinder Goyal</h3>
+          <p class="text-gray-600 mt-1">Co-founder & CEO, Zomato</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Ritesh Agarwal</h3>
+          <p class="text-gray-600 mt-1">Founder & CEO, OYO Rooms</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Amit Somani</h3>
+          <p class="text-gray-600 mt-1">Managing Partner, Prime Venture Partners</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Sandeep Singhal</h3>
+          <p class="text-gray-600 mt-1">Co-founder, Nexus Venture Partners</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Vivek Raghavan</h3>
+          <p class="text-gray-600 mt-1">Chief Technology Officer, UIDAI (Aadhaar)</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Sachin Bansal</h3>
+          <p class="text-gray-600 mt-1">Co-founder, Flipkart</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Binny Bansal</h3>
+          <p class="text-gray-600 mt-1">Co-founder, Flipkart</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Abhishek Goyal</h3>
+          <p class="text-gray-600 mt-1">Co-founder, Tracxn</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Rahul Sharma</h3>
+          <p class="text-gray-600 mt-1">Co-founder, Urban Ladder</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Kunal Shah</h3>
+          <p class="text-gray-600 mt-1">Founder, CRED</p>
+        </div>
       </div>
-
-      <!-- Scholarships Pane -->
-      <div id="scholarships" class="tab-pane hidden">
-        <h2 class="text-2xl font-semibold mb-2">🎓 Scholarships</h2>
-        <!-- your scholarships content -->
+    </section>
+  </div>
+</div>
+</div>
       </div>
-
-    </div> <!-- end #tab-content -->
-  </div> <!-- end main container -->
-
+    <div id="Student Talks" class="tab-pane hidden">
+  <h2 class="text-2xl font-semibold mb-2">🎓 Student Reviews</h2>
+  <section class="px-6 py-12 bg-white space-y-6">
+    <!-- Review 1 -->
+    <div style="background: white; padding: 20px; border-radius: 12px;">
+      <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+        <strong>Review 1: A life-changing experience at IIT Guwahati.</strong>
+        <p>
+          <b>Placements:</b> The placement cell at IIT Guwahati is very active and supportive. The average package for CSE students is around 25 LPA, with top companies like Google, Microsoft, and Amazon visiting the campus. The institute also provides excellent internship opportunities.
+          <br><b>Infrastructure:</b> The campus is beautiful with state-of-the-art facilities. The labs are well-equipped with the latest technology, and the library has an extensive collection of books and journals. The hostels are comfortable with all necessary amenities.
+          <br><b>Faculty:</b> The professors are highly qualified and experienced. They are always willing to help students and provide guidance for both academics and research. The curriculum is well-structured and industry-relevant.
+          <br><b>Other:</b> The cultural and technical festivals are amazing and provide great exposure. The campus has a vibrant student community with numerous clubs and societies for extracurricular activities.
+        </p>
+      </div>
+    </div>
+    <!-- Review 2 -->
+    <div style="background: white; padding: 20px; border-radius: 12px;">
+      <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+        <strong>Review 2: Excellent academic environment with holistic development.</strong>
+        <p>
+          <b>Placements:</b> IIT Guwahati has a strong placement record across all branches. The highest package this year was 2.4 CPA for a CSE student. The placement cell provides extensive training and mock interviews to prepare students.
+          <br><b>Infrastructure:</b> The campus is spread over 700 acres with beautiful natural surroundings. The academic buildings are modern, and the sports facilities are excellent. The campus has its own lake and is surrounded by hills.
+          <br><b>Faculty:</b> The faculty members are experts in their fields and are very approachable. They encourage students to take up research projects and provide opportunities for industry collaboration.
+        </p>
+      </div>
+    </div>
+    <!-- Review 3 -->
+    <div style="background: white; padding: 20px; border-radius: 12px;">
+      <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+        <strong>Review 3: IIT Guwahati provides a perfect blend of academics and extracurriculars.</strong>
+        <p>
+          <b>Placements:</b> The placement scenario is good, especially for CSE and ECE branches. Many students also opt for higher studies in reputed international universities. The institute has a strong alumni network that helps in placements.
+          <br><b>Infrastructure:</b> The hostel life is amazing with single rooms for final year students. The mess food is decent, and there are several food courts on campus. The campus is Wi-Fi enabled with high-speed internet.
+          <br><b>Faculty:</b> The curriculum is rigorous but well-designed. The professors are supportive and provide excellent mentorship. The institute encourages interdisciplinary learning and research.
+          <br><b>Other:</b> The location in Guwahati provides a unique cultural experience. The technical and cultural festivals are well-organized and attract participants from all over the country.
+        </p>
+      </div>
+    </div>
+    <!-- Review 4 -->
+    <div style="background: white; padding: 20px; border-radius: 12px;">
+      <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+        <strong>Review 4: A transformative journey at IIT Guwahati.</strong>
+        <p>
+          <b>Placements:</b> The placement cell works tirelessly to bring the best companies to campus. The average package for my branch (Mechanical) was around 18 LPA. Many core companies and startups also visit the campus.
+          <br><b>Infrastructure:</b> The campus is eco-friendly with lush greenery. The labs have state-of-the-art equipment, and the library is open 24/7 during exams. The sports complex is excellent with facilities for various sports.
+          <br><b>Faculty:</b> The professors are highly knowledgeable and experienced. They are always available to clear doubts and provide guidance. The curriculum is updated regularly to keep pace with industry trends.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- ⬇️ Rating Card Goes Here -->
+<div class="max-w-md mx-auto mt-6 p-4 border rounded shadow" data-college="IIT Guwahati">
+  <h2 class="text-xl font-semibold mb-2">Rate This College</h2>
+  <!-- Rating Stars -->
+  <div class="stars flex gap-1 mb-2">
+    <span class="star text-2xl cursor-pointer">☆</span>
+    <span class="star text-2xl cursor-pointer">☆</span>
+    <span class="star text-2xl cursor-pointer">☆</span>
+    <span class="star text-2xl cursor-pointer">☆</span>
+    <span class="star text-2xl cursor-pointer">☆</span>
+  </div>
+  <!-- Optional Comment -->
+  <textarea class="comment w-full border p-2 rounded mb-2" placeholder="Your thoughts (optional)"></textarea>
+  <!-- Submit Button -->
+  <button class="submit-rating bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+    Submit
+  </button>
+  <p class="thanks mt-3 text-green-600 hidden">Thanks for rating!</p>
+</div>
   <script>
     const buttons = document.querySelectorAll('.tab-button');
     const panes = document.querySelectorAll('.tab-pane');
@@ -191,12 +1042,40 @@ A natural lake, deepened in 1988 and 2003, drains most of its rainwater.
       });
     });
   </script>
-
   <style>
     .tab-button { padding: .5rem 1rem; font-size: .875rem; font-weight: 500; color: #374151; border-bottom:2px solid transparent; transition: .2s; cursor: pointer; }
     .tab-button:hover { color: #3b82f6; border-color: #3b82f6; }
     .active-tab { border-color: #2563eb; color: #2563eb; }
     .tab-pane { background: #fff; padding:1rem; border-radius:.5rem; box-shadow:0 1px 2px rgb(0 0 0 / .05); }
   </style>
+<script>
+  document.querySelectorAll('[data-college]').forEach((card) => {
+    const stars = card.querySelectorAll('.star');
+    const commentBox = card.querySelector('.comment');
+    const submitButton = card.querySelector('.submit-rating');
+    const thanksMsg = card.querySelector('.thanks');
+    let selectedRating = 0;
+    stars.forEach((star, i) => {
+      star.addEventListener('click', () => {
+        selectedRating = i + 1;
+        stars.forEach((s, idx) => {
+          s.textContent = idx < selectedRating ? '★' : '☆';
+        });
+      });
+    });
+    submitButton.addEventListener('click', () => {
+      const comment = commentBox.value;
+      const collegeName = card.getAttribute('data-college');
+      const key = `rating_${collegeName.replace(/\s+/g, '_')}`;
+      const previousRatings = JSON.parse(localStorage.getItem(key)) || [];
+      previousRatings.push({ rating: selectedRating, comment });
+      localStorage.setItem(key, JSON.stringify(previousRatings));
+      thanksMsg.classList.remove('hidden');
+      commentBox.value = "";
+      stars.forEach(s => s.textContent = '☆');
+      selectedRating = 0;
+    });
+  });
+</script>
 </body>
 </html>
