@@ -3,71 +3,610 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IIT Madras – UniFinder</title>
+  <title>National Institute of Technology Tiruchirappalli – UniFinder</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-800">
   <!-- 1) HERO BANNER -->
   <section
     class="rounded-lg shadow-lg p-12 mb-8"
-    style="background-image: url('https://generic.wordpress.soton.ac.uk/webscience/wp-content/uploads/sites/117/2019/04/madras.jpg'); background-size: cover; background-position: center;"
+    style="background-image: url('https://www.nitt.edu/home/About_NITT/General_Information/NITT_Buildings/images/academic_complex.jpg'); background-size: cover; background-position: center;"
   >
     <div
       class="flex flex-col md:flex-row items-center max-w-4xl mx-auto bg-black bg-opacity-50 p-8 rounded-lg"
     >
       <img
-        src="https://upload.wikimedia.org/wikipedia/en/6/69/IIT_Madras_Logo.svg"
+        src="https://www.nitt.edu/home/About_NITT/General_Information/NITT_Logo/images/nitt_logo.png"
         alt="Logo"
         class="w-24 h-24 rounded-full mb-4 md:mb-0 md:mr-6 shadow-lg"
       />
       <div class="text-white">
-        <h1 class="text-4xl font-extrabold mb-2">IIT Madras</h1>
-        <p class="text-lg">🏆 Ranked #1 in Engineering by NIRF 2024</p>
+        <h1 class="text-4xl font-extrabold mb-2">National Institute of Technology Tiruchirappalli</h1>
+        <p class="text-lg">🏆 Ranked #9 in Engineering by NIRF 2023</p>
       </div>
     </div>
   </section>
-
   <div class="max-w-6xl mx-auto p-4">
     <h1 class="text-4xl font-bold text-center mb-6">
-      Indian Institute of Technology Madras (IIT Madras)
+      National Institute of Technology Tiruchirappalli
     </h1>
-
     <!-- Tabs Navigation -->
-    <div class="flex space-x-4 border-b mb-6" id="tabs">
-      <button class="tab-button active-tab" data-tab="courses">🎓 Courses</button>
+    <div class="flex flex-wrap space-x-2 md:space-x-4 border-b mb-6" id="tabs">
+      <button class="tab-button active-tab" data-tab="Collegeinfo">🎓College Info</button>
+      <button class="tab-button " data-tab="courses">🎓 Courses</button>
       <button class="tab-button" data-tab="admissions">📝 Admissions</button>
       <button class="tab-button" data-tab="fees">💰 Fees</button>
       <button class="tab-button" data-tab="campus">🏕️ Campus Life</button>
       <button class="tab-button" data-tab="placements">💼 Placements</button>
-      <button class="tab-button" data-tab="rankings">📊 Rankings</button>
-      <button class="tab-button" data-tab="global">🌐 Collaborations</button>
-      <button class="tab-button" data-tab="scholarships">🎓 Scholarships</button>
+      <button class="tab-button" data-tab="Gallery">🌐 Gallery</button>
+      <button class="tab-button" data-tab="alumni">🌐 Alumni</button>
+      <button class="tab-button" data-tab="Student Talks">🎓 Student Talks</button>
     </div>
-
     <!-- Tab Content -->
     <div id="tab-content">
-      <!-- Courses Pane -->
-      <div id="courses" class="tab-pane block">
-        <h2 class="text-2xl font-semibold mb-2">🎓 Academic Information – IIT Madras</h2>
+      <!-- Collage info Pane -->
+       <div id="Collegeinfo" class="tab-pane block">
+        <h2 class="text-2xl font-semibold mb-2">🎓 Information – National Institute of Technology Tiruchirappalli</h2>
+        <!--  collage info content -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Full Name: </h3><p class="text-rose-700 text-xl font-semibold">National Institute of Technology Tiruchirappalli</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Established: </h3><p class="text-rose-700 text-xl font-semibold">1964</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+     <h3 class="font-bold text-xl">Type:</h3><p class="text-rose-700 text-xl font-semibold">Public Technical University</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+     <h3 class="font-bold text-xl">Location:</h3><p class="text-rose-700 text-xl font-semibold">Tiruchirappalli, Tamil Nadu, India</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Campus Size: </h3><p class="text-rose-700 text-xl font-semibold">~800 acres</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Status: </h3><p class="text-rose-700 text-xl font-semibold">Institute of National Importance</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Accreditation:  </h3><p class="text-rose-700 text-xl font-semibold">A++ Grade by NAAC</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Director: </h3><p class="text-rose-700 text-xl font-semibold">Dr. G. Aghila</p>
+    </div>
+  </div>
+  <!--  Content Card 1 -->
+<div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+ <!-- Enhanced Content Card added to College Info -->
+        <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+<h3 class="text-2xl font-bold mb-4">Basic Information </h3>
+             
+           
+            <p class="mb-4 leading-relaxed">
+The National Institute of Technology Tiruchirappalli (NITT), also known as NIT Trichy, is a public technical and research university located in Tiruchirappalli, Tamil Nadu, India. Founded in 1964 as Regional Engineering College Tiruchirappalli, it is one of the oldest institutions of the National Institutes of Technology (NITs) system. In 2003, the college was granted deemed university status with the recommendation of the UGC and AICTE and was renamed NIT Tiruchirappalli.</p>
+                     <!-- Diagonal Overlays -->
+          </div></div>
+        </div>
+                <!-- Enhanced Content Card-2 added to College Info -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">History</h3>
+             
+             
+<div>
+<p>
+The National Institute of Technology Tiruchirappalli (formerly known as Regional Engineering College Tiruchirappalli) was established in 1964. The institute was jointly sponsored by the Central and State Governments with the aim of providing quality technical education. The institute was granted Deemed University status in 2003 and renamed as National Institute of Technology Tiruchirappalli. Since its inception, the institute has grown from strength to strength and has established itself as one of the premier technical institutions in the country.</p> </div>
+          
+             
+              
+           
+             
+          </div>
+        </div></div>
+      
+      <!-- Enhanced Content Card-3 added to College Info -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Vision and Mission</h3>
+<ul class="list-disc ml-6 mb-4">
+  <li>To provide valuable resources for industry and society through excellence in technical education and research.</li>
+<li>To create and sustain an academic environment conducive to academic excellence and research.</li>
+ <li>To produce globally acceptable competent professionals with social commitment.</li>
+</ul>    <ul class="list-disc ml-6 mb-4">
+  <li>To be a center of excellence in technical education and research.</li>
+<li>To promote industry-institute interaction and technology transfer.</li>
+ <li>To develop entrepreneurial skills among students.</li>
+	<li>To inculcate ethical values and social responsibility.</li>
+</ul>        
+             
+             
+          
+</div>
+      </div>
+ </div> </div>
+      <div id="courses" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-2">🎓 Courses Offered </h2>
         <!-- your courses content -->
+         
+     
+        <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            
+            <p class="mb-4 leading-relaxed">
+NIT Trichy offers a wide range of undergraduate, postgraduate and doctoral programs in various disciplines of engineering, science, humanities and management. The institute follows a semester system and offers a flexible curriculum that allows students to choose elective courses of their interest. The academic programs are designed to provide a strong foundation in the core subjects while also allowing students to specialize in their area of interest.</p>
+<h3 class="text-2xl font-bold mb-4">UNDERGRADUATE PROGRAMS
+</h3>
+           
+            <p class="mb-4 leading-relaxed">
+The institute offers 4-year B.Tech programs in various engineering disciplines. The admission to these programs is based on JEE Main scores followed by JoSAA counseling. The total intake for undergraduate programs is around 850 students per year.</p>
+<h4 class="text-2xl font-bold mb-4">B.Tech Programs:</h4>
+<table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Department</th>
+      <th class="py-3 px-4">Intake</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Civil Engineering</td>
+      <td class="py-3 px-4">120</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Computer Science & Engineering</td>
+      <td class="py-3 px-4">130</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Electrical & Electronics Engineering</td>
+      <td class="py-3 px-4">120</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Electronics & Communication Engineering</td>
+      <td class="py-3 px-4">130</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Instrumentation & Control Engineering</td>
+      <td class="py-3 px-4">60</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Mechanical Engineering</td>
+      <td class="py-3 px-4">130</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Metallurgical & Materials Engineering</td>
+      <td class="py-3 px-4">60</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Production Engineering</td>
+      <td class="py-3 px-4">60</td>
+    </tr>
+    <tr>
+      <td class="py-3 px-4 font-semibold">Chemical Engineering</td>
+      <td class="py-3 px-4">60</td>
+    </tr>
+  </tbody>
+</table>
+          </div>
+        </div>
+    <!-- Enhanced Content Card-2 added to  -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">POSTGRADUATE PROGRAMS
+</h3>
+      <p>The institute offers various postgraduate programs including M.Tech, M.Sc, MBA and Ph.D. The admission to M.Tech programs is based on GATE scores, while M.Sc admissions are through JAM. MBA admissions are through CAT scores followed by group discussion and personal interview.</p>
+<h4 class="text-2xl font-bold mb-4">M.Tech Programs:</h4>
+<table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Department</th>
+      <th class="py-3 px-4">Specialization</th>
+      <th class="py-3 px-4">Intake</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Civil Engineering</td>
+      <td class="py-3 px-4">Structural Engineering</td>
+      <td class="py-3 px-4">25</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Civil Engineering</td>
+      <td class="py-3 px-4">Transportation Engineering</td>
+      <td class="py-3 px-4">15</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Civil Engineering</td>
+      <td class="py-3 px-4">Environmental Engineering</td>
+      <td class="py-3 px-4">15</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Computer Science & Engineering</td>
+      <td class="py-3 px-4">Computer Science & Engineering</td>
+      <td class="py-3 px-4">40</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Electrical & Electronics Engineering</td>
+      <td class="py-3 px-4">Power Systems</td>
+      <td class="py-3 px-4">25</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Electrical & Electronics Engineering</td>
+      <td class="py-3 px-4">Power Electronics & Drives</td>
+      <td class="py-3 px-4">15</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Electronics & Communication Engineering</td>
+      <td class="py-3 px-4">Communication Systems</td>
+      <td class="py-3 px-4">25</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Mechanical Engineering</td>
+      <td class="py-3 px-4">Thermal Engineering</td>
+      <td class="py-3 px-4">25</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Mechanical Engineering</td>
+      <td class="py-3 px-4">Design & Manufacturing</td>
+      <td class="py-3 px-4">25</td>
+    </tr>
+    <tr>
+      <td class="py-3 px-4 font-semibold">Metallurgical & Materials Engineering</td>
+      <td class="py-3 px-4">Materials Science & Engineering</td>
+      <td class="py-3 px-4">15</td>
+    </tr>
+  </tbody>
+</table>
+   <h4 class="text-2xl font-bold mb-4">M.Sc Programs:</h4> <table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Department</th>
+      <th class="py-3 px-4">Specialization</th>
+      <th class="py-3 px-4">Intake</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Physics</td>
+      <td class="py-3 px-4">Physics</td>
+      <td class="py-3 px-4">30</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Chemistry</td>
+      <td class="py-3 px-4">Chemistry</td>
+      <td class="py-3 px-4">30</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Mathematics</td>
+      <td class="py-3 px-4">Mathematics</td>
+      <td class="py-3 px-4">30</td>
+    </tr>
+    <tr>
+      <td class="py-3 px-4 font-semibold">Computer Applications</td>
+      <td class="py-3 px-4">Computer Applications</td>
+      <td class="py-3 px-4">30</td>
+    </tr>
+  </tbody>
+</table>
+   </div>   </div></div>
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">MBA AND Ph.D PROGRAMS
+</h3>  <p>The Department of Management Studies offers a 2-year MBA program with an intake of 60 students. The program focuses on developing managerial skills with a strong foundation in technology management. The institute also offers Ph.D programs in all departments. The admission to Ph.D programs is based on written test and interview conducted by the institute.</p></div>
+         <h4 class="text-2xl font-bold mb-4">MBA Program Specializations
+</h4><table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Specialization</th>
+      <th class="py-3 px-4">Intake</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Finance</td>
+      <td class="py-3 px-4">20</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Marketing</td>
+      <td class="py-3 px-4">20</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Systems</td>
+      <td class="py-3 px-4">20</td>
+    </tr>
+  </tbody>
+</table>
+          <h4 class="text-2xl font-bold mb-4">Ph.D Programs</h4>
+           <p>The institute offers Ph.D programs in all engineering departments, science departments, humanities and social sciences department, and management studies department. The selection process includes a written test followed by an interview. Candidates with valid GATE/NET/JRF scores are exempted from the written test.</p>
+</div></div>
       </div>
-
-      <!-- Admissions Pane -->
-      <div id="admissions" class="tab-pane hidden">
-        <h2 class="text-2xl font-semibold mb-2">📝 Admissions</h2>
-        <!-- your admissions content -->
+       <!-- Compare Now Button -->
+  <div class="text-center">
+    <button class="bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition shadow-lg">
+      🔍 Compare Now
+    </button>
+  </div>
+<!-- Admissions Pane -->
+<div id="admissions" class="tab-pane hidden px-4 py-6">
+  <h2 class="text-3xl font-bold text-indigo-700 mb-6">📝 Admissions – NIT Trichy 2025</h2>
+  <!-- Timeline CSS -->
+  <style>
+    .timeline-container {
+      position: relative;
+      margin: 2rem auto;
+      padding: 2rem 0;
+      max-width: 1100px;
+    }
+    .timeline-line {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(to bottom, #6366f1, #9333ea);
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+    .timeline-item {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+    .timeline-item-left,
+    .timeline-item-right {
+      width: 47%;
+      background-color: #f9fafb;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      z-index: 1;
+      transition: transform 0.3s ease;
+    }
+    .timeline-item-left:hover,
+    .timeline-item-right:hover {
+      transform: scale(1.03);
+    }
+    .timeline-circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: linear-gradient(to bottom right, #4f46e5, #7c3aed);
+      border-radius: 9999px;
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: white;
+      z-index: 2;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    @media (max-width: 768px) {
+      .timeline-item-left,
+      .timeline-item-right {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+      .timeline-circle {
+        top: -1.5rem;
+        left: 5%;
+        transform: none;
+      }
+    }
+  </style>
+  <!-- Timeline Content -->
+  <section class="timeline-container">
+    <div class="timeline-line"></div>
+    <div class="timeline-item">
+      <div class="timeline-item-left">
+        <h3 class="text-xl font-bold text-blue-700 mb-2">1. Appear for JEE Main 2025 (For B.Tech)</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Conducted by NTA (National Testing Agency)</li>
+          <li>Mandatory for admission to B.Tech programs</li>
+          <li>Subjects: Physics, Chemistry, Mathematics</li>
+          <li>Includes negative marking</li>
+        </ul>
       </div>
-
+      <div class="timeline-circle">1</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-right ml-auto">
+        <h3 class="text-xl font-bold text-purple-700 mb-2">2. Qualify JEE Main with a High Score</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>NIT Trichy requires a high percentile for admission</li>
+          <li>General category: typically 98+ percentile</li>
+          <li>Higher score = better chances of getting preferred branch</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">2</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-left">
+        <h3 class="text-xl font-bold text-green-700 mb-2">3. Register for JoSAA/CSAB Counselling</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Visit <a href="https://josaa.nic.in" target="_blank" class="text-blue-600 underline">josaa.nic.in</a></li>
+          <li>Register for counseling process</li>
+          <li>Pay counseling and choice-locking fee</li>
+          <li>Select NIT Trichy and branches in order of preference</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">3</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-right ml-auto">
+        <h3 class="text-xl font-bold text-pink-700 mb-2">4. Participate in Counselling Rounds</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Conducted in Rounds: Round 1, Round 2, Round 3, etc.</li>
+          <li>Seat allotment based on:
+            <ul class="list-disc ml-6">
+              <li>JEE Main Rank</li>
+              <li>Category (UR/OBC/SC/ST/EWS/PwD)</li>
+              <li>Availability of seats at NIT Trichy</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="timeline-circle">4</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-left">
+        <h3 class="text-xl font-bold text-red-600 mb-2">5. Seat Allotment & Reporting</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>If allotted NIT Trichy:
+            <ul class="list-disc ml-6">
+              <li>Accept the seat</li>
+              <li>Download the allotment letter</li>
+              <li>Report online or offline as instructed</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="timeline-circle">5</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-right ml-auto">
+        <h3 class="text-xl font-bold text-yellow-700 mb-2">6. Final Admission & Document Verification</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Submit original documents:
+            <ul class="list-disc ml-6">
+              <li>JEE Main Admit Card & Scorecard</li>
+              <li>Class 10 & 12 Mark Sheets</li>
+              <li>Category Certificate (if applicable)</li>
+              <li>Passport-sized photographs</li>
+              <li>Government-issued ID proof (Aadhaar/Passport)</li>
+            </ul>
+          </li>
+          <li>Pay the admission and tuition fee</li>
+          <li>Complete medical fitness test</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">6</div>
+    </div>
+  </section>
+</div>
       <!-- Fees Pane -->
       <div id="fees" class="tab-pane hidden">
-        <h2 class="text-2xl font-semibold mb-2">💵 Fees</h2>
-        <!-- your fees content -->
+        <h2 class="text-2xl font-semibold mb-2">💵 Academic Fees (2025-26)</h2>
+       <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+  <!-- Diagonal Overlays -->
+  <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+  <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+  
+  <!-- Accent Bar -->
+  <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+  <div class="relative">
+    <h2 class="text-2xl font-bold text-indigo-700 mb-4">💰 NIT Trichy Fees Structure</h2>
+    <p class="mb-4 leading-relaxed text-gray-700">
+      NIT Trichy is one of the premier engineering institutes in India. The fee structure is designed to be affordable while maintaining high-quality education standards. The fees vary for different programs and categories of students.
+    </p>
+    <!-- Fees Table -->
+    <div class="overflow-x-auto mt-6">
+      <table class="min-w-full text-sm border border-gray-300">
+        <thead class="bg-indigo-100 text-indigo-800">
+          <tr>
+            <th class="text-left px-4 py-2 border border-gray-300">Particulars</th>
+            <th class="text-left px-4 py-2 border border-gray-300">B.Tech (INR)</th>
+            <th class="text-left px-4 py-2 border border-gray-300">M.Tech (INR)</th>
+            <th class="text-left px-4 py-2 border border-gray-300">MBA (INR)</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-800">
+          <tr class="bg-white">
+            <td class="px-4 py-2 border border-gray-300">Tuition Fee</td>
+            <td class="px-4 py-2 border border-gray-300">62,500</td>
+            <td class="px-4 py-2 border border-gray-300">70,000</td>
+            <td class="px-4 py-2 border border-gray-300">1,25,000</td>
+          </tr>
+          <tr class="bg-gray-50">
+            <td class="px-4 py-2 border border-gray-300">Hostel Fee</td>
+            <td class="px-4 py-2 border border-gray-300">22,000</td>
+            <td class="px-4 py-2 border border-gray-300">22,000</td>
+            <td class="px-4 py-2 border border-gray-300">22,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-2 border border-gray-300">Mess Fee</td>
+            <td class="px-4 py-2 border border-gray-300">30,000</td>
+            <td class="px-4 py-2 border border-gray-300">30,000</td>
+            <td class="px-4 py-2 border border-gray-300">30,000</td>
+          </tr>
+          <tr class="bg-gray-50">
+            <td class="px-4 py-2 border border-gray-300">Caution Deposit (Refundable)</td>
+            <td class="px-4 py-2 border border-gray-300">5,000</td>
+            <td class="px-4 py-2 border border-gray-300">5,000</td>
+            <td class="px-4 py-2 border border-gray-300">5,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-2 border border-gray-300">Medical Insurance</td>
+            <td class="px-4 py-2 border border-gray-300">1,500</td>
+            <td class="px-4 py-2 border border-gray-300">1,500</td>
+            <td class="px-4 py-2 border border-gray-300">1,500</td>
+          </tr>
+          <tr class="bg-gray-50">
+            <td class="px-4 py-2 border border-gray-300">Other Fees</td>
+            <td class="px-4 py-2 border border-gray-300">6,000</td>
+            <td class="px-4 py-2 border border-gray-300">6,000</td>
+            <td class="px-4 py-2 border border-gray-300">6,000</td>
+          </tr>
+          <tr class="bg-white font-bold">
+            <td class="px-4 py-2 border border-gray-300">Total (Approx)</td>
+            <td class="px-4 py-2 border border-gray-300">1,27,000</td>
+            <td class="px-4 py-2 border border-gray-300">1,34,500</td>
+            <td class="px-4 py-2 border border-gray-300">1,89,500</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4 text-sm text-gray-600">
+      Note: Fees are subject to change. SC/ST/PwD students are eligible for fee concessions as per government norms.
+    </p>
+  </div>
+</div>
       </div>
-
      <!-- Campus Life Pane -->
       <div id="campus" class="tab-pane hidden">
         <h2 class="text-2xl font-semibold mb-4">🏕️ Campus Life</h2>
-
         <!-- Enhanced Content Card added to Campus Life -->
         <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
           <!-- Diagonal Overlays -->
@@ -75,19 +614,11 @@
           <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
           <!-- Accent Bar -->
           <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
-
           <div class="relative">
            
             <p class="mb-4 leading-relaxed">
-IIT Madras is a residential institute that occupies a 2.5 km² (617 acre) campus that was formerly part of the adjoining Guindy National Park. The main entrance of IIT Madras is on Sardar Patel Road, flanked by the residential districts of Adyar and Velachery. The campus is close to the Raj Bhavan, the official seat of the Governor of Tamil Nadu.
-The campus is located 10 km from the Chennai Airport, 12 km from the Chennai Central Railway station, and is well connected by city buses. Kasturba Nagar is the nearest station on the Chennai MRTS line.
-Two parallel roads, Bonn Avenue and Delhi Avenue, cut through the faculty residential area, before they meet at the Gajendra Circle, near the Administrative Block. Buses regularly ply between the Main Gate, Gajendra Circle, the Academic Zone, and the Hostel Zone.
-Much of the campus is a protected forest, carved out of the Guindy National Park, home to many animals that are not commonly seen in a busy city like Chennai. The campus has the pride of having one of the most elegant antelopes in the world - the Blackbuck. The campus is also home to large numbers of chital (spotted deer), bonnet macaque, monkeys and other rare wildlife. There is a lot of other smaller and exquisite life forms that play a major role in the biodiversity of the campus. The IIT campus has about 300 species of trees and plants with quite a large number of native wild species, which are unique to the tropical, dry evergreen vegetation. IIT Madras campus is a haven for bird watchers in the city. There are about 100 species of birds seen at different times of the year. There are quite a number of resident species as well as few migrants like Forest Wagtail, Pied Crested Cuckoo, Golden Oriole etc. which are migratory.
-A natural lake, deepened in 1988 and 2003, drains most of its rainwater.
-            </p>
-            <img src="https://www.iitm.ac.in/sites/default/files/2020-03/static-Overview%20IITM%20lake.jpg" alt="Campus Lake" class="w-full rounded-lg mb-4 shadow-lg">
-                     <!-- Diagonal Overlays -->
-
+NIT Trichy has a sprawling campus of about 800 acres with state-of-the-art infrastructure. The campus is located on the Tiruchirappalli-Thanjavur Highway, about 22 km from Tiruchirappalli Junction. The campus is self-contained with all facilities including hostels, library, sports complex, hospital, shopping center, and bank.</p>
+          
           </div>
         </div>
                 <!-- Enhanced Content Card-2 added to Campus Life -->
@@ -99,86 +630,386 @@ A natural lake, deepened in 1988 and 2003, drains most of its rainwater.
           <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
           <!-- Accent Bar -->
           <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
-
           <div class="relative">
-            <h3 class="text-2xl font-bold mb-4">🏫 Landmarks</h3>
+            <h3 class="text-2xl font-bold mb-4">Hostel Life</h3>
              
-              <li class="flex items-start">
-                <span class="text-indigo-600 text-2xl mr-3">•</span>
-<div><strong> Gajendra Circle:</strong> 
-<p>The first landmark that greets every visitor is GC or Gajendra Circle, which is about 2.5 km from the gate. The area from the main gate to GC is the residential zone of our campus where faculty and staff live. After GC you’ll enter the academic zone with various departments, laboratories, workshops and the computer centre, spread over a large area in a big array of buildings. Further into the campus towards the end, you will find the hostel zone with various facilities for students. </p> </div>
-              </li>
-              <li class="flex items-start">
-                <span class="text-indigo-600 text-2xl mr-3">•</span>
-                <div><strong> Himalaya:</strong><p> Himalaya is a giant building where all the messes are located. Infront is a beautiful lawn where you can relax in the evenings. </p></div>
-              </li>
-              <li class="flex items-start">
-                <span class="text-green-600 text-2xl mr-3">•</span>
-                <div><strong> New Academic Complex:</strong> <p>The new academic complex was constructed recently with a budget of 115 crores. It is equipped with all the latest technology classroom facilities. The view from outside is very scenic. It is presently hosting the Departments of Mathematics, Chemical Engineering, Metallurgical & Materials Engineering. </p></div>
-              </li>
-              <li class="flex items-start">
-                <span class="text-red-600 text-2xl mr-3">•</span>
-                <div><strong>OAT:</strong> <p>In between the GC and the hostel zone, you will spot a large arena called the Open Air Theatre, where the weekend movies are screened by the Film Club. Here, the best of the latest movies in English, Hindi, Tamil and other regional languages are screened. OAT is also the venue where the Saarang Pro-shows are held. </p></div>
-              </li>
-<img src="https://www.iitm.ac.in/sites/default/files/instigram/202004/static%20Campus%20Life%20Overview%20-%20Open%20Air%20Theatre.jpg" alt="Campus Lake" class="w-full rounded-lg mb-4 shadow-lg">
-           
-
-              <li class="flex items-start">
-                <span class="text-red-600 text-2xl mr-3">•</span>
-                <div><strong>CLT:</strong> <p>The Central Lecture Theatre is just opposite to the OAT in the middle of the Humanities and Sciences Block (HSB). This is an auditorium with a capacity of about 400, which is used for almost every in-house activity in the Institute. The Lit-Soc Schedule uses only this venue, not to mention the associations of the Institute which use this place all the time. </p></div>
-              </li>
-<img src=" https://www.iitm.ac.in/sites/default/files/2020-03/static-overview%20-Central%20Lecture%20Theatre.jpg " width="1000" height="200" alt="Campus Image">
-
-              <li class="flex items-start">
-                <span class="text-red-600 text-2xl mr-3">•</span>
-                <div><strong>CRC, Raman and Ramanujan Blocks:</strong><p> These are the places where most of your common classes take place. These are the places you would want to memorise in and out as this is where you would be headed to, most mornings, half- awake. The ground floor of the Class Room Complex is air-conditioned and is open for the use of students till 1 AM during the quiz weeks to serve as hangout spots for the muggu junta apart from the library.
-
-</p></div>
-              </li>
-
-            </ul>
-            <p class="italic text-gray-600">“The best blend of academics and campus life.” – Student Review</p>
-
-
-            <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-              <!-- List Items -->
-              <li class="flex items-start">
-                <span class="text-blue-600 text-2xl mr-3">🏠</span> 
-          </div>
-        </div>
+             
+<div>
+<p>The institute has 18 boys' hostels and 3 girls' hostels with a capacity to accommodate about 4500 students. Each hostel has a warden, deputy warden, and caretaker. The hostels have facilities like Wi-Fi, reading rooms, TV rooms, indoor games, and gymnasiums. The mess facilities are available in all hostels with both vegetarian and non-vegetarian options. The hostel life at NIT Trichy is vibrant with various cultural and sports activities organized throughout the year.</p> </div>
+          
+              
+              
+             
+         
+        </div>   </div>
       </div>
-
+            <!-- Enhanced Content Card-3 added to Campus Life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Clubs and Societies</h3>
+             
+             
+<div>
+<p>NIT Trichy has a vibrant student community with numerous clubs and societies catering to various interests. These include technical clubs like IEEE, CSI, ISTE, SAE; cultural clubs like music, dance, dramatics, photography; sports clubs for various games; and social service clubs like NSS. These clubs organize various events throughout the year, providing students with opportunities to develop their skills and pursue their interests.</p> </div>
+          
+              
+              
+             
+         
+        </div>   </div>
+      </div>
+                  <!-- Enhanced Content Card-2 added to Campus Life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Festivals and Events</h3>
+             
+             
+<div>
+<p>NIT Trichy hosts several festivals and events throughout the year. The annual technical festival 'Pragyan' is one of the largest technical festivals in Asia, attracting participants from across the country and abroad. The cultural festival 'Festember' is a three-day extravaganza of music, dance, drama, and other cultural activities. The institute also organizes sports festival 'Lithium' and departmental festivals. These events provide students with a platform to showcase their talents and interact with peers from other institutions.</p> </div>
+          
+              
+              
+             
+         
+        </div>   </div>
+      </div>
+       <!-- Enhanced Content Card-2 added to Campus Life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Sports Facilities</h3>
+             
+             
+<div>
+<p>NIT Trichy has excellent sports facilities including a cricket ground, football ground, hockey ground, basketball courts, volleyball courts, tennis courts, badminton courts, table tennis tables, and a gymnasium. The institute also has an Olympic-size swimming pool and an athletic track. The sports complex is well-maintained and equipped with modern facilities. The institute encourages students to participate in sports and provides coaching for various games. The institute teams participate in inter-college and inter-university tournaments.</p> </div>
+          
+              
+              
+             
+         
+        </div>   </div>
+      </div>
 </div>
-
-      </div>
-
+     
       <!-- Placements Pane -->
       <div id="placements" class="tab-pane hidden">
-        <h2 class="text-2xl font-semibold mb-2">💼 Placements</h2>
-        <!-- your placements content -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+           
+             
+  <h3 class="text-xl font-semibold mb-4 text-gray-800">NIT Trichy Placements 2023 Report</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <p>NIT Trichy has a dedicated Training and Placement Office that facilitates the placement process. The institute has consistently maintained high placement records over the years. The placement season for 2023 saw participation from over 200 companies across various sectors.</p>
+<table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Particulars</th>
+      <th class="py-3 px-4">Placement Statistics (2023)</th>
+      <th class="py-3 px-4">Placement Statistics (2022)</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Total Number of Companies</td>
+      <td class="py-3 px-4">200+</td>
+      <td class="py-3 px-4">180+</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Total Offers</td>
+      <td class="py-3 px-4">900+</td>
+      <td class="py-3 px-4">850+</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Placement Percentage</td>
+      <td class="py-3 px-4">95%</td>
+      <td class="py-3 px-4">93%</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Highest CTC</td>
+      <td class="py-3 px-4">INR 60 LPA</td>
+      <td class="py-3 px-4">INR 58 LPA</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Average CTC</td>
+      <td class="py-3 px-4">INR 15 LPA</td>
+      <td class="py-3 px-4">INR 14 LPA</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Median CTC</td>
+      <td class="py-3 px-4">INR 12 LPA</td>
+      <td class="py-3 px-4">INR 11 LPA</td>
+    </tr>
+    <tr>
+      <td class="py-3 px-4 font-semibold">Number of PPOs</td>
+      <td class="py-3 px-4">150+</td>
+      <td class="py-3 px-4">130+</td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+</div></div>
+   <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+              <h3 class="text-xl font-semibold mb-4 text-gray-800">Top Recruiting Companies</h3>
+<p>NIT Trichy attracts a wide range of companies from various sectors including IT, Core Engineering, Consulting, Finance, and Analytics. The institute has strong relationships with many leading companies who visit the campus regularly for recruitment.
+</p>
+<table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Sector</th>
+      <th class="py-3 px-4">Top Companies</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">IT/Software</td>
+      <td class="py-3 px-4">Microsoft, Google, Amazon, Infosys, TCS, Wipro, Cognizant, Accenture</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Core Engineering</td>
+      <td class="py-3 px-4">L&T, BHEL, NTPC, IOCL, ONGC, Tata Steel, JSW Steel</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Consulting</td>
+      <td class="py-3 px-4">McKinsey, BCG, Bain, Deloitte, KPMG, PwC, EY</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Finance</td>
+      <td class="py-3 px-4">Goldman Sachs, Morgan Stanley, J.P. Morgan, ICICI Bank, HDFC Bank</td>
+    </tr>
+    <tr>
+      <td class="py-3 px-4 font-semibold">Analytics</td>
+      <td class="py-3 px-4">Mu Sigma, Fractal Analytics, Tiger Analytics, Bridgei2i</td>
+    </tr>
+  </tbody>
+</table>
+              </div>
       </div>
-
-      <!-- Rankings Pane -->
-      <div id="rankings" class="tab-pane hidden">
-        <h2 class="text-2xl font-semibold mb-2">📊 Rankings</h2>
-        <!-- your rankings content -->
+    </div></div>
+              </div>
+      <!-- Gallery Pane -->
+      <div id="Gallery" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-2">Campus Gallery</h2>
+       <div class="p-6 bg-gray-100 rounded-xl">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+    
+    <!-- Image 1 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.nitt.edu/home/About_NITT/General_Information/NITT_Buildings/images/academic_complex.jpg" 
+        
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+    <!-- Image 2 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.nitt.edu/home/About_NITT/General_Information/NITT_Buildings/images/library.jpg" 
+          
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+    <!-- Image 3 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.nitt.edu/home/About_NITT/General_Information/NITT_Buildings/images/octagon.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+    <!-- Image 4 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.nitt.edu/home/About_NITT/General_Information/NITT_Buildings/images/pearl.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+<!-- Image 5 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.nitt.edu/home/About_NITT/General_Information/NITT_Buildings/images/lecture_complex.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+<!-- Image 6 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.nitt.edu/home/About_NITT/General_Information/NITT_Buildings/images/tech_park.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+<!-- Image 7 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://www.nitt.edu/home/About_NITT/General_Information/NITT_Buildings/images/admin_block.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+  </div>
+</div>
       </div>
-
-      <!-- Global Collaborations Pane -->
-      <div id="global" class="tab-pane hidden">
-        <h2 class="text-2xl font-semibold mb-2">🌐 Collaborations</h2>
-        <!-- your collaborations content -->
+    <!-- alumni Pane -->
+<div id="alumni" class="tab-pane hidden">
+  <!-- Alumni Table -->
+  <div class="max-w-6xl mx-auto p-4">
+    <section class="max-w-6xl mx-auto p-6">
+      <h2 class="text-3xl font-bold mb-6 text-center text-indigo-700">🎓 Notable Alumni – NIT Trichy</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-white">
+        <!-- Alumni Cards -->
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. S. Somanath</h3>
+          <p class="text-gray-600 mt-1">Chairman, ISRO</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">C. Rangarajan</h3>
+          <p class="text-gray-600 mt-1">Former Governor, RBI</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">V. Sridhar</h3>
+          <p class="text-gray-600 mt-1">Co-founder, Uniphore</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">K. R. Sridhar</h3>
+          <p class="text-gray-600 mt-1">CEO, Bloom Energy</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">R. Seshasayee</h3>
+          <p class="text-gray-600 mt-1">Former Executive Vice Chairman, Ashok Leyland</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">K. J. Rao</h3>
+          <p class="text-gray-600 mt-1">Former Director, NIT Trichy</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">S. Mahalingam</h3>
+          <p class="text-gray-600 mt-1">Former CFO, TCS</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">N. Dayasagar</h3>
+          <p class="text-gray-600 mt-1">Former Director, NIT Trichy</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">M. P. Vijay Kumar</h3>
+          <p class="text-gray-600 mt-1">Former Director, NIT Trichy</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">K. S. Viswanathan</h3>
+          <p class="text-gray-600 mt-1">Former Vice President, TCS</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">S. Parthasarathy</h3>
+          <p class="text-gray-600 mt-1">Former Director, NIT Trichy</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">M. S. Ananth</h3>
+          <p class="text-gray-600 mt-1">Former Director, IIT Madras</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">V. Kamakoti</h3>
+          <p class="text-gray-600 mt-1">Director, IIT Madras</p>
+        </div>
       </div>
-
-      <!-- Scholarships Pane -->
-      <div id="scholarships" class="tab-pane hidden">
-        <h2 class="text-2xl font-semibold mb-2">🎓 Scholarships</h2>
-        <!-- your scholarships content -->
+    </section>
+  </div>
+</div>
+</div>
       </div>
-
-    </div> <!-- end #tab-content -->
-  </div> <!-- end main container -->
-
+    <div id="Student Talks" class="tab-pane hidden">
+  <h2 class="text-2xl font-semibold mb-2">🎓 Student Reviews</h2>
+  <section class="px-6 py-12 bg-white space-y-6">
+    <!-- Review 1 -->
+    <div style="background: white; padding: 20px; border-radius: 12px;">
+      <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+        <strong>Review 1: Great college with excellent infrastructure.</strong>
+        <p>
+          <b>Placements:</b> Placements are very good. Almost 90% of students get placed with good packages. The highest package was around 60 LPA and the average was around 15 LPA.
+          <br><b>Infrastructure:</b> Infrastructure is one of the best among NITs. We have well-equipped labs, modern classrooms, a huge library, and excellent sports facilities.
+          <br><b>Faculty:</b> Faculty members are highly qualified and experienced. They are very supportive and always ready to help students.
+          <br><b>Other:</b> Campus life is amazing with various clubs and activities. The annual fest Festember is one of the best cultural fests in South India.
+        </p>
+      </div>
+    </div>
+    <!-- Review 2 -->
+    <div style="background: white; padding: 20px; border-radius: 12px;">
+      <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+        <strong>Review 2: Best decision of my life.</strong>
+        <p>
+          <b>Placements:</b> Placement opportunities are excellent with top companies visiting the campus. The placement cell is very active and provides good training.
+          <br><b>Infrastructure:</b> The campus is huge with greenery all around. Hostels are comfortable with all necessary facilities. Wi-Fi is available throughout the campus.
+          <br><b>Faculty:</b> Most professors have PhDs from reputed institutions. Teaching quality is good with focus on practical knowledge.
+          <br><b>Other:</b> The college has a great alumni network which helps in placements and internships. The technical fest Pragyan is internationally recognized.
+        </p>
+      </div>
+    </div>
+    <!-- Review 3 -->
+    <div style="background: white; padding: 20px; border-radius: 12px;">
+      <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+        <strong>Review 3: NIT Trichy is one of the best engineering colleges in India.</strong>
+        <p>
+          <b>Placements:</b> Almost 95% of students get placed. Core companies as well as software companies visit the campus. The average package is around 15 LPA.
+          <br><b>Infrastructure:</b> The campus is spread over 800 acres with all modern facilities. Labs are well-equipped with latest technology.
+          <br><b>Faculty:</b> Faculty members are experts in their fields. They are very approachable and supportive.
+          <br><b>Other:</b> The college has a vibrant campus life with various clubs and societies. The hostel life is memorable with friends and various activities.
+        </p>
+      </div>
+    </div>
+    <!-- Review 4 -->
+    <div style="background: white; padding: 20px; border-radius: 12px;">
+      <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+        <strong>Review 4: Excellent college with great opportunities.</strong>
+        <p>
+          <b>Placements:</b> The placement record is consistently high with top companies like Microsoft, Google, Amazon visiting the campus. The highest package was 60 LPA.
+          <br><b>Infrastructure:</b> The campus has state-of-the-art infrastructure with modern classrooms, labs, library, and sports facilities.
+          <br><b>Faculty:</b> The faculty is highly qualified with many having industry experience. They focus on both theoretical and practical aspects.
+          <br><b>Other:</b> The college encourages students to participate in extracurricular activities. The fests and events organized are of high quality.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- ⬇️ Rating Card Goes Here -->
+<div class="max-w-md mx-auto mt-6 p-4 border rounded shadow" data-college="NIT Trichy">
+  <h2 class="text-xl font-semibold mb-2">Rate This College</h2>
+  <!-- Rating Stars -->
+  <div class="stars flex gap-1 mb-2">
+    <span class="star text-2xl cursor-pointer">☆</span>
+    <span class="star text-2xl cursor-pointer">☆</span>
+    <span class="star text-2xl cursor-pointer">☆</span>
+    <span class="star text-2xl cursor-pointer">☆</span>
+    <span class="star text-2xl cursor-pointer">☆</span>
+  </div>
+  <!-- Optional Comment -->
+  <textarea class="comment w-full border p-2 rounded mb-2" placeholder="Your thoughts (optional)"></textarea>
+  <!-- Submit Button -->
+  <button class="submit-rating bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+    Submit
+  </button>
+  <p class="thanks mt-3 text-green-600 hidden">Thanks for rating!</p>
+</div>
   <script>
     const buttons = document.querySelectorAll('.tab-button');
     const panes = document.querySelectorAll('.tab-pane');
@@ -191,12 +1022,40 @@ A natural lake, deepened in 1988 and 2003, drains most of its rainwater.
       });
     });
   </script>
-
   <style>
     .tab-button { padding: .5rem 1rem; font-size: .875rem; font-weight: 500; color: #374151; border-bottom:2px solid transparent; transition: .2s; cursor: pointer; }
     .tab-button:hover { color: #3b82f6; border-color: #3b82f6; }
     .active-tab { border-color: #2563eb; color: #2563eb; }
     .tab-pane { background: #fff; padding:1rem; border-radius:.5rem; box-shadow:0 1px 2px rgb(0 0 0 / .05); }
   </style>
+<script>
+  document.querySelectorAll('[data-college]').forEach((card) => {
+    const stars = card.querySelectorAll('.star');
+    const commentBox = card.querySelector('.comment');
+    const submitButton = card.querySelector('.submit-rating');
+    const thanksMsg = card.querySelector('.thanks');
+    let selectedRating = 0;
+    stars.forEach((star, i) => {
+      star.addEventListener('click', () => {
+        selectedRating = i + 1;
+        stars.forEach((s, idx) => {
+          s.textContent = idx < selectedRating ? '★' : '☆';
+        });
+      });
+    });
+    submitButton.addEventListener('click', () => {
+      const comment = commentBox.value;
+      const collegeName = card.getAttribute('data-college');
+      const key = `rating_${collegeName.replace(/\s+/g, '_')}`;
+      const previousRatings = JSON.parse(localStorage.getItem(key)) || [];
+      previousRatings.push({ rating: selectedRating, comment });
+      localStorage.setItem(key, JSON.stringify(previousRatings));
+      thanksMsg.classList.remove('hidden');
+      commentBox.value = "";
+      stars.forEach(s => s.textContent = '☆');
+      selectedRating = 0;
+    });
+  });
+</script>
 </body>
 </html>
