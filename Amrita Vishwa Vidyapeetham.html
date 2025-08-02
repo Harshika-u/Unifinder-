@@ -3,91 +3,554 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IIT Madras – UniFinder</title>
+  <title>Amrita Vishwa Vidyapeetham – UniFinder</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-800">
   <!-- 1) HERO BANNER -->
   <section
     class="rounded-lg shadow-lg p-12 mb-8"
-    style="background-image: url('https://generic.wordpress.soton.ac.uk/webscience/wp-content/uploads/sites/117/2019/04/madras.jpg'); background-size: cover; background-position: center;"
+    style="background-image: url('https://webfiles.amrita.edu/2019/06/8cpBy7xk-Banner-1384-chennai.jpg'); background-size: cover; background-position: center;"
   >
     <div
       class="flex flex-col md:flex-row items-center max-w-4xl mx-auto bg-black bg-opacity-50 p-8 rounded-lg"
     >
       <img
-        src="https://upload.wikimedia.org/wikipedia/en/6/69/IIT_Madras_Logo.svg"
+        src="https://image-upload.getmycollege.com/new-uploads/college/logo/amrita-vishwa-vidyapeetham-college-of-engineering-logo-713.jpg"
         alt="Logo"
-        class="w-24 h-24 rounded-full mb-4 md:mb-0 md:mr-6 shadow-lg"
+        class="w-24 h-24 rounded-full mb-4 md:mb-0 md:mr-6 shadow-lg bg-white"
       />
       <div class="text-white">
-        <h1 class="text-4xl font-extrabold mb-2">IIT Madras</h1>
-        <p class="text-lg">🏆 Ranked #1 in Engineering by NIRF 2024</p>
+        <h1 class="text-4xl font-extrabold mb-2">Amrita Vishwa Vidyapeetham</h1>
+        <p class="text-lg">Premier Multi-disciplinary Research University</p>
       </div>
     </div>
   </section>
-
   <div class="max-w-6xl mx-auto p-4">
     <h1 class="text-4xl font-bold text-center mb-6">
-      Indian Institute of Technology Madras (IIT Madras)
+      Amrita Vishwa Vidyapeetham
     </h1>
-
     <!-- Tabs Navigation -->
     <div class="flex space-x-4 border-b mb-6" id="tabs">
-      <button class="tab-button active-tab" data-tab="courses">🎓 Courses</button>
+      <button class="tab-button active-tab" data-tab="Collegeinfo">🎓College Info</button>
+      <button class="tab-button " data-tab="courses">🎓 Courses</button>
       <button class="tab-button" data-tab="admissions">📝 Admissions</button>
       <button class="tab-button" data-tab="fees">💰 Fees</button>
-      <button class="tab-button" data-tab="campus">🏕️ Campus Life</button>
+      <button class="tab-button" data-tab="campus">🏕 Campus Life</button>
       <button class="tab-button" data-tab="placements">💼 Placements</button>
-      <button class="tab-button" data-tab="rankings">📊 Rankings</button>
-      <button class="tab-button" data-tab="global">🌐 Collaborations</button>
-      <button class="tab-button" data-tab="scholarships">🎓 Scholarships</button>
+      <button class="tab-button" data-tab="Gallery">📸 Gallery</button>
+      <button class="tab-button" data-tab="alumni">🌐 Alumni</button>
+      <button class="tab-button" data-tab="Student Talks">🎓 Student Talks</button>
     </div>
-
     <!-- Tab Content -->
     <div id="tab-content">
-      <!-- Courses Pane -->
-      <div id="courses" class="tab-pane block">
-        <h2 class="text-2xl font-semibold mb-2">🎓 Academic Information – IIT Madras</h2>
-        <!-- your courses content -->
-      </div>
-
-      <!-- Admissions Pane -->
-      <div id="admissions" class="tab-pane hidden">
-        <h2 class="text-2xl font-semibold mb-2">📝 Admissions</h2>
-        <!-- your admissions content -->
-      </div>
-
-      <!-- Fees Pane -->
-      <div id="fees" class="tab-pane hidden">
-        <h2 class="text-2xl font-semibold mb-2">💵 Fees</h2>
-        <!-- your fees content -->
-      </div>
-
-     <!-- Campus Life Pane -->
-      <div id="campus" class="tab-pane hidden">
-        <h2 class="text-2xl font-semibold mb-4">🏕️ Campus Life</h2>
-
-        <!-- Enhanced Content Card added to Campus Life -->
+      <!-- Collage info Pane -->
+       <div id="Collegeinfo" class="tab-pane block">
+        <h2 class="text-2xl font-semibold mb-2">🎓 Information – Amrita Vishwa Vidyapeetham</h2>
+        <!--  collage info content -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Full Name: </h3><p class="text-rose-700 text-xl font-semibold">Amrita Vishwa Vidyapeetham</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Established: </h3><p class="text-rose-700 text-xl font-semibold">1994</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+     <h3 class="font-bold text-xl">Type:</h3><p class="text-rose-700 text-xl font-semibold">Deemed-to-be-University</p>
+</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+     <h3 class="font-bold text-xl">Location:</h3><p class="text-rose-700 text-xl font-semibold">Multiple campuses across India</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Founder: </h3><p class="text-rose-700 text-xl font-semibold">Mata Amritanandamayi Devi (Amma)</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Status: </h3><p class="text-rose-700 text-xl font-semibold">Institute of Eminence</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Accreditation:  </h3><p class="text-rose-700 text-xl font-semibold">NAAC A++ grade</p>
+    </div>
+    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-xl">Campus Size: </h3><p class="text-rose-700 text-xl font-semibold">1000+ acres across all campuses</p>
+    </div>
+  </div>
+  <!--  Content Card 1 -->
+<div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+ <!-- Enhanced Content Card added to College Info -->
         <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
           <!-- Diagonal Overlays -->
           <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
           <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
           <!-- Accent Bar -->
           <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
-
+          <div class="relative">
+<h3 class="text-2xl font-bold mb-4">Basic Information </h3>
+             
+           
+            <p class="mb-4 leading-relaxed">
+Amrita Vishwa Vidyapeetham is a multi-disciplinary, research-intensive university accredited with 'A++' grade by NAAC. Founded by world-renowned humanitarian and spiritual leader Mata Amritanandamayi Devi (Amma), the university has been consistently ranked among the top private universities in India. With six campuses spread across the country in Amritapuri, Bengaluru, Coimbatore, Kochi, Mysuru, and Faridabad, Amrita offers over 250 undergraduate, postgraduate, and doctoral programs across various disciplines including Engineering, Medicine, Dentistry, Nursing, Pharmacy, Arts & Sciences, Management, Communication, Social Work, and Education.</p>
+                     <!-- Diagonal Overlays -->
+          </div></div>
+        </div>
+                <!-- Enhanced Content Card-2 added to College Info -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y/1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">History</h3>
+             
+             
+<div>
+<p>
+Amrita Vishwa Vidyapeetham was established in 1994 as the School of Engineering in Coimbatore by Mata Amritanandamayi Devi with the vision to provide value-based education and to nurture compassionate professionals. In 2003, it was conferred the status of a Deemed-to-be University under Section 3 of the UGC Act. Over the years, the university has expanded to include multiple campuses across India and has grown into a multi-disciplinary institution offering programs in diverse fields. The university has been recognized as an Institution of Eminence by the Government of India, a testament to its commitment to excellence in education and research.</p> </div>
+          
+             
+              
+           
+             
+          </div>
+        </div></div>
+      
+      <!-- Enhanced Content Card-3 added to College Info -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Vision and Mission</h3>
+<ul class="list-disc ml-6 mb-4">
+  <li>To provide value-based education and mould the character of the younger generation through a synthesis of science and spirituality.</li>
+  <li>To promote research and development in cutting-edge technologies and emerging areas of global importance.</li>
+  <li>To extend the benefits of education and technology to all sections of society, especially the rural and underprivileged.</li>
+</ul>    <h3 class="text-2xl font-bold mb-4">Objectives</h3>    
+<ul class="list-disc ml-6 mb-4">
+  <li>To develop world-class professionals with a strong sense of social responsibility and ethical values.</li>
+  <li>To foster interdisciplinary research that addresses critical challenges facing humanity.</li>
+  <li>To create an environment that nurtures innovation, creativity, and entrepreneurship.</li>
+  <li>To collaborate with leading national and international institutions for academic and research excellence.</li>
+</ul>        
+             
+             
+          
+</div>
+      </div>
+ </div> </div></div>
+      <div id="courses" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-2">🎓 Courses Offered </h2>
+        <!-- your courses content -->
+         
+     
+        <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y/1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            
+            <p class="mb-4 leading-relaxed">
+Amrita Vishwa Vidyapeetham offers a wide range of undergraduate, postgraduate, and doctoral programs across various disciplines. The programs are designed to provide students with a strong theoretical foundation and practical skills in their chosen fields, along with opportunities for research and innovation.</p>
+<h3 class="text-2xl font-bold mb-4">UNDERGRADUATE PROGRAMS
+</h3>
+           
+            <p class="mb-4 leading-relaxed">
+Amrita offers several undergraduate programs in various disciplines. These programs provide students with a comprehensive understanding of their chosen subjects and prepare them for higher studies or careers in research and industry.</p>
+<h4 class="text-2xl font-bold mb-4">Bachelor of Technology (B.Tech) Programs:</h4>
+<p>The Bachelor of Technology programs at Amrita are four-year undergraduate programs that offer specializations in various engineering disciplines. The curriculum is designed to provide students with a strong foundation in their chosen subjects.</p>
+<!-- Table for B.Tech Specializations at Amrita -->
+<table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Specialization</th>
+      <th class="py-3 px-4">Duration</th>
+      <th class="py-3 px-4">Seats</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Computer Science</td>
+      <td class="py-3 px-4">4 Years</td>
+      <td class="py-3 px-4">600</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Electronics & Communication</td>
+      <td class="py-3 px-4">4 Years</td>
+      <td class="py-3 px-4">300</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Electrical & Electronics</td>
+      <td class="py-3 px-4">4 Years</td>
+      <td class="py-3 px-4">240</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Mechanical Engineering</td>
+      <td class="py-3 px-4">4 Years</td>
+      <td class="py-3 px-4">240</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Civil Engineering</td>
+      <td class="py-3 px-4">4 Years</td>
+      <td class="py-3 px-4">180</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Chemical Engineering</td>
+      <td class="py-3 px-4">4 Years</td>
+      <td class="py-3 px-4">120</td>
+    </tr>
+    <tr>
+      <td class="py-3 px-4 font-semibold">Aerospace Engineering</td>
+      <td class="py-3 px-4">4 Years</td>
+      <td class="py-3 px-4">60</td>
+    </tr>
+  </tbody>
+</table>
+            <p>Admission to the B.Tech programs is based on the Amrita Engineering Entrance Examination (AEEE) or JEE Main. The programs provide students with a strong foundation in their chosen subjects and prepare them for higher studies or careers in research and industry.</p>
+          </div>
+        </div>
+    <!-- Enhanced Content Card-2 added to  -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y/1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">OTHER UNDERGRADUATE PROGRAMS
+</h3>
+      <p>Amrita offers a range of undergraduate programs in various disciplines besides engineering. These programs are designed to provide a comprehensive education to students in their chosen fields.</p>
+<h4 class="text-2xl font-bold mb-4">Bachelor of Science (B.Sc), Bachelor of Arts (B.A), and Bachelor of Commerce (B.Com) Programs:</h4>
+<table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Program</th>
+      <th class="py-3 px-4">Duration</th>
+      <th class="py-3 px-4">Specializations</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">B.Sc</td>
+      <td class="py-3 px-4">3 Years</td>
+      <td class="py-3 px-4">Physics, Chemistry, Mathematics, Computer Science, Data Science, Biotechnology, Microbiology</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">B.A</td>
+      <td class="py-3 px-4">3 Years</td>
+      <td class="py-3 px-4">English, Economics, Psychology, Communication, Journalism</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">B.Com</td>
+      <td class="py-3 px-4">3 Years</td>
+      <td class="py-3 px-4">Commerce, Computer Applications, Finance & International Business</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">BBA</td>
+      <td class="py-3 px-4">3 Years</td>
+      <td class="py-3 px-4">Business Administration</td>
+    </tr>
+    <tr>
+      <td class="py-3 px-4 font-semibold">BCA</td>
+      <td class="py-3 px-4">3 Years</td>
+      <td class="py-3 px-4">Computer Applications</td>
+    </tr>
+  </tbody>
+</table>
+   </div>   </div></div>
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y/1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">POSTGRADUATE AND RESEARCH PROGRAMS
+</h3>  <p>Amrita Vishwa Vidyapeetham offers a wide range of postgraduate and research programs across various disciplines. The university provides excellent research facilities and opportunities for students to work on cutting-edge research projects under the guidance of experienced faculty members.</p>
+<h4 class="text-2xl font-bold mb-4">Master's Programs:</h4>
+<p>The university offers Master of Technology (M.Tech), Master of Science (M.Sc), Master of Arts (M.A), Master of Commerce (M.Com), Master of Business Administration (MBA), and Master of Computer Applications (MCA) programs in various specializations.</p>
+<h4 class="text-2xl font-bold mb-4">PhD Programs:</h4>
+<p>The PhD program at Amrita is designed to train students to become independent researchers who can contribute to the advancement of knowledge in their chosen fields. The program involves coursework, comprehensive examinations, and original research leading to a thesis.</p>
+<h4 class="text-2xl font-bold mb-4">Research Areas:</h4>
+<ul class="list-disc ml-6 mb-4">
+  <li>Engineering: Artificial Intelligence, Robotics, Cybersecurity, Renewable Energy, Nanotechnology</li>
+  <li>Sciences: Biotechnology, Environmental Sciences, Materials Science, Data Science</li>
+  <li>Medical Sciences: Cancer Research, Regenerative Medicine, Neuroscience, Public Health</li>
+  <li>Management: Business Analytics, Finance, Marketing, Human Resources, Operations</li>
+  <li>Humanities: Cultural Studies, Communication, Psychology, Social Work</li>
+</ul>
+          <p>Admission to the PhD program is based on a research entrance test followed by interviews. The university provides fellowships and research assistantships to support PhD students during their studies.</p>
+</div></div>
+      </div></div>
+<!-- Admissions Pane -->
+<div id="admissions" class="tab-pane hidden px-4 py-6">
+  <h2 class="text-3xl font-bold text-indigo-700 mb-6">📝 Admissions – Amrita Vishwa Vidyapeetham 2025</h2>
+  <!-- Timeline CSS -->
+  <style>
+    .timeline-container {
+      position: relative;
+      margin: 2rem auto;
+      padding: 2rem 0;
+      max-width: 1100px;
+    }
+    .timeline-line {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(to bottom, #6366f1, #9333ea);
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+    .timeline-item {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+    .timeline-item-left,
+    .timeline-item-right {
+      width: 47%;
+      background-color: #f9fafb;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      z-index: 1;
+      transition: transform 0.3s ease;
+    }
+    .timeline-item-left:hover,
+    .timeline-item-right:hover {
+      transform: scale(1.03);
+    }
+    .timeline-circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: linear-gradient(to bottom right, #4f46e5, #7c3aed);
+      border-radius: 9999px;
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: white;
+      z-index: 2;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    @media (max-width: 768px) {
+      .timeline-item-left,
+      .timeline-item-right {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+      .timeline-circle {
+        top: -1.5rem;
+        left: 5%;
+        transform: none;
+      }
+    }
+  </style>
+  <!-- Timeline Content -->
+  <section class="timeline-container">
+    <div class="timeline-line"></div>
+    <div class="timeline-item">
+      <div class="timeline-item-left">
+        <h3 class="text-xl font-bold text-blue-700 mb-2">1. Check Eligibility</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>For B.Tech: 10+2 with Physics, Chemistry, and Mathematics with minimum 60% marks</li>
+          <li>For B.Sc/B.A/B.Com: 10+2 in relevant stream with minimum 50% marks</li>
+          <li>For M.Tech/M.Sc: Bachelor's degree in relevant subject with minimum 60% marks</li>
+          <li>For MBA: Bachelor's degree in any discipline with minimum 50% marks</li>
+          <li>For PhD: Master's degree in relevant subject with minimum 60% marks</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">1</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-right ml-auto">
+        <h3 class="text-xl font-bold text-purple-700 mb-2">2. Apply for Entrance Examination</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>For B.Tech: Register for AEEE (Amrita Engineering Entrance Examination) or apply through JEE Main</li>
+          <li>For other UG programs: Register for Amrita Common Entrance Test</li>
+          <li>For PG programs: Register for program-specific entrance examinations</li>
+          <li>For PhD: Register for Research Entrance Test on the Amrita website</li>
+          <li>Fill out the online application form with accurate details</li>
+          <li>Pay the application fee as specified</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">2</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-left">
+        <h3 class="text-xl font-bold text-green-700 mb-2">3. Appear for Selection Process</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>For B.Tech: AEEE or JEE Main examination</li>
+          <li>For other UG programs: Amrita Common Entrance Test</li>
+          <li>For PG programs: Program-specific entrance examinations</li>
+          <li>For MBA: CAT/MAT/XAT/CMAT/GMAT scores or Amrita Management Entrance Test</li>
+          <li>For PhD: Research Entrance Test followed by interview</li>
+          <li>Prepare well for the examination based on the syllabus provided</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">3</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-right ml-auto">
+        <h3 class="text-xl font-bold text-pink-700 mb-2">4. Check Admission Results</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Results published on the official Amrita website</li>
+          <li>Merit lists prepared based on entrance exam performance</li>
+          <li>Cutoff ranks for different programs are released</li>
+          <li>Waitlist movement for selected programs</li>
+          <li>Counseling process for selected candidates</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">4</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-left">
+        <h3 class="text-xl font-bold text-red-600 mb-2">5. Accept Admission Offer</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>If selected:
+            <ul class="list-disc ml-6">
+              <li>Accept the admission offer online</li>
+              <li>Pay the admission fee</li>
+              <li>Download the admission letter</li>
+              <li>Complete the counseling process</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="timeline-circle">5</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-item-right ml-auto">
+        <h3 class="text-xl font-bold text-yellow-700 mb-2">6. Complete Admission Formalities</h3>
+        <ul class="list-disc ml-6 text-sm text-gray-700">
+          <li>Submit original documents:
+            <ul class="list-disc ml-6">
+              <li>Entrance exam scorecard/admission letter</li>
+              <li>Class 10 & 12 Mark Sheets</li>
+              <li>Degree certificates (for PG/PhD)</li>
+              <li>Category Certificate (if applicable)</li>
+              <li>Passport-sized photographs</li>
+              <li>Government-issued ID proof</li>
+            </ul>
+          </li>
+          <li>Complete medical fitness requirements</li>
+          <li>Pay the tuition and hostel fees</li>
+          <li>Register for courses</li>
+        </ul>
+      </div>
+      <div class="timeline-circle">6</div>
+    </div>
+  </section>
+</div>
+      <!-- Fees Pane -->
+      <div id="fees" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-2">💵 Academic Fees (2025-26)</h2>
+       <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+  <!-- Diagonal Overlays -->
+  <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+  <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y/1/2 opacity-15"></div>
+  
+  <!-- Accent Bar -->
+  <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+  <div class="relative">
+    <h2 class="text-2xl font-bold text-indigo-700 mb-4">💰 Amrita Vishwa Vidyapeetham Fees Structure</h2>
+    <p class="mb-4 leading-relaxed text-gray-700">
+      Amrita Vishwa Vidyapeetham offers various undergraduate, postgraduate, and research programs across multiple disciplines. The fee structure varies based on the program and campus. The university provides several scholarships and financial assistance options to deserving students.
+    </p>
+    <!-- Fees Table -->
+    <div class="overflow-x-auto mt-6">
+      <table class="min-w-full text-sm border border-gray-300">
+        <thead class="bg-indigo-100 text-indigo-800">
+          <tr>
+            <th class="text-left px-4 py-2 border border-gray-300">Program</th>
+            <th class="text-left px-4 py-2 border border-gray-300">Tuition Fee (per annum)</th>
+            <th class="text-left px-4 py-2 border border-gray-300">Other Fees (per annum)</th>
+            <th class="text-left px-4 py-2 border border-gray-300">Hostel Fee (per annum)</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-800">
+          <tr class="bg-white">
+            <td class="px-4 py-2 border border-gray-300">B.Tech</td>
+            <td class="px-4 py-2 border border-gray-300">INR 2,00,000 - 3,00,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 20,000 - 30,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 70,000 - 1,00,000</td>
+          </tr>
+          <tr class="bg-gray-50">
+            <td class="px-4 py-2 border border-gray-300">B.Sc/B.A/B.Com</td>
+            <td class="px-4 py-2 border border-gray-300">INR 75,000 - 1,50,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 15,000 - 20,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 70,000 - 1,00,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-2 border border-gray-300">M.Tech</td>
+            <td class="px-4 py-2 border border-gray-300">INR 1,50,000 - 2,50,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 20,000 - 30,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 70,000 - 1,00,000</td>
+          </tr>
+          <tr class="bg-gray-50">
+            <td class="px-4 py-2 border border-gray-300">MBA</td>
+            <td class="px-4 py-2 border border-gray-300">INR 4,00,000 - 5,00,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 30,000 - 40,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 70,000 - 1,00,000</td>
+          </tr>
+          <tr class="bg-white">
+            <td class="px-4 py-2 border border-gray-300">MCA</td>
+            <td class="px-4 py-2 border border-gray-300">INR 1,50,000 - 2,00,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 20,000 - 30,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 70,000 - 1,00,000</td>
+          </tr>
+          <tr class="bg-gray-50">
+            <td class="px-4 py-2 border border-gray-300">PhD</td>
+            <td class="px-4 py-2 border border-gray-300">INR 50,000 - 1,00,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 15,000 - 20,000</td>
+            <td class="px-4 py-2 border border-gray-300">INR 70,000 - 1,00,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-4 text-sm text-gray-600">
+      Note: The above fees are approximate and subject to change. Additional fees for laboratory, library, and other facilities may apply. 
+      Financial assistance and scholarships are available for eligible students.
+    </p>
+  </div>
+</div>
+      </div>
+     <!-- Campus Life Pane -->
+      <div id="campus" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-4">🏕 Campus Life</h2>
+        <!-- Enhanced Content Card added to Campus Life -->
+        <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y/1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
           <div class="relative">
            
             <p class="mb-4 leading-relaxed">
-IIT Madras is a residential institute that occupies a 2.5 km² (617 acre) campus that was formerly part of the adjoining Guindy National Park. The main entrance of IIT Madras is on Sardar Patel Road, flanked by the residential districts of Adyar and Velachery. The campus is close to the Raj Bhavan, the official seat of the Governor of Tamil Nadu.
-The campus is located 10 km from the Chennai Airport, 12 km from the Chennai Central Railway station, and is well connected by city buses. Kasturba Nagar is the nearest station on the Chennai MRTS line.
-Two parallel roads, Bonn Avenue and Delhi Avenue, cut through the faculty residential area, before they meet at the Gajendra Circle, near the Administrative Block. Buses regularly ply between the Main Gate, Gajendra Circle, the Academic Zone, and the Hostel Zone.
-Much of the campus is a protected forest, carved out of the Guindy National Park, home to many animals that are not commonly seen in a busy city like Chennai. The campus has the pride of having one of the most elegant antelopes in the world - the Blackbuck. The campus is also home to large numbers of chital (spotted deer), bonnet macaque, monkeys and other rare wildlife. There is a lot of other smaller and exquisite life forms that play a major role in the biodiversity of the campus. The IIT campus has about 300 species of trees and plants with quite a large number of native wild species, which are unique to the tropical, dry evergreen vegetation. IIT Madras campus is a haven for bird watchers in the city. There are about 100 species of birds seen at different times of the year. There are quite a number of resident species as well as few migrants like Forest Wagtail, Pied Crested Cuckoo, Golden Oriole etc. which are migratory.
-A natural lake, deepened in 1988 and 2003, drains most of its rainwater.
-            </p>
-            <img src="https://www.iitm.ac.in/sites/default/files/2020-03/static-Overview%20IITM%20lake.jpg" alt="Campus Lake" class="w-full rounded-lg mb-4 shadow-lg">
-                     <!-- Diagonal Overlays -->
-
+Amrita Vishwa Vidyapeetham has six campuses spread across India in Amritapuri, Bengaluru, Coimbatore, Kochi, Mysuru, and Faridabad. Each campus provides a serene and intellectually stimulating environment for students, faculty, and researchers. With its blend of modern infrastructure and natural beauty, Amrita offers a unique academic experience that promotes holistic development.</p>
+          
           </div>
         </div>
                 <!-- Enhanced Content Card-2 added to Campus Life -->
@@ -96,89 +559,341 @@ A natural lake, deepened in 1988 and 2003, drains most of its rainwater.
 <div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
           <!-- Diagonal Overlays -->
           <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
-          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y-1/2 opacity-15"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y/1/2 opacity-15"></div>
           <!-- Accent Bar -->
           <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
-
           <div class="relative">
-            <h3 class="text-2xl font-bold mb-4">🏫 Landmarks</h3>
+            <h3 class="text-2xl font-bold mb-4">Hostels and Accommodation</h3>
              
-              <li class="flex items-start">
-                <span class="text-indigo-600 text-2xl mr-3">•</span>
-<div><strong> Gajendra Circle:</strong> 
-<p>The first landmark that greets every visitor is GC or Gajendra Circle, which is about 2.5 km from the gate. The area from the main gate to GC is the residential zone of our campus where faculty and staff live. After GC you’ll enter the academic zone with various departments, laboratories, workshops and the computer centre, spread over a large area in a big array of buildings. Further into the campus towards the end, you will find the hostel zone with various facilities for students. </p> </div>
-              </li>
-              <li class="flex items-start">
-                <span class="text-indigo-600 text-2xl mr-3">•</span>
-                <div><strong> Himalaya:</strong><p> Himalaya is a giant building where all the messes are located. Infront is a beautiful lawn where you can relax in the evenings. </p></div>
-              </li>
-              <li class="flex items-start">
-                <span class="text-green-600 text-2xl mr-3">•</span>
-                <div><strong> New Academic Complex:</strong> <p>The new academic complex was constructed recently with a budget of 115 crores. It is equipped with all the latest technology classroom facilities. The view from outside is very scenic. It is presently hosting the Departments of Mathematics, Chemical Engineering, Metallurgical & Materials Engineering. </p></div>
-              </li>
-              <li class="flex items-start">
-                <span class="text-red-600 text-2xl mr-3">•</span>
-                <div><strong>OAT:</strong> <p>In between the GC and the hostel zone, you will spot a large arena called the Open Air Theatre, where the weekend movies are screened by the Film Club. Here, the best of the latest movies in English, Hindi, Tamil and other regional languages are screened. OAT is also the venue where the Saarang Pro-shows are held. </p></div>
-              </li>
-<img src="https://www.iitm.ac.in/sites/default/files/instigram/202004/static%20Campus%20Life%20Overview%20-%20Open%20Air%20Theatre.jpg" alt="Campus Lake" class="w-full rounded-lg mb-4 shadow-lg">
-           
-
-              <li class="flex items-start">
-                <span class="text-red-600 text-2xl mr-3">•</span>
-                <div><strong>CLT:</strong> <p>The Central Lecture Theatre is just opposite to the OAT in the middle of the Humanities and Sciences Block (HSB). This is an auditorium with a capacity of about 400, which is used for almost every in-house activity in the Institute. The Lit-Soc Schedule uses only this venue, not to mention the associations of the Institute which use this place all the time. </p></div>
-              </li>
-<img src=" https://www.iitm.ac.in/sites/default/files/2020-03/static-overview%20-Central%20Lecture%20Theatre.jpg " width="1000" height="200" alt="Campus Image">
-
-              <li class="flex items-start">
-                <span class="text-red-600 text-2xl mr-3">•</span>
-                <div><strong>CRC, Raman and Ramanujan Blocks:</strong><p> These are the places where most of your common classes take place. These are the places you would want to memorise in and out as this is where you would be headed to, most mornings, half- awake. The ground floor of the Class Room Complex is air-conditioned and is open for the use of students till 1 AM during the quiz weeks to serve as hangout spots for the muggu junta apart from the library.
-
-</p></div>
-              </li>
-
-            </ul>
-            <p class="italic text-gray-600">“The best blend of academics and campus life.” – Student Review</p>
-
-
-            <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-              <!-- List Items -->
-              <li class="flex items-start">
-                <span class="text-blue-600 text-2xl mr-3">🏠</span> 
-          </div>
-        </div>
+             
+<div>
+<p>Amrita provides on-campus accommodation to most of its students. The university has separate hostels for boys and girls with modern amenities. Each hostel has its own mess, common room, and recreational facilities. The hostels are equipped with Wi-Fi, laundry facilities, and 24/7 security. The hostel life at Amrita is vibrant, with students from diverse backgrounds and cultures living together, fostering a sense of community and collaboration. The university also provides accommodation for international students with special facilities to help them adjust to the new environment.</p> </div>
+          
+              
+              
+             
+         
+        </div>   </div>
       </div>
-
+            <!-- Enhanced Content Card-3 added to Campus Life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y/1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Sports and Recreation</h3>
+             
+             
+<div>
+<p>Amrita encourages students to maintain a healthy balance between academics and physical activities. The campuses have excellent sports facilities, including stadiums, gymnasiums, swimming pools, tennis courts, basketball courts, cricket grounds, and football grounds. The university also has dedicated spaces for indoor games like table tennis, badminton, and chess. Regular sports tournaments and inter-college competitions are organized to promote sportsmanship and physical fitness among students.</p> </div>
+          
+              
+              
+             
+         
+        </div>   </div>
+      </div>
+                  <!-- Enhanced Content Card-2 added to Campus Life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y/1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Cultural Activities</h3>
+             
+             
+<div>
+<p>Cultural life at Amrita is vibrant and diverse. The university has several student clubs and societies that organize various cultural events throughout the year. The annual cultural festival, "Anokha," is one of the most anticipated events on campus, featuring music, dance, drama, art, and literature. The festival attracts participants from colleges across the country and provides a platform for students to showcase their talents. Other cultural events include traditional festivals celebrations, food festivals, and international cultural exchange programs.</p> </div>
+          
+              
+              
+             
+         
+        </div>   </div>
+      </div>
+       <!-- Enhanced Content Card-2 added to Campus Life -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y/1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+            <h3 class="text-2xl font-bold mb-4">Facilities and Amenities</h3>
+             
+             
+<div>
+<p>Amrita provides state-of-the-art facilities to support academic and research activities. The campuses have well-equipped laboratories, advanced research centers, central libraries with vast collections of books and journals, and modern classrooms. The university also has health centers, banking facilities, post offices, shopping complexes, and several cafeterias that cater to the diverse culinary preferences of the campus community. The libraries at Amrita are digitalized and provide access to numerous online resources and databases. The university also has dedicated centers for innovation and entrepreneurship, providing students with opportunities to develop their ideas into viable products and services.</p> </div>
+          
+              
+              
+             
+         
+        </div>   </div>
+      </div>
 </div>
-
-      </div>
-
+     
       <!-- Placements Pane -->
       <div id="placements" class="tab-pane hidden">
-        <h2 class="text-2xl font-semibold mb-2">💼 Placements</h2>
-        <!-- your placements content -->
+        <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y/1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+           
+             
+  <h3 class="text-xl font-semibold mb-4 text-gray-800">Amrita Vishwa Vidyapeetham Placements Report</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <p>Amrita has a dedicated Placement Cell that facilitates campus recruitment for students. The university has consistently maintained excellent placement records over the years, with top companies from various sectors visiting the campus for recruitment. Given below are the details about Amrita Placements as per the latest available data:</p>
+<table class="min-w-full bg-white border border-gray-200 shadow-md rounded-lg overflow-hidden my-8">
+  <thead class="bg-indigo-600 text-white">
+    <tr>
+      <th class="py-3 px-4">Particulars</th>
+      <th class="py-3 px-4">Placement Statistics (2023)</th>
+    </tr>
+  </thead>
+  <tbody class="text-gray-700">
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Highest Package (Domestic)</td>
+      <td class="py-3 px-4">INR 60 LPA</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Highest Package (International)</td>
+      <td class="py-3 px-4">INR 1.2 Crore</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Average Package</td>
+      <td class="py-3 px-4">INR 8-10 LPA</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Median Package</td>
+      <td class="py-3 px-4">INR 6.5 LPA</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Total Number of Companies</td>
+      <td class="py-3 px-4">400+</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Total Number of Offers</td>
+      <td class="py-3 px-4">3000+</td>
+    </tr>
+    <tr class="border-b hover:bg-gray-50">
+      <td class="py-3 px-4 font-semibold">Placement Percentage</td>
+      <td class="py-3 px-4">90%</td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+</div></div>
+   <div style="margin-top: 30px; background: white; padding: 20px; border-radius: 12px;">
+  
+<div class="relative max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-xl overflow-hidden">
+          <!-- Diagonal Overlays -->
+          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500 transform rotate-45 translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+          <div class="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500 transform -rotate-45 -translate-x-1/2 translate-y/1/2 opacity-15"></div>
+          <!-- Accent Bar -->
+          <div class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-blue-600 to-indigo-600"></div>
+          <div class="relative">
+              <h3 class="text-xl font-semibold mb-4 text-gray-800">Top Recruiters</h3>
+<p>Amrita graduates are sought after by leading organizations across various sectors. The university has strong connections with multinational corporations, research organizations, and industries. Some of the top recruiters for Amrita graduates include:</p>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mt-4">
+  <div class="bg-gray-50 p-3 rounded-lg shadow text-center">Microsoft</div>
+  <div class="bg-gray-50 p-3 rounded-lg shadow text-center">Amazon</div>
+  <div class="bg-gray-50 p-3 rounded-lg shadow text-center">Google</div>
+  <div class="bg-gray-50 p-3 rounded-lg shadow text-center">IBM</div>
+  <div class="bg-gray-50 p-3 rounded-lg shadow text-center">Cognizant</div>
+  <div class="bg-gray-50 p-3 rounded-lg shadow text-center">Infosys</div>
+  <div class="bg-gray-50 p-3 rounded-lg shadow text-center">Wipro</div>
+  <div class="bg-gray-50 p-3 rounded-lg shadow text-center">TCS</div>
+  <div class="bg-gray-50 p-3 rounded-lg shadow text-center">Deloitte</div>
+  <div class="bg-gray-50 p-3 rounded-lg shadow text-center">KPMG</div>
+  <div class="bg-gray-50 p-3 rounded-lg shadow text-center">Ernst & Young</div>
+  <div class="bg-gray-50 p-3 rounded-lg shadow text-center">Goldman Sachs</div>
+</div>
+              </div>
       </div>
-
-      <!-- Rankings Pane -->
-      <div id="rankings" class="tab-pane hidden">
-        <h2 class="text-2xl font-semibold mb-2">📊 Rankings</h2>
-        <!-- your rankings content -->
+    </div></div>
+              </div>
+      <!-- Gallery Pane -->
+      <div id="Gallery" class="tab-pane hidden">
+        <h2 class="text-2xl font-semibold mb-2">Campus Gallery</h2>
+       <div class="p-6 bg-gray-100 rounded-xl">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+    
+    <!-- Image 1 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://webfiles.amrita.edu/2021/09/OvZftjDw-amritapuri-campus-1384.jpg" 
+        
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+    <!-- Image 2 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://webfiles.amrita.edu/2019/02/anokha-2019-techfest30.jpg" 
+          
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+    <!-- Image 3 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://webfiles.amrita.edu/2024/04/Fa6utA1c-amrita-vishwa-vidyapeetham-kochi-campus-hosts-tech-fest-savishkaara-2k24-to-foster-innovation-and-collaboration-3.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+    <!-- Image 4 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://webfiles.amrita.edu/2021/09/1tAxiiVP-kalo-1-1384.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+<!-- Image 5 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://cdn-az.allevents.in/events6/banners/e1898a7b254bb0633ce9dbc2c4699a25473e2591f969ebbd49f83932371b461c-rimg-w1131-h1600-dcffffff-gmir?v=1753045829" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+<!-- Image 6 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://webfiles.amrita.edu/2021/05/66tyac36-Physical-1384.jpg" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+<!-- Image 7 -->
+    <div class="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+      <img src="https://scontent.fhyd2-3.fna.fbcdn.net/v/t39.30808-6/513680898_1146843560794866_2563000123601417181_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=5326MKkceBUQ7kNvwG1I9ZZ&_nc_oc=AdlfWDSl2W8cFwd6jf2ZH97b0h9sBc8GhDt4Xf2vLH4gTEUep2PV_WUlBvL81weGlbo&_nc_zt=23&_nc_ht=scontent.fhyd2-3.fna&_nc_gid=80j64suQlqJDkg8HFR-qNg&oh=00_AfSKZz4YjsdF9pGWFP-nCPeqjlmqV5gV82A9gIFYuEyiWQ&oe=6892C464" 
+           
+           class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+  </div>
+</div>
       </div>
-
-      <!-- Global Collaborations Pane -->
-      <div id="global" class="tab-pane hidden">
-        <h2 class="text-2xl font-semibold mb-2">🌐 Collaborations</h2>
-        <!-- your collaborations content -->
+    <!-- alumni Pane -->
+<div id="alumni" class="tab-pane hidden">
+  <!-- Alumni Table -->
+  <div class="max-w-6xl mx-auto p-4">
+    <section class="max-w-6xl mx-auto p-6">
+      <h2 class="text-3xl font-bold mb-6 text-center text-indigo-700">🎓 Notable Alumni – Amrita Vishwa Vidyapeetham</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-white">
+        <!-- Alumni Cards -->
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Venkat Rangan</h3>
+          <p class="text-gray-600 mt-1">Vice Chancellor, Amrita Vishwa Vidyapeetham</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Krishnashree Achuthan</h3>
+          <p class="text-gray-600 mt-1">Dean, Amrita Center for Cybersecurity</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Maneesha Sudheer</h3>
+          <p class="text-gray-600 mt-1">Director, Amrita Center for Wireless Networks</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Rahul Eswar</h3>
+          <p class="text-gray-600 mt-1">Heritage Conservationist & Social Activist</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Shyam Diwakar</h3>
+          <p class="text-gray-600 mt-1">Director, Amrita Center for Computational Neuroscience</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Bipin Nair</h3>
+          <p class="text-gray-600 mt-1">Dean, Amrita School of Biotechnology</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Raghu Raman</h3>
+          <p class="text-gray-600 mt-1">Professor, Amrita School of Engineering</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Sriram Devanathan</h3>
+          <p class="text-gray-600 mt-1">Dean, Amrita School of Engineering, Bangalore</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. Prem Vasudevan</h3>
+          <p class="text-gray-600 mt-1">Associate Dean, Amrita School of Business</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. K. Gangadharan</h3>
+          <p class="text-gray-600 mt-1">Professor, Amrita School of Engineering, Coimbatore</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. M. R. Kaimal</h3>
+          <p class="text-gray-600 mt-1">Chairman, Department of Computer Science</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-4 shadow-md">
+          <h3 class="text-lg font-semibold text-gray-800">Dr. T. R. Gopalakrishnan Nair</h3>
+          <p class="text-gray-600 mt-1">Professor, Amrita School of Engineering, Amritapuri</p>
+        </div>
       </div>
-
-      <!-- Scholarships Pane -->
-      <div id="scholarships" class="tab-pane hidden">
-        <h2 class="text-2xl font-semibold mb-2">🎓 Scholarships</h2>
-        <!-- your scholarships content -->
+    </section>
+  </div>
+</div>
+</div>
       </div>
-
-    </div> <!-- end #tab-content -->
-  </div> <!-- end main container -->
-
+    <div id="Student Talks" class="tab-pane hidden">
+  <h2 class="text-2xl font-semibold mb-2">🎓 Student Reviews</h2>
+  <section class="px-6 py-12 bg-white space-y-6">
+    <!-- Review 1 -->
+    <div style="background: white; padding: 20px; border-radius: 12px;">
+      <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+        <strong>Review 1: A transformative educational experience.</strong>
+        <p>
+          <b>Academics:</b> The curriculum at Amrita is comprehensive and industry-relevant. The faculty are highly knowledgeable and always willing to help students. The focus on research and innovation is commendable.
+          <br><b>Infrastructure:</b> The campuses are beautiful with state-of-the-art facilities. The laboratories are well-equipped with modern instruments and the libraries have extensive collections of books and digital resources.
+          <br><b>Placements:</b> Excellent placement opportunities with top companies from various sectors visiting the campus. The average package is around 8-10 LPA with the highest going up to 60 LPA.
+          <br><b>Overall:</b> Amrita provides a holistic educational experience that focuses not just on academics but also on personal growth and social responsibility.
+        </p>
+      </div>
+    </div>
+    <!-- Review 2 -->
+    <div style="background: white; padding: 20px; border-radius: 12px;">
+      <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+        <strong>Review 2: Beyond academics - a journey of self-discovery.</strong>
+        <p>
+          <b>Academics:</b> The academic rigor at Amrita is challenging but rewarding. The emphasis on practical learning and industry exposure prepares students well for their careers.
+          <br><b>Faculty:</b> The faculty members are experts in their fields and provide excellent guidance. Their industry experience adds immense value to classroom teaching.
+          <br><b>Campus Life:</b> The campus is vibrant with numerous cultural and technical events throughout the year. The hostels are comfortable and the mess food is good. The spiritual environment adds a unique dimension to campus life.
+          <br><b>Placements:</b> The placement cell works tirelessly to bring good companies to campus. The placement percentage is consistently high across all programs.
+        </p>
+      </div>
+    </div>
+    <!-- Review 3 -->
+    <div style="background: white; padding: 20px; border-radius: 12px;">
+      <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+        <strong>Review 3: A perfect blend of tradition and modern education.</strong>
+        <p>
+          <b>Research Opportunities:</b> Amrita provides excellent research opportunities in various disciplines. The well-equipped laboratories and research centers allow students to work on innovative projects.
+          <b>Academic Environment:</b> The academic environment is highly stimulating with regular seminars, conferences, and workshops by experts from around the world.
+          <b>Infrastructure:</b> The infrastructure is impressive with well-maintained labs, a vast library, and modern classrooms. The campuses are eco-friendly with lush greenery.
+          <b>Overall Experience:</b> Studying at Amrita has been a transformative experience. The university not only provides quality education but also instills values of compassion and social service in students.
+        </p>
+      </div>
+    </div>
+    <!-- Review 4 -->
+    <div style="background: white; padding: 20px; border-radius: 12px;">
+      <div class="max-w-4xl mx-auto p-4 bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-lg">
+        <strong>Review 4: An institution that nurtures holistic development.</strong>
+        <p>
+          <b>Academics:</b> The academic programs at Amrita are well-structured with a perfect balance of theory and practical applications. The emphasis on interdisciplinary learning is commendable.
+          <b>Extracurricular Activities:</b> Amrita offers numerous opportunities for extracurricular activities through various clubs and societies. The annual cultural fest "Anokha" and technical fest "Vidyut" are highlights of campus life.
+          <b>Social Initiatives:</b> The university's focus on social outreach through programs like AMMACHI Labs and Jivamritam provides students with opportunities to contribute to society.
+          <b>Alumni Network:</b> The alumni network is strong and supportive, providing guidance and opportunities to current students in various fields.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
   <script>
     const buttons = document.querySelectorAll('.tab-button');
     const panes = document.querySelectorAll('.tab-pane');
@@ -191,7 +906,6 @@ A natural lake, deepened in 1988 and 2003, drains most of its rainwater.
       });
     });
   </script>
-
   <style>
     .tab-button { padding: .5rem 1rem; font-size: .875rem; font-weight: 500; color: #374151; border-bottom:2px solid transparent; transition: .2s; cursor: pointer; }
     .tab-button:hover { color: #3b82f6; border-color: #3b82f6; }
